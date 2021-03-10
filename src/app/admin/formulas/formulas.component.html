@@ -1,0 +1,181 @@
+<div class="row">
+    <div class="text-center w-100 text-white bg-color-purple" style=" height:45px;padding-top: 15px;">
+        <h6 class="">Liste des formules</h6>
+    </div>
+    <div class="container bg-white">
+      <br />
+      <span style="border-radius:4px">Cliquez sur les éléments de la liste pour voir les détails* </span>
+      <button class="btn edit-btn" style="float:right" data-toggle="modal" data-target="#add" (click)="addNewRow()">Ajouter une formule</button>
+      <br>
+      <br>
+      <table *ngIf="formulas" class="table table-hover table-striped table-bordered" style="height:330px;">
+        <thead>
+          <tr>
+            <th *ngFor="let header of headers">{{header}}</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let formula of formulas | paginate: { itemsPerPage: 5, currentPage: p }">
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(formula)"> <img [src]="createImgPath(formula.image_Id)" alt="" width="60" height="60"></td>
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(formula)"> {{ formula.name }}</td>
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(formula)"> {{ formula.price }}</td>
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(formula)"> {{ formula.status | showLable:"value":"label": boolOption }}</td>
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(formula)"> {{ formula.activeDays | showLable:"value":"label":days:true }}</td>
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(formula)"> {{ formula.startTime  | date : 'h:mm a'  }}</td>
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(formula)"> {{ formula.endTime | date : 'h:mm a' }}</td>
+                <td>
+                    <div class="row" style="padding: 10px;">
+                            <button class="btn edit-btn" data-toggle="modal" data-target="#edit" (click)="editChanges(formula)">Éditer</button>
+                            <button class="btn del-btn" data-toggle="modal" data-target="#delete" (click)="deleteRow(formula)">Effacer</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+      <!--Modal for adding formula -->
+      <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Ajouter une formule</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table *ngIf="addFormula">
+                    <tr><td>{{ headers[0] }} :</td>
+                        <td>
+                            <p-fileUpload #fileUpload mode="basic" accept="image/*" maxFileSize="1000000" customUpload="true" (uploadHandler)="myUploader($event,addFormula,fileUpload)" [auto]="true"></p-fileUpload>
+                        </td>
+                    </tr>
+                    <tr><td>{{ headers[1] }} :</td>
+                        <td> <input pInputText type="text" [(ngModel)]="addFormula.name"> </td>
+                    </tr>
+                    <tr><td>{{ headers[2] }} :</td>
+                        <td> <input pInputText type="number" [(ngModel)]="addFormula.price"></td>
+                    </tr>
+                    <tr><td>{{ headers[3] }} :</td>
+                        <td> <p-dropdown [options]="boolOption" [(ngModel)]="addFormula.status"></p-dropdown></td>
+                    </tr>
+                    <tr><td>{{ headers[4] }} :</td>
+                        <td><p-multiSelect [options]="days" [(ngModel)]="addedDays"></p-multiSelect></td>
+                    </tr>
+                    <tr><td>{{ headers[5] }} :</td>
+                        <td> <input pInputText type="time" [ngModel]="startTime" (ngModelChange)="startTime = $event"></td>
+                    </tr>
+                    <tr><td>{{ headers[6] }} :</td>
+                        <td> <input pInputText type="time" [ngModel]="endTime" (ngModelChange)="endTime = $event"></td>
+                    </tr>
+              </table>
+            </div>
+            <div class="modal-footer">
+
+              <button type="button" class="btn green-btn" data-dismiss="modal" (click)="saveAddedRow()">Ajouter une formule</button>
+              <button type="button" class="btn sec-btn" data-dismiss="modal" (click)="clearChanges()">Proche</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Modal for viewing product -->
+      <div class="modal fade" id="view" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Formula</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table *ngIf="viewFormula">
+                <tr><td>{{ headers[0] }} :</td><td> {{ viewFormula.image_Id }}</td></tr>
+                <tr><td>{{ headers[1] }} :</td><td> {{ viewFormula.name }}</td></tr>
+                <tr><td>{{ headers[2] }} :</td><td> {{ viewFormula.price }}</td></tr>
+                <tr><td>{{ headers[3] }} :</td><td> {{ viewFormula.status }}</td></tr>
+                <tr><td>{{ headers[4] }} :</td><td> {{ viewFormula.activeDays | showLable:"value":"label":days:true }}</td></tr>
+                <tr><td>{{ headers[5] }} :</td><td> {{ viewFormula.startTime  | date : 'HH.mm a'  }}</td></tr>
+                <tr><td>{{ headers[6] }} :</td><td> {{ viewFormula.endTime  | date : 'HH.mm a' }}</td></tr>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn sec-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Modal for editing product -->
+      <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Modifier la formule</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                    <table *ngIf="editFormula">
+                            <tr><td>{{ headers[0] }} :</td>
+                                <td>
+                                    <p-fileUpload #fileUpload mode="basic" accept="image/*" maxFileSize="1000000" customUpload="true" (uploadHandler)="myUploader($event,editFormula,fileUpload)" [auto]="true"></p-fileUpload>
+                                </td>
+                            </tr>
+                            <tr><td>{{ headers[1] }} :</td>
+                                <td> <input pInputText type="text" [(ngModel)]="editFormula.name"> </td>
+                            </tr>
+                            <tr><td>{{ headers[2] }} :</td>
+                                <td> <input pInputText type="number" [(ngModel)]="editFormula.price"></td>
+                            </tr>
+                            <tr><td>{{ headers[3] }} :</td>
+                                <td> <p-dropdown [options]="boolOption" [(ngModel)]="editFormula.status"></p-dropdown></td>
+                            </tr>
+                            <tr><td>{{ headers[4] }} :</td>
+                                <td><p-multiSelect [options]="days" [(ngModel)]="addedDays"></p-multiSelect></td>
+                            </tr>
+                            <tr><td>{{ headers[5] }} :</td>
+                              <td> <input pInputText type="time" [ngModel]="startTime" (ngModelChange)="startTime = $event"></td>
+                            </tr>
+                            <tr><td>{{ headers[6] }} :</td>
+                              <td> <input pInputText type="time" [ngModel]="endTime" (ngModelChange)="endTime = $event"></td>
+                            </tr>
+                      </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn sec-btn" data-dismiss="modal" (click)="clearChanges()">Proche</button>
+              <button type="button" class="btn green-btn" data-dismiss="modal" (click)="saveEditedRow()">Sauvegarder les modifications</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Delete Modal -->
+      <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Supprimer la formule</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Voulez-vous supprimer la formule?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn edit-btn" data-dismiss="modal" (click)="saveChanges()" >Oui</button>
+              <button type="button" class="btn sec-btn" data-dismiss="modal" (click)="clearChanges()" >Non</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

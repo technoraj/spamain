@@ -1,0 +1,44 @@
+{
+    "apiEndPoint": "http://localhost:57622/",
+    "authenticationEndPoint": "http://localhost:58716/",
+    "language": "en-GB",
+    "key": "BELGIUMSPA1",
+    "paypalKey": "ATMRfDRTj3P5UI6lLGsyyExFEsCz_cnw5T-XcP4h3I2yeIygKuJBIaUeb3EwVJj09XMDOqCelgPXV-m-",
+    "stripePublishKey": "pk_test_51II5v7Kzvu1z1YEgDYXl6RSzRzTcS7h4QwFx2zL5a4a9HmrXKapBvROj3dpoX8B9xp78avtbavc3wysEK4Nnbmuc00JhIGVblH",
+    "intent": "CAPTURE",
+    "Currency": "EUR",
+    "productCategories": [
+        {
+            "name": "Drinks",
+            "icon": "fas fa-cocktail"
+        },
+        {
+            "name": "Hygene",
+            "icon": "fas fa-hands-wash"
+        },
+        {
+            "name": "Alcohol",
+            "icon": "fas fa-wine-bottle"
+        },
+        {
+            "name": "Restaurants",
+            "icon": "fas fa-utensils"
+        },
+        {
+            "name": "Care",
+            "icon": "fas fa-hand-holding-medical"
+        },
+        {
+            "name": "Personne",
+            "icon": "fab fa-speaker-deck"
+        }
+    ],
+    "picsArt":[
+        {"roomType":"DESERT PINK","images":["DESERT PINK.jpg","gallery-V4-1.jpg","gallery-V4-2.jpg","gallery-V4-3.jpg"]},
+        {"roomType":"COOKIE BROWN","images":["COOKIE BROWN.jpg","gallery-V4-1.jpg","gallery-V4-2.jpg","gallery-V4-3.jpg"]},
+        {"roomType":"BLACK WOOD","images":["BLACK WOOD.jpg","gallery-V4-1.jpg","gallery-V4-2.jpg","gallery-V4-3.jpg"]},
+        {"roomType":"LOFT","images":["LOFT.jpg","gallery-V4-1.jpg","gallery-V4-2.jpg","gallery-V4-3.jpg"]},
+        {"roomType":"BORA BORA","images":["BORA BORA.jpg","gallery-V4-1.jpg","gallery-V4-2.jpg","gallery-V4-3.jpg"]},
+        {"roomType":"BALI","images":["BALI.jpg","gallery-V4-1.jpg","gallery-V4-2.jpg","gallery-V4-3.jpg"]}
+    ]
+}

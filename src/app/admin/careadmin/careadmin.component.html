@@ -1,0 +1,85 @@
+<div class="row">
+        <div class="text-center w-100 text-white bg-color-purple" style=" height:45px;padding-top: 15px;">
+            <h6 class="">Liste des traitements</h6>
+        </div>
+        <div class="container bg-white">
+          <br>
+          <table *ngIf="!loading" class="table table-hover table-striped table-bordered" style="height:330px;">
+            <thead>
+              <tr>
+                <th *ngFor="let header of headers">{{header}}</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let care of reservations | paginate: { itemsPerPage: 5, currentPage: p }">
+                    <td > {{ care.user_Id  | showLable:"user_Id":"firstName": users  }} {{ care.user_Id  | showLable:"user_Id":"lastName": users  }}</td>
+                    <td > {{ care.center_Id  | showLable:"center_Id":"name": centers  }}</td>
+                    <td > {{ care.date | date: 'dd-MM-yyyy' }}</td>
+                    <td > {{ care.user_Id  | showLable:"user_Id":"phone": users  }}</td>
+                    <td>
+                        <div class="row" style="padding: 10px;">
+                                <button class="btn check-btn" data-toggle="modal" data-target="#view" (click)="showFormula(care)">Vérifier</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="row" style="padding: 10px;">
+                                <button class="btn del-btn" data-toggle="modal" data-target="#delete" (click)="deleteRow(care.reservation_Id)">Effacer</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+          </table>
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    
+          <!--Modal for viewing product -->
+          <div class="modal fade" id="view" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Formule</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <table *ngIf="viewCare">
+                    <tr><td>{{ viewHeaders[0] }} :</td><td> {{ viewCare.user_Id  | showLable:"user_Id":"firstName": users  }} {{ viewCare.user_Id  | showLable:"user_Id":"lastName": users  }}</td></tr>
+                    <tr><td>{{ viewHeaders[1] }} :</td><td> {{ viewCare.center_Id  | showLable:"center_Id":"name": centers  }}</td></tr>
+                    <tr><td>{{ viewHeaders[2] }} :</td><td> {{ viewCare.date | date: 'dd-MM-yyyy' }}</td></tr>
+                    <tr><td>{{ viewHeaders[3] }} :</td><td> {{ viewCare.user_Id  | showLable:"user_Id":"phone": users  }}</td></tr>
+                    <tr><td>{{ viewHeaders[4] }} :</td><td *ngIf = "viewCare.services.length > 0"> {{ viewCare.services[0].service_Id  | showLable:"service_Id":"name": services }}</td></tr>
+                    <tr><td>{{ viewHeaders[5] }} :</td><td *ngIf = "viewCare.services.length > 0"> {{ viewCare.services[0].quantity }}</td></tr>
+                    <tr><td>{{ viewHeaders[6] }} :</td><td> ${{ viewCare.totalPayment  }}</td></tr>
+                  </table>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn sec-btn" data-dismiss="modal">Proche</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Delete Modal -->
+          <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Supprimer le traitement</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Voulez-vous supprimer les détails du traitement?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn edit-btn" data-dismiss="modal" (click)="saveChanges()" >Oui</button>
+                  <button type="button" class="btn sec-btn" data-dismiss="modal" (click)="clearChanges()" >Non</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

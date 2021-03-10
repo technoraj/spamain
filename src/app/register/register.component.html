@@ -1,0 +1,48 @@
+
+<div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <h3>Choisissez le paiement</h3>
+                <p>Avoir une expérience de luxe!!!</p>
+                <input type="submit" name="" value="Connexion" routerLink='/app-home/app-login'/><br/>
+            </div>
+            <div class="col-md-9 register-right">
+                <div class="tab-content" id="myTabContent">
+                    <div id="customer" class="tab-pane fade show active" role="tabpanel" aria-labelledby="customer-tab">
+                        <h3 class="register-heading">S'inscrire</h3>
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" id = "firstname" class="form-control" placeholder="Prénom *" value="" [(ngModel)]="user.firstName"/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id = "lastname"  class="form-control" placeholder="Nom de famille *" value="" [(ngModel)]="user.lastName" />
+                                </div>
+                                
+                                <div class="form-group">
+                                        <input type="email" id = "email"  class="form-control" placeholder="Votre e-mail *" value="" [(ngModel)]="user.email"/>
+                                </div>
+                                                   
+                            </div>
+                            <div class="col-md-6">                           
+                                <div class="form-group">
+                                    <input type="number" id = "phone" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==10) return false;"  name="txtEmpPhone" class="form-control" placeholder="Ton téléphone *" value="" [(ngModel)]="user.phone"/>
+                                </div>    
+                                <div class="form-group">
+                                        <show-hide-password class="btn-show" size="md" icon="empty">
+                                    <input type="password" id = "password"  class="form-control" placeholder="Mot de passe *" value="" [(ngModel)]="tmpPassword"/>
+                                    </show-hide-password>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" id = "confirmpassword"  class="form-control"  placeholder="Confirmez le mot de passe *" value="" [(ngModel)]="confirmPassword"/>
+                                </div>
+                                
+                                <input type="submit" class="btnRegister"  value="S'inscrire" (click)=CreateAccount()/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>

@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+/* *{
+    font-family: fangsong;
+} */
+
+.btn[disabled] {
+    cursor: not-allowed;
+}
+
+.beautypress-btn-wraper{
+ color: #fff;   
+}
+
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+  }
+  
+  .ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+  }
+
+  .pointer{
+    cursor: pointer;
+}
+
+.red{
+  color: red;
+}

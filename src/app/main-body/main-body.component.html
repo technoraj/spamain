@@ -1,0 +1,266 @@
+<!-- welcome section -->
+<section class="beautypress-welcome-section beautypress-welcome-version-4 welcome-height-calc-minus">
+    <div class="beautypress-welcome-slider-wraper">
+        <div class="beautypress-welcome-slider owl-carousel">
+            <div class="beautypress-welcome-slider-item beautypress-version-1 beautypress-bg"
+                style="background-image: url(./src/assets/img/slider-4_img_1.jpg);">
+                <div class="container">
+                    <div class="beautypress-welcome-content-group">
+                        <div class="beautypress-welcome-container">
+                            <div class="beautypress-welcome-wraper">
+                                <p class="color-black">Le meilleur moment pour se détendre</p>
+                                <h3 class="color-purple">l'lle O Spa</h3>
+                                <div class="beautypress-btn-wraper"
+                                    (click)="setReservationType(ReservationType.Appointment)">
+                                    <a class="xs-btn bg-color-pink round-btn box-shadow-btn">Rendez-vous
+                                            maintenant <span></span></a>
+                                    <a class="xs-btn bg-color-purple round-btn box-shadow-btn">Lire la suite
+                                        <span></span></a>
+                                </div>
+                            </div>
+                        </div><!-- .beautypress-welcome-container END -->
+                    </div><!-- .beautypress-welcome-content-group END -->
+                </div>
+            </div><!-- .beautypress-welcome-slider-item END -->
+            <div class="beautypress-welcome-slider-item beautypress-version-1 content-right beautypress-bg"
+                style="background-image: url(./src/assets/img/slider-4_img_2.jpg);">
+                <div class="container">
+                    <div class="beautypress-welcome-content-group">
+                        <div class="beautypress-welcome-container">
+                            <div class="beautypress-welcome-wraper">
+                                <p class="color-black">Le meilleur traitement</p>
+                                <h3 class="color-purple">l'lle O Spa</h3>
+                                <div class="beautypress-btn-wraper" (click)="setReservationType(ReservationType.Care)">
+                                    <a class="xs-btn bg-color-pink round-btn box-shadow-btn">Rendez-vous
+                                            maintenant <span></span></a>
+                                    <a class="xs-btn bg-color-purple round-btn box-shadow-btn">Lire la suite
+                                        <span></span></a>
+                                </div>
+                            </div>
+                        </div><!-- .beautypress-welcome-container END -->
+                    </div><!-- .beautypress-welcome-content-group END -->
+                </div>
+            </div><!-- .beautypress-welcome-slider-item END -->
+            <div class="beautypress-welcome-slider-item beautypress-version-1 beautypress-bg"
+                style="background-image: url(./src/assets/img/slider-4_img_3.jpg);">
+                <div class="container">
+                    <div class="beautypress-welcome-content-group">
+                        <div class="beautypress-welcome-container">
+                            <div class="beautypress-welcome-wraper">
+                                <p class="color-black">Le meilleur traitement</p>
+                                <h3 class="color-purple">Centre de bien-être et salon</h3>
+                                <div class="beautypress-btn-wraper" (click)="setReservationType(ReservationType.Care)">
+                                    <a class="xs-btn bg-color-pink round-btn box-shadow-btn">Rendez-vous
+                                            maintenant <span></span></a>
+                                    <a class="xs-btn bg-color-purple round-btn box-shadow-btn">Lire la suite
+                                        <span></span></a>
+                                </div>
+                            </div>
+                        </div><!-- .beautypress-welcome-container END -->
+                    </div><!-- .beautypress-welcome-content-group END -->
+                </div>
+            </div><!-- .beautypress-welcome-slider-item END -->
+        </div><!-- .beautypress-welcome-slider END -->
+    </div>
+</section><!-- .beautypress-welcome-section END -->
+<!-- welcome section -->
+<section class="beautypress-our-features-section beautypress-padding-bottom">
+    <div class="container">
+        <div class="beautypress-section-headinig beautypress-watermark-title">
+            <i class="xsicon icon-lotus"></i>
+            <h2 data-title="Need A Service?" class="color-black">Besoin d'un service ?</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-xl-4 col-lg-4">
+                <div class="beautypress-single-our-feature beautypress-black-gradient-overlay">
+                    <i class="xsicon icon-cosmetics"></i>
+                    <img src="./src/assets/img/features-1.jpg" alt="">
+                    <div class="beautypress-our-features-content">
+                        <h3>Réserver un spa</h3>
+                        <div class="beautypress-btn-wraper" (click)="setReservationType(ReservationType.Appointment)">
+                            <a class="xs-btn round-btn box-shadow-btn bg-color-purple">Réserver
+                                <span></span></a>
+                        </div>
+                    </div>
+                </div><!-- .beautypress-single-our-feature END -->
+            </div>
+            <div class="col-md-6 col-xl-4 col-lg-4">
+                <div class="beautypress-single-our-feature beautypress-black-gradient-overlay">
+                    <i class="xsicon icon-stones"></i>
+                    <img src="./src/assets/img/features-2.jpg" alt="">
+                    <div class="beautypress-our-features-content">
+                        <h3>Commander un soin</h3>
+                        <div class="beautypress-btn-wraper" (click)="setReservationType(ReservationType.Care)">
+                            <a class="xs-btn round-btn box-shadow-btn bg-color-purple">Commander
+                                <span></span></a>
+                        </div>
+                    </div>
+                </div><!-- .beautypress-single-our-feature END -->
+            </div>
+            <div class="col-md-6 col-xl-4 col-lg-4">
+                <div class="beautypress-single-our-feature beautypress-black-gradient-overlay">
+                    <i class="xsicon icon-lotus"></i>
+                    <img src="./src/assets/img/features-3.jpg" alt="">
+                    <div class="beautypress-our-features-content">
+                        <h3>Offrir une carte cadeaux</h3>
+                        <div class="beautypress-btn-wraper">
+                            <a routerLink="/app-home/gift-card"
+                                class="xs-btn round-btn box-shadow-btn bg-color-purple">Commander
+                                <span></span></a>
+                        </div>
+                    </div>
+                </div><!-- .beautypress-single-our-feature END -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Simple text with image-->
+<section class="beautypress-simple-text-with-img-section bg-color-gray" id="formulas">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xl-6 col-lg-6">
+                <div class="beautypress-simple-text beautypress-watermark-icon">
+                    <div class="beautypress-separetor-sub-heading">
+                        <h2>Nos formules</h2>
+                    </div><!-- . END -->
+                    <p>Profitez de nos formules Faites-vous plaisir avec nos différentes formules spa bien-être,
+                            que vous souhaitiez venir en semaine, le week-end ou même la nuit, le Lile O Spa
+                            propose une multitude d'offres associées.</p>
+                    <div class="beautypress-btn-wraper" (click)="setReservationType(ReservationType.Appointment)">
+                        <a class="xs-btn bg-color-purple round-btn box-shadow-btn">Réservation en ligne
+                            <span></span></a>
+                    </div>
+                </div><!-- . END -->
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6">
+                <div class="beautypress-simple-img-wraper">
+                    <img src="./src/assets/img/tawel_stone.png" alt="">
+                </div><!-- .beautypress-simple-img-wraper END -->
+            </div>
+        </div>
+    </div>
+</section><!-- .beautypress-simple-text-with-img-section END -->
+<!-- Simple text with image end -->
+<section class="beautypress-call-to-action-section beautypress-bg parallax-bg" data-parallax="scroll"
+    style="background-image: url(./src/assets/img/call-to-action.jpg);">
+    <div class="container">
+        <div class="beautypress-call-to-action-content beautypress-version-2">
+            <div class="beautypress-content-headinig">
+                <h2 class="color-purple">Besoin d'un génial</h2>
+                <h3>Service de beauté</h3>
+            </div>
+            <a class="xs-btn round-btn box-shadow-btn bg-chocolate"
+                (click)="setReservationType(ReservationType.Appointment)">prendre rendez-vous <span></span></a>
+        </div><!-- .beautypress-call-to-action-content END -->
+    </div>
+</section>
+<section class="beautypress-simple-text-with-img-section beautypress-simple-text-with-img-section-v2 beautypress-no-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6">
+                <div class="beautypress-simple-img-wraper">
+                    <img src="./src/assets/img/feature_img_1.png" alt="">
+                </div><!-- .beautypress-simple-img-wraper END -->
+            </div>
+            <div class="col-md-12 col-sm-12 col-xl-6 col-lg-6">
+                <div class="beautypress-simple-text beautypress-watermark-icon">
+                    <p>Envie de vous offrir un moment de détente sous les pierres chaudes ou même d'essayer une pochette
+                            massage, prenez rendez-vous avec nos esthéticiennes pour une séance spécialement dédiée à votre
+                            le bien-être et votre beauté. Vous êtes déjà fan des centres de spa, alors pourquoi ne pas partager votre
+                            petit secret avec vos amis ou même vos collègues. Ile O Spa à Tournai offre groupe
+                            des forfaits à petits prix pour passer des moments privilégiés avec vos amis ou collègues. C'est maintenant le
+                            le temps de profiter de ces offres pour clôturer un anniversaire ou même après un
+                            conférence intense ou réunion d'affaires. Découvrez nos différents centres de la région,
+                            habitants de Lyon, Mons ou Mouscron, le centre de Tournai est idéalement situé et facilement
+                            accessible. Nos formules et horaires s'adaptent facilement à tous les scénarios, quel que soit votre
+                            situation et vos disponibilités, nous pouvons certainement vous aider à organiser votre prochain spa de groupe
+                            sortie.</p>
+                    <!-- <div class="beautypress-btn-wraper">
+                            <a href="#" class="xs-btn bg-color-purple round-btn box-shadow-btn">learn more
+                                <span></span></a>
+                        </div> -->
+                </div><!-- . END -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Fun factory section -->
+<section class="beautypress-fun-factory-section bg-color-purple">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-lg-3 col-xl-3">
+                <div class="beautypress-single-fun-factory">
+                    <i class="xsicon icon-fruit beautypress-watermark-icons watermark-icon-style-1"></i>
+                    <div class="beautypress-counter">
+                        <h2 class="numeric-count number-animate" data-value="10" data-animation-duration="3200">0
+                        </h2>
+                        <span>+</span>
+                    </div>
+                    <h5>Spécialiste</h5>
+                </div><!-- .beautypress-single-fun-factory END -->
+            </div>
+            <div class="col-md-6 col-sm-12 col-lg-3 col-xl-3">
+                <div class="beautypress-single-fun-factory">
+                    <i class="xsicon icon-nail beautypress-watermark-icons watermark-icon-style-1"></i>
+                    <div class="beautypress-counter">
+                        <h2 class="numeric-count number-animate" data-value="4000" data-animation-duration="3200">0
+                        </h2>
+                        <span>+</span>
+                    </div>
+                    <h5>Utilisateurs heureux</h5>
+                </div><!-- .beautypress-single-fun-factory END -->
+            </div>
+            <div class="col-md-6 col-sm-12 col-lg-3 col-xl-3">
+                <div class="beautypress-single-fun-factory">
+                    <i class="xsicon icon-relax beautypress-watermark-icons watermark-icon-style-1"></i>
+                    <div class="beautypress-counter">
+                        <h2 class="numeric-count number-animate" data-value="70" data-animation-duration="3200">0
+                        </h2>
+                        <span>+</span>
+                    </div>
+                    <h5>Récompenses gagnantes</h5>
+                </div><!-- .beautypress-single-fun-factory END -->
+            </div>
+            <div class="col-md-6 col-sm-12 col-lg-3 col-xl-3">
+                <div class="beautypress-single-fun-factory">
+                    <i class="xsicon icon-spa beautypress-watermark-icons watermark-icon-style-1"></i>
+                    <div class="beautypress-counter">
+                        <h2 class="numeric-count number-animate" data-value="100" data-animation-duration="3200">0
+                        </h2>
+                        <span>+</span>
+                    </div>
+                    <h5>Prestations de service</h5>
+                </div><!-- .beautypress-single-fun-factory END -->
+            </div>
+        </div>
+    </div>
+</section><!-- .beautypress-fun-factory-section END -->
+<!-- Fun factory section -->
+<!-- Simple text with image version 2-->
+<section class="beautypress-simple-text-with-img-section beautypress-simple-text-with-img-section-v2 beautypress-no-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6">
+                <div class="beautypress-simple-img-wraper">
+                    <img src="./src/assets/img/feature_img_1.png" alt="">
+                </div><!-- .beautypress-simple-img-wraper END -->
+            </div>
+            <div class="col-md-12 col-sm-12 col-xl-6 col-lg-6">
+                <div class="beautypress-simple-text beautypress-watermark-icon">
+                    <p>Notre centre est ouvert toute la semaine, et jusqu'à 23h30 les vendredis et samedis. Envie de faire plaisir à votre
+                            l'autre moitié ou votre maman alors pourquoi ne pas leur offrir un chèque cadeau utilisable à leur
+                            loisir. Nos équipes sont à votre écoute chaque semaine pour vous guider et vous guider dans le choix
+                            de soins et massages. Contactez-nous directement en ligne pour une réponse rapide. Notre gamme de
+                            soins du visage, soins du corps, massages et services esthétiques. Offrez-vous
+                            de la tête aux pieds grâce à l'Ile O Spa à Tournai, sans se ruiner.</p>
+                    <!-- <div class="beautypress-btn-wraper">
+                                <a href="#" class="xs-btn bg-color-purple round-btn box-shadow-btn">learn more
+                                    <span></span></a>
+                            </div> -->
+                </div><!-- . END -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Simple text with image end -->

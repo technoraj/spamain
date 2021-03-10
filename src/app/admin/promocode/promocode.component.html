@@ -1,0 +1,162 @@
+
+<div class="row">
+    <div class="text-center w-100 text-white bg-color-purple"  style=" height:45px;padding-top: 15px;">
+        <h6 class="">Liste des codes promotionnels</h6>
+    </div>
+    <div class="container bg-white">
+      <br />
+      <span style="border-radius:4px">Cliquez sur les éléments de la liste pour voir les détails*  </span>
+      <button class="btn edit-btn" style="float:right" data-toggle="modal" data-target="#add" (click)="addNewRow()">Ajouter un code promotionnel</button>
+      <br>
+      <br>
+      <table *ngIf="promocodes" class="table table-hover table-striped table-bordered" style="height:330px;">
+        <thead>
+          <tr>
+            <th *ngFor="let header of headers">{{header}}</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let promo of promocodes | paginate: { itemsPerPage: 5, currentPage: p }">
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(promo)"> {{ promo.code }}</td>                 
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(promo)"> {{ promo.valid_Till  | date: 'dd-MM-yyyy'  }}</td>
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(promo)"> {{ promo.percentage_off }}</td>
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(promo)"> {{ promo.no_of_times_use }}</td>
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(promo)"> {{ promo.is_Active | showLable:"value":"label": boolOption }}</td>
+                <td>
+                    <div class="row" style="padding: 10px;">
+                            <button class="btn edit-btn" data-toggle="modal" data-target="#edit" (click)="editChanges(promo)">Éditer</button>
+                            <button class="btn del-btn" data-toggle="modal" data-target="#delete" (click)="deleteRow(promo)">Effacer</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+      <!--Modal for adding formula -->
+      <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Ajouter un code promotionnel</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table *ngIf="addPromocode">
+                    <tr><td>{{ headers[0] }} :</td>
+                        <td> <input pInputText type="text" [(ngModel)]="addPromocode.code"> </td>
+                    </tr>
+                    <tr><td>{{ headers[1] }} :</td>
+                      <td> <input pInputText type="date" [ngModel]="addPromocode.valid_Till | date:'yyyy-MM-dd'" (ngModelChange)="addPromocode.valid_Till = $event"></td>
+                    </tr>
+                    <tr><td>{{ headers[2] }} :</td>
+                        <td> <input pInputText type="number" [(ngModel)]="addPromocode.percentage_off"></td>
+                    </tr> 
+                    <tr><td>{{ headers[3] }} :</td>
+                        <td> <input pInputText type="number" [(ngModel)]="addPromocode.no_of_times_use"></td>
+                    </tr>                        
+                    <tr><td>{{ headers[4] }} :</td>
+                        <td> <p-dropdown [options]="boolOption" [(ngModel)]="addPromocode.is_Active"></p-dropdown></td>
+                    </tr>
+              </table>
+            </div>
+            <div class="modal-footer">
+
+              <button type="button" class="btn green-btn" data-dismiss="modal" (click)="saveAddedRow()">Ajouter un code promotionnel</button>
+              <button type="button" class="btn sec-btn" data-dismiss="modal" (click)="clearChanges()">Proche</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Modal for viewing product -->
+      <div class="modal fade" id="view" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Code promo</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table *ngIf="viewPromocode">
+                <tr><td>{{ headers[0] }} :</td><td> {{ viewPromocode.code }}</td></tr>
+                <tr><td>{{ headers[1] }} :</td><td> {{ viewPromocode.valid_Till | date: 'dd-MM-yyyy' }}</td></tr>
+                <tr><td>{{ headers[2] }} :</td><td> {{ viewPromocode.percentage_off  }}</td></tr>
+                <tr><td>{{ headers[3] }} :</td><td> {{ viewPromocode.no_of_times_use }}</td></tr>
+                <tr><td>{{ headers[4] }} :</td><td> {{ viewPromocode.is_Active | showLable:"value":"label": boolOption }}</td></tr>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn sec-btn" data-dismiss="modal">Proche</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Modal for editing product -->
+      <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Modifier le code promotionnel</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <table *ngIf="editPromocode">
+                    <tr><td>{{ headers[0] }} :</td>
+                        <td> <input pInputText type="text" [(ngModel)]="editPromocode.code"> </td>
+                    </tr>
+                    <tr><td>{{ headers[1] }} :</td>
+                      <td> <input pInputText type="date" [ngModel]="editPromocode.valid_Till | date:'yyyy-MM-dd'" (ngModelChange)="editPromocode.valid_Till = $event"></td>
+                    </tr>
+                    <tr><td>{{ headers[2] }} :</td>
+                        <td> <input pInputText type="number" [(ngModel)]="editPromocode.percentage_off"></td>
+                    </tr> 
+                    <tr><td>{{ headers[3] }} :</td>
+                        <td> <input pInputText type="number" [(ngModel)]="editPromocode.no_of_times_use"></td>
+                    </tr>                        
+                    <tr><td>{{ headers[4] }} :</td>
+                        <td> <p-dropdown [options]="boolOption" [(ngModel)]="editPromocode.is_Active"></p-dropdown></td>
+                    </tr>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn sec-btn" data-dismiss="modal" (click)="clearChanges()">Proche</button>
+              <button type="button" class="btn green-btn" data-dismiss="modal" (click)="saveEditedRow()">Sauvegarder les modifications</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Delete Modal -->
+      <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Supprimer le code promotionnel</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Voulez-vous supprimer le code promotionnel?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn edit-btn" data-dismiss="modal" (click)="saveChanges()" >Oui</button>
+              <button type="button" class="btn sec-btn" data-dismiss="modal" (click)="clearChanges()" >Non</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

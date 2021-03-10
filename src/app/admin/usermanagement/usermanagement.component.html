@@ -1,0 +1,24 @@
+<div class="row">
+        <div class="text-center w-100 text-white bg-color-purple" style=" height:45px;padding-top: 15px;">
+            <h6 class="">Liste des utilisateurs</h6>
+        </div>
+        <div class="container bg-white">
+          <table *ngIf="users" class="table table-hover table-striped table-bordered" style="height:330px;">
+            <thead>
+              <tr>
+                <th *ngFor="let header of headers">{{header}}</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users | paginate: { itemsPerPage: 8, currentPage: p }">
+                    <td> {{ user.firstName }} {{ lastName }}</td>
+                    <td> {{ user.email }}</td>
+                    <td> {{ user.phone  }}</td>
+                    <td> {{ user.userRole  }}</td>
+                    <td> actif </td>
+                </tr>
+            </tbody>
+          </table>
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>

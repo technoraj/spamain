@@ -1,0 +1,27 @@
+<section class="bg-color-pink" style="padding: 1rem 0 3rem;">
+    <div class="row ml-2 mr-2">
+        <div class="col-md-3">
+            <ul>
+                <li class="list-group-item d-flex align-items-center bg-color-purple nav">
+                    <div class="" style="margin: 0 auto;"> 
+                        <span class="text-white" style="font-weight: bold;">Client</span>
+                    </div>
+                </li>
+                <li [ngClass]="menuItem == 'profile' ? 'list-style list-group-item d-flex tab nav-active' : 'list-style list-group-item d-flex tab'" (click)="menuItem = 'profile'">
+                    <a routerLink="/app-home/user/profile" class="nav-link"> Profil</a>
+                </li>
+                <li [ngClass]="menuItem == 'order' ? 'list-style list-group-item d-flex tab nav-active': 'list-style list-group-item d-flex tab'" (click)="menuItem = 'order'">
+                    <a routerLink="/app-home/user/order" class="nav-link"> Ordres</a>
+                </li>
+                <li class="list-style list-group-item d-flex tab">
+                    <a href="/app-home" class="nav-link" (click)="logout()">Se déconnecter</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-9 bg-white">
+            <router-outlet></router-outlet>
+        </div>
+       
+        
+    </div>
+</section>

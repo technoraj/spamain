@@ -1,0 +1,29 @@
+<div class="col-md-9">
+    <form #profileForm="ngForm">
+        <div class="row tag-boxes user-box">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6>Editer le profil</h6>
+                </div>
+                <div class="row mt-2">
+                        <div class="col-md-6 form-group"><input type="text" class="form-control" name="fistName" placeholder="first name" [(ngModel)]="userInfo.firstName">
+                        </div>
+                        <div class="col-md-6 form-group"><input type="text" class="form-control" name="lastName" placeholder="Last Name" [(ngModel)]="userInfo.lastName">
+                        </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6 form-group"><input type="email" class="form-control" name="email" readonly placeholder="Email" [(ngModel)]="userInfo.email"></div>
+                    <div class="col-md-6 form-group"><input type="phone" class="form-control" name="phone" placeholder="Phone number" [(ngModel)]="userInfo.phone">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6 form-group"><input type="text" class="form-control" name="address" placeholder="address" [(ngModel)]="userInfo.address"></div>
+                    <div class="col-md-6 form-group"><input type="text" class="form-control" name="city" placeholder="City" [(ngModel)]="userInfo.city"></div>
+                </div>
+                <div class="mt-5 text-right"><button class="btn btn-primary" type="button" (click)="saveProfile()">sauver
+                    Profil</button></div>
+            </div>
+        </div>
+    </form>
+
+</div>

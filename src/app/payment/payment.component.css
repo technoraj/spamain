@@ -1,0 +1,37 @@
+.main-form{
+    background: linear-gradient(to right, #b24592, #f15f79);
+    padding: 1rem 0 1rem;
+    background-color: #f3f3f3;
+    height: 50%;
+}
+
+.login-page {
+    width: 70%;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 500px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.payment-menu{
+    text-align: left;
+    font-size: 1em;
+    background: black;
+    color: white;
+    border-radius: 1em;
+    padding: 1em 0.7em 0.7em 1em;
+    cursor: pointer;
+}
+
+.label-name{
+    text-align: left;
+}

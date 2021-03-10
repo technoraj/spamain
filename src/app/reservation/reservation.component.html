@@ -1,0 +1,361 @@
+<div class="appointment-body  bg-color-pink">
+    <div class="beautypress-breedcrumb">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a routerLink="/app-home">Accueil</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Rendez-vous</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <section class="booking-section">
+        <div class="container">
+            <div class="row">
+                <div *ngIf="paneFirst" class="col-lg-8 col-md-12 mb-5">
+                    <div class="booking-side">
+                        <div class="side-heading">
+                            <h3 *ngIf="summary.reservationType == ReservationType.Appointment" class="text-center">Livre
+                                    un rendez-vous pour vous</h3>
+                            <h3 *ngIf="summary.reservationType == ReservationType.Care" class="text-center">Réserver un
+                                    traitement pour vous</h3>
+                        </div>
+                        <div class="contents">
+                            <div *ngIf="summary.reservationType == ReservationType.Appointment"
+                                class="form-group date-picker">
+                                <form>
+                                    <label for="">Choisissez une date</label>
+                                    <div class="input-group">
+                                        <input name="reservationDate" type="date" class="form-control" #reserveDate
+                                            [(ngModel)]="reservationDate" (change)=" update($event.target.value)">
+                                        <!-- <div class="input-group-addon input-group-append">
+                                            <span class="far fa-calendar-alt"></span>
+                                        </div> -->
+                                    </div>
+                                </form>
+                                <div class="red" *ngIf="dateError">
+                                        *Veuillez sélectionner la date
+                                </div>
+                            </div>
+                            <div *ngIf="summary.reservationType == ReservationType.Care" class="alert alert-warning">
+                                <p>Attention! Après avoir commandé votre soin, merci de contacter le salon concerné pour
+                                        choisissez une date de rendez-vous.</p>
+                            </div>
+                            <div class="choose-business">
+                                <div class="section-heading">
+                                    <h4>Choisissez votre entreprise:</h4>
+                                </div>
+                                <div class="row">
+                                    <div *ngFor="let center of centers" class="col-lg-6 col-md-6">
+                                        <div class="beautypress-single-our-feature beautypress-purple-gradient-overlay">
+                                            <img [src]="createImgPath(center.image_Id)" alt="">
+                                            <div class="beautypress-our-features-content">
+                                                <h3>{{center.name}}</h3>
+                                                <div class="beautypress-btn-wraper">
+                                                    <label for="choice-mouscron" (click)="getSessions(center)">
+                                                        <div class="xs-btn round-btn box-shadow-btn bg-color-purple">
+                                                                Choisissez ce service
+                                                            <span></span>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div *ngIf="centerError" class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <span class="red">*Veuillez sélectionner le centre</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reservation-section"
+                        *ngIf="masterSessions.length == 0 && summary.selectedCenter != null && summary.reservationType == ReservationType.Appointment">
+                        <div class="col-lg-12"> Aucune session disponible</div>
+                    </div>
+                    <div *ngIf="masterSessions.length > 0 && summary.reservationType == ReservationType.Appointment"
+                        class="reservation-section">
+                        <div class="row">
+                            <div class="col-lg-12 outer-column">
+                                <div class="row">
+                                    <div *ngFor="let sessionType of diffirentTypeSession; let i = index;"
+                                        class="col-lg-3 col-md-3 inner-column mb-4">
+                                        <div class="room-schedule">
+                                            <div class="room-heading">
+                                                <h4>{{sessionType}}</h4>
+                                                <span (click)="openModalBox(sessionType)" class="gallery-btn">Galerie</span>
+                                            </div>
+                                            <hr>
+                                            <div class="room-time">
+                                                <div class="time-box">
+
+                                                    <div *ngFor="let session of masterSessions[i]" class="card mb-3">
+                                                        <div class="card-body">
+                                                            <div
+                                                                [ngClass]="(session.isBlocked == '1' || !session.isAvailable) ? 'status reserved':'status'">
+                                                            </div>
+                                                            <div class="time">
+                                                                <p>Temps: {{session.startTime | dateToTime}} -
+                                                                    {{session.endTime | dateToTime}}</p>
+                                                            </div>
+                                                            <div class="reserve-btn-wrapper">
+                                                                <label for="time1">
+                                                                    <div role="button" (click)="selectTiming(session)"
+                                                                        [ngClass]="(session.isBlocked == '1' || !session.isAvailable) ? 'reserve-btn reserved' : 'reserve-btn'">
+                                                                        Réserve
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="summary.reservationType == ReservationType.Care">
+                        <div class="side-widget service-choice mt-3">
+                            <div class="side-heading">
+                                <h3 class="text-center">Choisissez un soin</h3>
+                            </div>
+                            <div class="widget-inner">
+                                <div class="services">
+                                    <form action="">
+                                        <div class="tab-content" id="item-tabContent">
+                                            <div class="tab-pane fade show active" id="drinks" role="tabpanel">
+                                                <div *ngIf="careError">
+                                                    <span class="red">*Veuillez sélectionner les soins</span>
+                                                </div>
+                                                <div class="item-box-wrapper">
+                                                    <div class="row">
+                                                        <div *ngFor="let service of services" class="col-lg-4 col-md-4">
+                                                            <div class="card">
+                                                                <div class="card-img">
+                                                                    <img [src]="createImgPath(service.image_Id)"
+                                                                        class="img-fluid" alt="">
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <div class="formula-title">
+                                                                        <h4>{{service.name}}</h4>
+                                                                    </div>
+                                                                    <div
+                                                                        class="price-select d-flex align-items-center justify-content-between">
+                                                                        <div class="price">
+                                                                            <span
+                                                                                class="amount">{{service.price}}€</span>
+                                                                        </div>
+                                                                        <div class="quantity">
+                                                                            <div class="input-group">
+                                                                                <button class="quantity-minus"
+                                                                                    type="button"
+                                                                                    (click)="reduceServiceCount(service)">
+                                                                                    <i
+                                                                                        class="fas fa-minus"></i></button>
+                                                                                <input class="quantity form-control"
+                                                                                    type="number" min="1" max="1000000"
+                                                                                    value="{{service.count}}" readonly>
+                                                                                <button class="quantity-plus"
+                                                                                    type="button"
+                                                                                    (click)="increaseSericeCount(service)"><i
+                                                                                        class="fas fa-plus"></i></button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="add-btn-wrapper">
+                                                                        <button type="button" class="add-btn"
+                                                                            (click)="selectService(service)">Ajouter</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 mb-5">
+                            <div class="next-page-btn text-right mt-3 col-xs-12" (click)="makeCarePayment()">
+                                <span class="next-page"><span>Effectuer le paiement</span> <i
+                                        class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div *ngIf="paneSecond" class="col-lg-8 col-md-12 mb-5">
+                    <div class="booking-side side-widget">
+                        <div class="side-heading">
+                            <h3 class="text-center">Choisissez une formule</h3>
+                        </div>
+
+                        <div class="widget-inner">
+                            <div *ngIf="formulaError">
+                                <span class="red">*Veuillez choisir une formule</span>
+                            </div>
+                            <div class="formulas-wrapper">
+                                <div class="row">
+                                    <div *ngFor="let formula of formulas" class="col-lg-3 col-md-3 np">
+                                        <div class="single-formula">
+                                            <input type="radio" name="select-formula" id="formula1" class="d-none">
+                                            <div class="card">
+                                                <div class="card-img">
+                                                    <img [src]="createImgPath(formula.image_Id)" class="img-fluid"
+                                                        alt="">
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="formula-title">
+                                                        <h4>{{formula.name}}</h4>
+                                                    </div>
+                                                    <div
+                                                        class="price-select d-flex align-items-center justify-content-between">
+                                                        <div class="price">
+                                                            <span class="amount">{{formula.price}}€</span>
+                                                        </div>
+                                                        <div class="choose-btn-wrapper">
+                                                            <label for="formula1">
+                                                                <a class="choose-btn" role="button"
+                                                                    (click)="selectFormula(formula)">Choose</a>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div *ngIf="formulas.length == 0" class="col-lg-3 col-md-3 np">
+                                            Aucune formule disponible
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side-widget service-choice mt-3">
+                        <div class="side-heading">
+                            <h3 class="text-center">Choisissez un service</h3>
+                        </div>
+                        <div class="widget-inner">
+                            <div class="services">
+                                <nav>
+                                    <div class="nav nav-tabs" id="item-tab" role="tablist">
+                                        <span *ngFor="let category of serviceCategories"
+                                            [ngClass]="selectedCategory == category.name ? 'nav-item pointer nav-link active' : 'pointer nav-item nav-link'"
+                                            data-toggle="tab" role="tab" (click)="selectCategory(category.name)">
+                                            <div class="tab-inner">
+                                                <i class="{{category.icon}}"></i>
+                                                <p>{{category.name}}</p>
+                                            </div>
+                                        </span>
+
+                                    </div>
+                                </nav>
+                                <form action="">
+                                    <div class="tab-content" id="item-tabContent">
+                                        <div class="tab-pane fade show active" id="drinks" role="tabpanel">
+                                            <div class="item-box-wrapper">
+                                                <div *ngIf="services.length > 0" class="row">
+                                                    <div *ngFor="let service of services" class="col-lg-4 col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img [src]="createImgPath(service.image_Id)"
+                                                                    class="img-fluid" alt="">
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="formula-title">
+                                                                    <h4>{{service.name}}</h4>
+                                                                </div>
+                                                                <div
+                                                                    class="price-select d-flex align-items-center justify-content-between">
+                                                                    <div class="price">
+                                                                        <span class="amount">{{service.price}}€</span>
+                                                                    </div>
+                                                                    <div class="quantity">
+                                                                        <div class="input-group">
+                                                                            <button class="quantity-minus" type="button"
+                                                                                (click)="reduceServiceCount(service)">
+                                                                                <i class="fas fa-minus"></i></button>
+                                                                            <input class="quantity form-control"
+                                                                                type="number" min="1" max="1000000"
+                                                                                value="{{service.count}}" readonly>
+                                                                            <button class="quantity-plus" type="button"
+                                                                                (click)="increaseSericeCount(service)"><i
+                                                                                    class="fas fa-plus"></i></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="add-btn-wrapper">
+                                                                    <button type="button" class="add-btn"
+                                                                        (click)="selectService(service)">Ajouter</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row" *ngIf="services.length == 0">
+                                                    <div class="col-lg-8 col-md-8">
+                                                            Aucun service disponible pour ce service de catégorie
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="previous-page-btn text-left mt-3 col-xs-3" (click)="moveToPreviousStep()">
+                            <span class="previous-page"><i class="fas fa-arrow-left"></i><span>Aller
+                                    retourner</span></span>
+                        </div>
+                        <div class="next-page-btn text-right mt-3 col-xs-3" (click)="makePayment()">
+                            <span class="next-page"><span>Effectuer le paiement</span> <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <app-summary [summaryData]="summary" [saveReservation]="saveReservation"
+                        (selectedService)="changeService($event)"></app-summary>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- The Modal -->
+    <div *ngIf="openModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="container2">
+                <span (click)="openModal = false" class="closebtn">&times;</span>
+                <img src="src/assets/img/{{mainModalImage}}" id="expandedImg" style="width:100%">
+                <div id="imgtext">{{mainModalImage | imageNameTransform}}</div>
+            </div>
+            <div class="row">
+                <div (click)="mainModalImage = selectedRoomImages[0]?.images[0]" class="column">
+                    <img src="src/assets/img/{{selectedRoomImages[0]?.images[0]}}" alt="Nature" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div (click)="mainModalImage = selectedRoomImages[0]?.images[1]" class="column">
+                    <img src="src/assets/img/{{selectedRoomImages[0]?.images[1]}}" alt="Snow" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div (click)="mainModalImage = selectedRoomImages[0]?.images[2]" class="column">
+                    <img src="src/assets/img/{{selectedRoomImages[0]?.images[2]}}" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div (click)="mainModalImage = selectedRoomImages[0]?.images[3]" class="column">
+                    <img src="src/assets/img/{{selectedRoomImages[0]?.images[3]}}" alt="Lights" style="width:100%" onclick="myFunction(this);">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

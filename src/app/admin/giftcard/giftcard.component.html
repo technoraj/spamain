@@ -1,0 +1,182 @@
+
+<div class="row">
+        <div class="text-center w-100 text-white bg-color-purple"  style=" height:45px;padding-top: 15px;">
+            <h6 class="">Liste des cartes-cadeaux</h6>
+        </div>
+        <div class="container bg-white">
+          <br />
+          <span style="border-radius:4px">Cliquez sur les éléments de la liste pour voir les détails * </span>
+          <button class="btn edit-btn" style="float:right" data-toggle="modal" data-target="#add" (click)="addNewRow()">Ajouter une carte-cadeau</button>
+          <br>
+          <br>
+          <table *ngIf="giftCards" class="table table-hover table-striped table-bordered" style="height:330px;">
+            <thead>
+              <tr>
+                <th *ngFor="let header of headers">{{header}}</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let giftcard of giftCards | paginate: { itemsPerPage: 5, currentPage: p }">
+                    <td data-toggle="modal" data-target="#view" (click)="showFormula(giftcard)"> <img [src]="createImgPath(giftcard.image_Id)" alt="" width="60" height="60"></td>
+                    <td data-toggle="modal" data-target="#view" (click)="showFormula(giftcard)"> {{ giftcard.name }}</td>
+                    <td data-toggle="modal" data-target="#view" (click)="showFormula(giftcard)"> {{ giftcard.price }}</td>                  
+                    <td data-toggle="modal" data-target="#view" (click)="showFormula(giftcard)"> {{ giftcard.startTime  | date: 'dd-MM-yyyy'  }}</td>
+                    <td data-toggle="modal" data-target="#view" (click)="showFormula(giftcard)"> {{ giftcard.endTime | date: 'dd-MM-yyyy' }}</td>
+                    <td data-toggle="modal" data-target="#view" (click)="showFormula(giftcard)"> {{ giftcard.detail }}</td>
+                    <td data-toggle="modal" data-target="#view" (click)="showFormula(giftcard)"> {{ giftcard.status | showLable:"value":"label": boolOption }}</td>
+                    <td>
+                        <div class="row" style="padding: 10px;">
+                                <button class="btn edit-btn" data-toggle="modal" data-target="#edit" (click)="editChanges(giftcard)">Éditer</button>
+                                <button class="btn del-btn" data-toggle="modal" data-target="#delete" (click)="deleteRow(giftcard)">Effacer</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+          </table>
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    
+          <!--Modal for adding formula -->
+          <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Ajouter une carte-cadeau</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <table *ngIf="addGiftCard">
+                        <tr><td>{{ headers[0] }} :</td>
+                            <td>
+                                <p-fileUpload #fileUpload  mode="basic" accept="image/*" maxFileSize="1000000" customUpload="true" (uploadHandler)="uploadFile($event,addGiftCard,fileUpload)" [auto]="true"></p-fileUpload>
+                            </td>
+                        </tr>
+                        <tr><td>{{ headers[1] }} :</td>
+                            <td> <input pInputText type="text" [(ngModel)]="addGiftCard.name"> </td>
+                        </tr>
+                        <tr><td>{{ headers[2] }} :</td>
+                            <td> <input pInputText type="number" [(ngModel)]="addGiftCard.price"></td>
+                        </tr>                       
+                        <tr><td>{{ headers[3] }} :</td>
+                            <td> <input pInputText type="date" [ngModel]="startDate | date:'yyyy-MM-dd'"  (ngModelChange)="startDate = $event"></td>
+                        </tr>
+                        <tr><td>{{ headers[4] }} :</td>
+                            <td> <input pInputText type="date" [ngModel]="endDate | date:'yyyy-MM-dd'" (ngModelChange)="endDate = $event"></td>
+                        </tr>
+                        <tr><td>{{ headers[5] }} :</td>
+                            <td> <input pInputText type="text" [(ngModel)]="addGiftCard.detail"></td>
+                        </tr>
+                        <tr><td>{{ headers[6] }} :</td>
+                            <td> <p-dropdown [options]="boolOption" [(ngModel)]="addGiftCard.status"></p-dropdown></td>
+                        </tr>
+                  </table>
+                </div>
+                <div class="modal-footer">
+    
+                  <button type="button" class="btn green-btn" data-dismiss="modal" (click)="saveAddedRow()">Ajouter une carte-cadeau</button>
+                  <button type="button" class="btn sec-btn" data-dismiss="modal" (click)="clearChanges()">Proche</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!--Modal for viewing product -->
+          <div class="modal fade" id="view" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Carte cadeau</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <table *ngIf="viewGiftCard">
+                    <tr><td>{{ headers[0] }} :</td><td> {{ viewGiftCard.image_Id }}</td></tr>
+                    <tr><td>{{ headers[1] }} :</td><td> {{ viewGiftCard.name }}</td></tr>
+                    <tr><td>{{ headers[2] }} :</td><td> {{ viewGiftCard.price }}</td></tr>
+                    <tr><td>{{ headers[3] }} :</td><td> {{ viewGiftCard.startTime  | date: 'dd-MM-yyyy' }}</td></tr>
+                    <tr><td>{{ headers[4] }} :</td><td> {{ viewGiftCard.endTime  |date: 'dd-MM-yyyy' }}</td></tr>
+                    <tr><td>{{ headers[5] }} :</td><td> {{ viewGiftCard.detail }}</td></tr>
+                    <tr><td>{{ headers[6] }} :</td><td> {{ viewGiftCard.status | showLable:"value":"label": boolOption }}</td></tr>
+                  </table>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn sec-btn" data-dismiss="modal">Proche</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!--Modal for editing product -->
+          <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Modifier la carte-cadeau</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                        <table *ngIf="editGiftCard">
+                                <tr><td>{{ headers[0] }} :</td>
+                                    <td>
+                                        <p-fileUpload #fileUpload  mode="basic" accept="image/*" maxFileSize="1000000" customUpload="true" (uploadHandler)="uploadFile($event,editGiftCard,fileUpload)" [auto]="true"></p-fileUpload>
+                                    </td>
+                                </tr>
+                                <tr><td>{{ headers[1] }} :</td>
+                                    <td> <input pInputText type="text" [(ngModel)]="editGiftCard.name"> </td>
+                                </tr>
+                                <tr><td>{{ headers[2] }} :</td>
+                                    <td> <input pInputText type="number" [(ngModel)]="editGiftCard.price"></td>
+                                </tr>                       
+                                <tr><td>{{ headers[3] }} :</td>
+                                  <td> <input pInputText type="date" [ngModel]="startDate | date:'yyyy-MM-dd'"  (ngModelChange)="startDate = $event"></td>
+                                </tr>
+                                <tr><td>{{ headers[4] }} :</td>
+                                  <td> <input pInputText type="date" [ngModel]="endDate | date:'yyyy-MM-dd'" (ngModelChange)="endDate = $event"></td>
+                                </tr>
+                                <tr><td>{{ headers[5] }} :</td>
+                                    <td> <input pInputText type="text" [(ngModel)]="editGiftCard.detail"></td>
+                                </tr>
+                                <tr><td>{{ headers[6] }} :</td>
+                                    <td> <p-dropdown [options]="boolOption" [(ngModel)]="editGiftCard.status"></p-dropdown></td>
+                                </tr>
+                          </table>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn sec-btn" data-dismiss="modal" (click)="clearChanges()">Proche</button>
+                  <button type="button" class="btn green-btn" data-dismiss="modal" (click)="saveEditedRow()">Sauvegarder les modifications</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Delete Modal -->
+          <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Supprimer la carte-cadeau</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Voulez-vous supprimer la carte-cadeau?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn edit-btn" data-dismiss="modal" (click)="saveChanges()" >Oui</button>
+                  <button type="button" class="btn sec-btn" data-dismiss="modal" (click)="clearChanges()" >Non</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

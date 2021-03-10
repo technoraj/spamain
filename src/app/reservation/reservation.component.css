@@ -1,0 +1,158 @@
+.center_box{
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 25px;
+    padding-top: 1%;
+    color: white;
+    margin-left: 5%;
+}
+
+.margin_top{
+    margin-top: 2%;
+}
+
+
+.not_active{
+    background-color: #1d1d1e;
+}
+
+.session_style{
+    margin-left: 3%;
+}
+
+.session_header{
+    background-color: black;
+    color: white;
+    height: 20%;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.date_lable{
+    font-size: 20px;
+    margin: 0 2%;
+}
+
+.service_box{
+    background: #705eae;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    padding: 15px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.second_panel{
+    margin-left: 2%;
+}
+
+.summery_panel{
+    margin-left: 2%;
+}
+
+.margin_bottom{
+    margin-bottom: 3%;
+}
+
+.appointment-body{
+    background: #BFBFBF;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.red{
+    color:red;;
+}
+
+.modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin-top: 10%;
+    margin-left: 10%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The expanding image container */
+  .container2 {
+    position: relative;
+    display: block;
+  }
+  
+  /* Expanding image text */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  /* Closable button inside the expanded image */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }

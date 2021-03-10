@@ -1,0 +1,10 @@
+td{
+    max-width: 250px;
+    word-wrap:break-word;
+}
+.btn{
+    color: white !important;
+}
+.p-dropdown, .p-component{
+    width: 100% !important;
+}

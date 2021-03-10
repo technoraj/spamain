@@ -1,0 +1,234 @@
+<div *ngFor="let table of typeOfTable" class="row">
+    <div class="text-center w-100 text-white bg-color-purple" style=" height:45px;padding-top: 15px;">
+        <h6 class="">{{table}}</h6>
+    </div>
+    <div *ngIf="table == typeOfTable[0]" class="container">
+        <br />
+        <table class="table table-hover table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Centre</th>
+                    <th>Date</th>
+                    <th>Horaire</th>
+                    <th>Prix</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let appointment of appointments">
+                    <td>{{appointment.center.name}} </td>
+                    <td>{{appointment.date | date }}</td>
+                    <td>{{appointment.session.startTime | dateToTime}}- {{appointment.session.endTime | dateToTime}}</td>
+                    <td>{{appointment.amount}}€</td>
+                    <td><button class="btn check-btn" (click)="chooseAppointment(appointment)">Vérifier</button>
+                    </td>
+                </tr>
+                <tr *ngIf="appointments.length == 0">
+                    <td colspan="10">
+                        Aucun rendez-vous disponible
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+        <!--Modal for viewing treatment -->
+        <div class="modal fade show modal-background" [ngStyle]="{'display': appointmentPopUp}">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Informations de rendez-vous</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" (click)="appointmentPopUp = 'none'">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table>
+                            <tr>
+                                <td>Centre:</td>
+                                <td>{{selectedAppointment?.center?.name}}</td>
+                            </tr>
+                            <tr>
+                                <td>Date:</td>
+                                <td>{{selectedAppointment?.date | date }}</td>
+                            </tr>
+                            <tr>
+                                <td>Horaire:</td>
+                                <td>{{selectedAppointment?.session?.startTime | dateToTime}} - {{selectedAppointment?.session?.endTime | dateToTime}}</td>
+                            </tr>
+                            <tr>
+                                <td>Pièce:</td>
+                                <td> {{selectedAppointment?.session?.roomType}}</td>
+                            </tr>
+                            <tr>
+                                <td>Prix:</td>
+                                <td> {{selectedAppointment?.amount}}€</td>
+                            </tr>
+                            <tr>
+                                <td>Statut de paiement:</td>
+                                <td> {{selectedAppointment?.paymentStatus}}</td>
+                            </tr>
+                            <tr>
+                                <td>Formule sélectionnée:</td>
+                                <td> {{selectedAppointment?.formula?.name}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn sec-btn" (click)="appointmentPopUp = 'none'">Proche</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="table == typeOfTable[1]" class="container">
+        <br />
+        <table class="table table-hover table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Centre</th>
+                    <th>Prestations de service</th>
+                    <th>Quantité totale</th>
+                    <th>Prix</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let care of cares">
+                    <td>{{care.center.name}} </td>
+                    <td>{{care.services}}</td>
+                    <td>{{care.quantity}}</td>
+                    <td>{{care.amount}}€</td>
+                    <td><button class="btn check-btn" (click)="chooseCare(care)">Vérifier</button>
+                    </td>
+                </tr>
+                <tr *ngIf="cares.length == 0">
+                    <td colspan="10">
+                        Aucun soin disponible
+                    </td>
+                    
+                </tr>
+
+
+            </tbody>
+        </table>
+        <!--Modal for viewing treatment -->
+        <div class="modal fade show modal-background" [ngStyle]="{'display': carePopUp}">
+            <div class="modal-dialog modal-dialog-centered" role="document">+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Informations d'entretien</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" (click)="carePopUp = 'none'">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table>
+                            <tr>
+                                <td>Centre:</td>
+                                <td>{{selectedCare?.center?.name}}</td>
+                            </tr>
+                            <tr>
+                                <td>Prestations de service:</td>
+                                <td>{{selectedCare?.services}}</td>
+                            </tr>
+                            <tr>
+                                <td>Quantité totale:</td>
+                                <td>{{selectedCare?.quantity}}</td>
+                            </tr>
+                            <tr>
+                                <td>Prix:</td>
+                                <td> {{selectedCare?.amount}}€</td>
+                            </tr>
+                            <tr>
+                                <td>Statut de paiement:</td>
+                                <td> {{selectedCare?.paymentStatus}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn sec-btn" (click)="carePopUp = 'none'">Proche</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="table == typeOfTable[2]" class="container">
+        <br />
+        <table class="table table-hover table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Code de la carte cadeau</th>
+                    <th>Nom du destinataire</th>
+                    <th>Commentaire</th>
+                    <th>Est utilisé</th>
+                    <th>Prix</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let giftCard of giftCards">
+                    <td>{{giftCard.giftCardCode | uppercase}} </td>
+                    <td>{{giftCard.recipientName}}</td>
+                    <td>{{giftCard.comment}}</td>
+                    <td>{{giftCard.isUsed == true ? 'Yes' :  'No'}}</td>
+                    <td>{{giftCard.price}}€</td>
+                    <td><button class="btn check-btn" (click)="chooseGiftCard(giftCard)">Vérifier</button>
+                    </td>
+                </tr>
+                <tr *ngIf="giftCards.length == 0">
+                    <td colspan="10">
+                        Aucune carte-cadeau disponible
+                    </td>
+                    
+                </tr>
+
+
+            </tbody>
+        </table>
+        <!--Modal for viewing treatment -->
+        <div class="modal fade show modal-background" [ngStyle]="{'display': giftCardPopUp}">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Carte cadeau</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" (click)="giftCardPopUp = 'none'">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table>
+                            <tr>
+                                <td>Code de la carte cadeau: </td>
+                                <td>{{selectGiftCard?.giftCardCode}}</td>
+                            </tr>
+                            <tr>
+                                <td>Nom du destinataire: </td>
+                                <td>{{selectGiftCard?.recipientName}}</td>
+                            </tr>
+                            <tr>
+                                <td>Commentaire:</td>
+                                <td>{{selectGiftCard?.comment}}</td>
+                            </tr>
+                            <tr>
+                                <td>Est utilisé:</td>
+                                <td> {{selectGiftCard?.isUsed == true ? 'Yes' :  'No'}}</td>
+                            </tr>
+                            <tr>
+                                <td>Statut de paiement:</td>
+                                <td> {{selectGiftCard?.paymentStatus}}</td>
+                            </tr>
+                            <tr>
+                                <td>Prix:</td>
+                                <td> {{selectGiftCard?.price}}€</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn sec-btn" (click)="giftCardPopUp = 'none'">Proche</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

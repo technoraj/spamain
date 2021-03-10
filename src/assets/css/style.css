@@ -1,0 +1,7102 @@
+
+
+:root {
+    /*color purple*/
+    --color-purple: #6A1B9A;
+    /* color navy blue */
+    --color-navy-blue: #590D88;
+    /* color pink */
+    --color-pink: #EC5598;
+    /* color pink 2 */
+    --color-pink-2: #E6377A;
+    /* color white */
+    --color-white: #FFFFFF;
+    /* color semi black */
+    --color-semi-black: #222222;
+    /* color light blck */
+    --color-semi-ash: #777777;
+    /* color sky blue */
+    --color-sky-blue: #00BCD4;
+    /* color light red */
+    --light-red: #FF4641;
+    /* color orange */
+    --color-orange: #F79700;
+    /* cyan color */
+    --color-cyan: #4DB6AC;
+    /* color light chocolate */
+    --color-chocolate: #E3BDA8;
+    /* font family cursive */
+    --font-cursive: 'Niconne', cursive;
+    /* icons font 1 */
+    --font-icons-1: 'FontAwesome';
+    /* icons font 2 */
+    --font-icons-2: 'iconfont';
+    /* box-shadow hover */
+    --hover-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.1);
+    /* box-shadow primary */
+    --primary-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    --edit-blue: #0069e0;
+    --del-red: #DC3545;
+    --agree-green: #28A745;
+    --sec-grey:#868E96;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-white);
+    font-size: 14px;
+    color: var(--color-semi-ash);
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-weight: 400;
+    overflow-x: hidden;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+}
+
+img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+a, a:hover, a:active, a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+input[type="submit"]:active, input[type="submit"]:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+a, button, a span {
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+
+.btn.extra-width {
+    padding: 13px 40px;
+}
+
+.btn:focus, .btn:active {
+    outline: inherit;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    /*    direction: rtl;*/
+}
+
+p {
+    margin: 0 0 15px;
+}
+
+ol, ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    outline: none;
+}
+
+.form-control {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    font-size: 16px;
+    height: 45px;
+}
+
+.form-control:focus {
+    border-color: #f56363;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+}
+
+p:last-child {
+    margin-bottom: 0px;
+}
+
+button:focus, select:focus, select:active {
+    outline: none;
+}
+
+/*
+Section
+*/
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-70 {
+    margin-bottom: 70px;
+}
+
+.mt-70 {
+    margin-top: 70px;
+}
+
+.element-header-example {
+    font-weight: 200;
+    text-transform: capitalize;
+    border-bottom: 1px dotted #EDEDED;
+    padding-bottom: 30px;
+}
+
+.xs-row {
+    display: flex;
+    margin: 0 -15px;
+}
+
+.xs-row .xs-col-5 {
+    width: calc((100% / 12) * 5);
+    padding: 0 15px;
+}
+
+.xs-row .xs-col-2 {
+    width: calc((100% / 12) * 2.3);
+    padding: 0 15px;
+    margin: 0 20px;
+}
+
+.xs-row .xs-col-9 {
+    width: calc((100% / 12) * 9);
+    padding: 0 15px;
+}
+
+.xs-row .xs-col-3 {
+    width: calc((100% / 12) * 3);
+    padding: 0 15px;
+}
+
+/* ===================== beautypress bg =================== */
+
+.beautypress-bg {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+/* beautypress no background color */
+
+.beautypress-no-bg {
+    background-color: transparent !important;
+}
+
+/* ====================== beautypress buttons =========================== */
+
+.beautypress-btn-wraper a {
+    margin: 0 20px 0 0;
+}
+
+.beautypress-btn-wraper a:last-child {
+    margin: 0;
+}
+
+.beautypress-btn {
+    position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 15px 36px;
+    z-index: 1;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    background-color: var(--color-semi-black);
+    color: var(--color-white);
+    text-transform: uppercase;
+    overflow: hidden;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: 700;
+}
+
+.beautypress-btn.bg-color-white:hover {
+    color: var(--color-semi-black) !important;
+}
+
+.xs-btn {
+    overflow: hidden;
+    /*margin: 1rem auto;*/
+    text-transform: uppercase;
+    background: #6A1B9A;
+    border-radius: 5px;
+    padding: 15px 36px;
+    color: #fff;
+    transition: 0.4s ease-in-out;
+    z-index: 2;
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.xs-btn span {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 5px;
+    background: #EC5598;
+    -webkit-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.xs-btn:hover span {
+    width: 335%;
+    height: 562.5px;
+}
+
+.xs-btn.round-btn {
+    border-radius: 5px;
+}
+
+.xs-btn.box-shadow-btn {
+    box-shadow: var(--primary-shadow);
+}
+
+.beautypress-btn.block-btn {
+    width: 100%;
+}
+
+.beautypress-btn.round-btn {
+    border-radius: 5px;
+}
+
+.beautypress-btn.box-shadow-btn {
+    box-shadow: var(--primary-shadow);
+}
+
+.beautypress-btn:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+.beautypress-welcome-slider-wraper .customNavigation .welcome-next, .beautypress-welcome-slider-wraper .customNavigation .welcome-prev, .beautypress-welcome-slider .owl-nav .owl-prev, .beautypress-welcome-slider .owl-nav .owl-next {
+    background-color: transparent;
+    border: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 9;
+}
+
+.beautypress-welcome-slider-wraper .customNavigation .next-prev-btn {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.039);
+    border-radius: 5px;
+    height: 70px;
+    width: 70px;
+    background-color: var(--color-cyan);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    color: var(--color-white);
+    font-size: 2.143em;
+    text-align: center;
+    line-height: 70px;
+}
+
+.beautypress-welcome-slider-wraper .customNavigation .next-prev-btn:hover {
+    background-color: var(--color-chocolate);
+    color: var(--color-white);
+}
+
+.beautypress-btn:hover {
+    color: var(--color-white) !important;
+}
+
+.xs-btn:hover {
+    color: var(--color-white) !important;
+}
+
+.xs-btn.bg-color-cyan span {
+    background-color: var(--color-chocolate);
+}
+
+.xs-btn.bg-chocolate span {
+    background-color: var(--color-cyan);
+}
+
+.xs-btn.bg-color-pink span, .xs-btn.bg-color-sky-blue span, .xs-btn.bg-color-white span {
+    background-color: var(--color-purple);
+}
+
+.xs-btn.bg-color-purple span {
+    background-color: var(--color-pink);
+}
+
+.xs-btn.bg-color-purple.purple-2 span {
+    background-color: var(--light-red);
+}
+
+.xs-btn.bg-color-red span {
+    background-color: var(--color-purple);
+}
+
+.xs-btn.bg-color-green span {
+    background-color: var(--light-red);
+}
+
+.xs-btn.small-round-btn span {
+    background-color: #339188;
+}
+
+.beautypress-btn.small-round-btn {
+    border-radius: 4px;
+    box-shadow: var(--primary-shadow);
+    font-weight: 700;
+    padding: 15px 42px;
+    background-color: #58B7AC;
+}
+
+.gradient-btn {
+    background-image: -webkit-linear-gradient( 0deg, rgb(211, 16, 39) 0%, rgb(125, 0, 254) 0%, rgb(213, 43, 255) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(211, 16, 39) 0%, rgb(125, 0, 254) 0%, rgb(213, 43, 255) 100%);
+}
+
+/* ================= section padding =======================*/
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.beautypress-padding-bottom {
+    padding: 0 0 120px;
+}
+
+/* ==================== section heading ================================*/
+
+.beautypress-section-headinig {
+    padding: 120px 0 80px 0;
+    text-align: center;
+}
+
+.beautypress-section-headinig.beautypress-section-padding-minus {
+    padding: 0 0 80px 0;
+}
+
+.beautypress-section-headinig h2 {
+    margin: 0 0 12px;
+    color: var(--color-pink);
+    font-family: var(--font-cursive);
+    font-size: 2.143em;
+}
+
+.beautypress-section-headinig h3 {
+    margin: 0;
+    color: var(--color-semi-black);
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 2.857em;
+    letter-spacing: -2px;
+}
+
+.beautypress-section-headinig.beautypress-section-headinig-white h3 {
+    color: var(--color-white)
+}
+
+/* water mark title */
+
+.beautypress-watermark-title h2 {
+    position: relative;
+}
+
+.beautypress-watermark-title h2:before {
+    position: absolute;
+    content: attr(data-title);
+    left: 0;
+    top: 0;
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--color-semi-black);
+}
+
+/*=========================== image Magnific Popup for zoom animation  =======================*/
+
+.mfp-with-zoom .mfp-container, .mfp-with-zoom.mfp-bg {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, .mfp-with-zoom.mfp-removing.mfp-bg {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+/*============================== color list =======================================*/
+
+.color-pink {
+    color: var(--color-pink) !important;
+}
+
+.color-purple {
+    color: var(--color-purple) !important;
+}
+
+.color-black {
+    color: var(--color-semi-black) !important;
+}
+
+.color-sky-blue {
+    color: var(--color-sky-blue) !important;
+}
+
+.color-white {
+    color: var(--color-white) !important;
+}
+
+.color-red {
+    color: var(--light-red) !important;
+}
+
+.color-cyan {
+    color: var(--color-cyan) !important;
+}
+
+.color-navy-blue {
+    color: var(--color-navy-blue) !important;
+}
+
+.color-chocolate {
+    color: var(--color-chocolate) !important;
+}
+
+.color-gradient {
+    color: rgb(211, 16, 39);
+    background: -webkit-linear-gradient( 0deg, rgb(211, 16, 39) 0%, rgb(125, 0, 254) 0%, rgb(213, 43, 255) 100%);
+    /*background: -ms-linear-gradient( 0deg, rgb(211,16,39) 0%, rgb(125,0,254) 0%, rgb(213,43,255) 100%);*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* background color list */
+
+.bg-color-red {
+    background-color: var(--light-red) !important;
+}
+
+.bg-color-pink {
+    background-color: var(--color-pink) !important;
+}
+
+.bg-color-pink-2 {
+    background-color: var(--color-pink-2) !important;
+}
+
+.bg-color-sky-blue {
+    background-color: var(--color-sky-blue) !important;
+}
+
+.bg-color-purple {
+    background-color: var(--color-purple) !important;
+}
+
+.bg-color-black {
+    background-color: var(--color-semi-black) !important;
+}
+
+.bg-color-white {
+    background-color: var(--color-white) !important;
+}
+
+.bg-color-cyan {
+    background-color: var(--color-cyan) !important;
+}
+
+.bg-navy-blue {
+    background-color: var(--color-navy-blue) !important;
+}
+
+.bg-chocolate {
+    background-color: var(--color-chocolate) !important;
+}
+
+.bg-dark-green {
+    background-color: #249788 !important;
+}
+
+.bg-color-green {
+    background-color: #4CA14B !important;
+}
+
+.bg-color-gray {
+    background-color: #eef2f5 !important;
+}
+
+.bg-color-gray-2 {
+    background-color: #F9F9F9;
+}
+
+.bg-green-2 {
+    background-color: #8FC351 !important;
+}
+
+/*======================= beautypress overlay list ==========================*/
+
+.beautypress-black-overlay {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: -1;
+    backface-visibility: hidden;
+}
+
+.beautypress-purple-overlay, .beautypress-pink-overlay, .beautypress-sky-blue-overlay, .beautypress-white-overlay, .beautypress-chocolate-overlay {
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.beautypress-purple-overlay:before, .beautypress-pink-overlay:before, .beautypress-sky-blue-overlay:before, .beautypress-single-team:before, .beautypress-single-team:after, .beautypress-white-overlay:before, .beautypress-chocolate-overlay:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.beautypress-purple-overlay:before {
+    background-image: -webkit-linear-gradient( 90deg, rgb(211, 16, 39) 0%, rgb(125, 0, 254) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(211, 16, 39) 0%, rgb(125, 0, 254) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.beautypress-pink-overlay:before {
+    background-image: -webkit-linear-gradient( 90deg, rgb(125, 0, 254) 0%, rgb(236, 85, 152) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(125, 0, 254) 0%, rgb(236, 85, 152) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.beautypress-sky-blue-overlay:before {
+    background-image: -webkit-linear-gradient( 90deg, rgb(236, 85, 152) 0%, rgb(0, 188, 212) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(236, 85, 152) 0%, rgb(0, 188, 212) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.beautypress-white-overlay:before {
+    background-image: -webkit-linear-gradient( 90deg, rgb(226, 185, 163) 0%, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(226, 185, 163) 0%, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 0) 100%);
+}
+
+.beautypress-light-overlay.beautypress-purple-overlay:before {
+    background-image: -webkit-linear-gradient( 90deg, rgb(0, 0, 0) 0%, rgb(106, 27, 154) 0%, rgba(151, 95, 184, 0.5) 30%, rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(0, 0, 0) 0%, rgb(106, 27, 154) 0%, rgba(151, 95, 184, 0.5) 30%, rgba(255, 255, 255, 0) 100%);
+}
+
+.beautypress-light-overlay.beautypress-pink-overlay:before {
+    background-image: -webkit-linear-gradient( 90deg, rgb(0, 0, 0) 0%, rgb(236, 85, 152) 0%, rgba(242, 136, 183, 0.5) 30%, rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(0, 0, 0) 0%, rgb(236, 85, 152) 0%, rgba(242, 136, 183, 0.5) 30%, rgba(255, 255, 255, 0) 100%);
+}
+
+.beautypress-light-overlay.beautypress-sky-blue-overlay:before {
+    background-image: -webkit-linear-gradient( 90deg, rgb(0, 0, 0) 0%, rgb(0, 188, 212) 0%, rgba(77, 208, 225, 0.5) 30%, rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(0, 0, 0) 0%, rgb(0, 188, 212) 0%, rgba(77, 208, 225, 0.5) 30%, rgba(255, 255, 255, 0) 100%);
+}
+
+.beautypress-single-team.beautypress-purple-overlay:before {
+    background-image: -webkit-linear-gradient( 90deg, rgb(211, 16, 39) 0%, rgb(125, 0, 254) 0%, rgba(255, 255, 255, 0) 50%);
+    background-image: -ms-linear-gradient( 90deg, rgb(211, 16, 39) 0%, rgb(125, 0, 254) 0%, rgba(255, 255, 255, 0) 50%);
+}
+
+.beautypress-single-team.beautypress-pink-overlay:before {
+    background-image: -webkit-linear-gradient( 90deg, rgb(125, 0, 254) 0%, rgb(236, 85, 152) 0%, rgba(255, 255, 255, 0) 50%);
+    background-image: -ms-linear-gradient( 90deg, rgb(125, 0, 254) 0%, rgb(236, 85, 152) 0%, rgba(255, 255, 255, 0) 50%);
+}
+
+.beautypress-single-team.beautypress-sky-blue-overlay:before {
+    background-image: -webkit-linear-gradient( 90deg, rgb(236, 85, 152) 0%, rgb(0, 188, 212) 0%, rgba(255, 255, 255, 0) 50%);
+    background-image: -ms-linear-gradient( 90deg, rgb(236, 85, 152) 0%, rgb(0, 188, 212) 0%, rgba(255, 255, 255, 0) 50%);
+}
+
+.beautypress-single-team.beautypress-purple-overlay:after {
+    background-image: -webkit-linear-gradient( 90deg, rgb(211, 16, 39) 0%, rgb(125, 0, 254) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(211, 16, 39) 0%, rgb(125, 0, 254) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.beautypress-single-team.beautypress-pink-overlay:after {
+    background-image: -webkit-linear-gradient( 90deg, rgb(125, 0, 254) 0%, rgb(236, 85, 152) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(125, 0, 254) 0%, rgb(236, 85, 152) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.beautypress-single-team.beautypress-sky-blue-overlay:after {
+    background-image: -webkit-linear-gradient( 90deg, rgb(236, 85, 152) 0%, rgb(0, 188, 212) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(236, 85, 152) 0%, rgb(0, 188, 212) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.beautypress-black-gradient-overlay {
+    position: relative;
+}
+
+.beautypress-black-gradient-overlay:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: -webkit-linear-gradient( 90deg, rgb(227, 185, 163) 0%, rgb(0, 0, 0) 0%, rgba(77, 77, 77, 0.5) 30%, rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(227, 185, 163) 0%, rgb(0, 0, 0) 0%, rgba(77, 77, 77, 0.5) 30%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* prelaoder */
+
+.spinner-eff {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.spinner-eff.spinner-eff-3 .circle {
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.spinner-eff.spinner-eff-3 .circle-1 {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    -webkit-animation: pulse 1.6s linear 0s infinite;
+    animation: pulse 1.6s linear 0s infinite;
+}
+
+.spinner-eff.spinner-eff-3 .circle-2 {
+    width: 66.6%;
+    height: 66.6%;
+    top: 16.5%;
+    -webkit-animation: pulse-2 1.6s linear 0s infinite;
+    animation: pulse-2 1.6s linear 0s infinite;
+}
+
+.spinner-eff.spinner-eff-3 .circle-3 {
+    width: 33.3%;
+    height: 33.3%;
+    top: 33.3%;
+}
+
+.spinner-eff.spinner-eff-3 .circle-1, .spinner-eff.spinner-eff-3 .circle-2, .spinner-eff.spinner-eff-3 .circle-3 {
+    background-color: var(--color-white);
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999999999;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    visibility: visible;
+    -webkit-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+.spinner-block {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    visibility: visible;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.preloader-window {
+    position: absolute;
+    background-color: var(--color-purple);
+    height: 100%;
+    top: 0;
+    -webkit-transition: all 1.8s ease;
+    transition: all 1.8s ease;
+}
+
+.left-window {
+    width: 51%;
+    left: 0;
+}
+
+.right-window {
+    width: 51%;
+    right: 0;
+}
+
+.loaded .left-window {
+    -webkit-transform: translateX(-150%);
+    transform: translateX(-150%);
+}
+
+.loaded .right-window {
+    -webkit-transform: translateX(150%);
+    transform: translateX(150%);
+}
+
+.loaded .spinner-block {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    visibility: hidden;
+}
+
+.loaded#preloader {
+    visibility: hidden;
+    /*opacity: 0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";*/
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    50% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+    100% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    50% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+    100% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+}
+
+@-webkit-keyframes pulse-2 {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+}
+
+@keyframes pulse-2 {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+}
+
+.preloader-content {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.preloader-content h2 {
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 300;
+    margin: 0;
+}
+
+.preloader-content img {
+    margin: 0 0 20px;
+}
+
+.loaded .preloader-content {
+    top: -50%;
+}
+
+/*======================================================================================
+								1. INDEX-V1 Header section
+===============================================================================*/
+
+.beautypress-header-section {
+    position: relative;
+    z-index: 9999;
+    box-shadow: var(--primary-shadow);
+    transition: all .4s ease;
+    top: 0;
+}
+
+.beautypress-logo-wraper {
+    position: relative;
+}
+
+.beautypress-logo {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-white);
+    box-shadow: var(--hover-shadow);
+    padding: 30px 15px;
+    z-index: 9;
+    text-align: center;
+}
+
+.beautypress-header-section.beautypress-version-1 .beautypress-logo {
+    /*min-height: 187px;*/
+    min-height: 170px;
+    min-width: 197px;
+    max-width: 250px;
+    max-height: 220px;
+}
+
+.beautypress-logo a {
+    display: block;
+}
+
+.beautypress-header-top {
+    text-align: right;
+    color: var(--color-white);
+}
+
+.beautypress-simple-iocn-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.beautypress-simple-iocn-list.beautypress-version-1 {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+.beautypress-simple-iocn-list li {
+    margin: 0 30px 0 0;
+}
+
+.beautypress-header-top.bg-color-gray-2 .beautypress-simple-iocn-list li {
+    color: #444444;
+}
+
+.beautypress-header-top .beautypress-version-2 .beautypress-simple-iocn-list li {
+    font-size: 0.857em;
+}
+
+.beautypress-header-top .beautypress-version-2 .beautypress-simple-iocn-list li i {
+    font-size: 1.333em;
+    top: 2px;
+    position: relative;
+}
+
+.beautypress-header-top .beautypress-version-2 .beautypress-language-select-list select {
+    background: url(../img/globe.png) no-repeat center left;
+    color: #444444;
+    font-size: 0.857em;
+    padding: 2px 22px;
+}
+
+.beautypress-header-top .beautypress-version-2 .beautypress-language-select-list select option {
+    background-color: #F9F9F9;
+}
+
+.beautypress-simple-iocn-list li i {
+    padding: 0 8px 0 0;
+}
+
+.beautypress-simple-iocn-list li:last-child {
+    margin: 0;
+}
+
+.beautypress-main-header {
+    background-color: var(--color-white);
+}
+
+.beautypress-main-header {
+    position: relative;
+    min-height: 50px;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+}
+
+.beautypress-header-section.beautypress-version-1.beautypress-extra-css .beautypress-main-header {
+    background-color: transparent;
+}
+
+.beautypress-header-section.beautypress-version-1.beautypress-extra-css .beautypress-header-top {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.beautypress-main-header nav {
+    margin: 0;
+    width: 100%;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    height: 100%;
+}
+
+.beautypress-main-header nav {
+    background-color: transparent;
+}
+
+.beautypress-main-header nav li {
+    /*margin: 0 30px 0 0;*/
+    float: none;
+    display: inline-block;
+}
+
+/*.beautypress-main-header nav li:last-child{
+		margin: 0;
+}*/
+
+.beautypress-main-header nav li a {
+    padding: 40px 0;
+    display: block;
+    text-transform: uppercase;
+    color: var(--color-semi-black);
+    font-weight: 600;
+    position: relative;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    height: auto;
+    font-size: 12px;
+}
+
+.beautypress-main-header nav li a {
+    padding: 30px 13.5px;
+    /*padding-right: 27px;*/
+}
+
+.beautypress-extra-css .beautypress-main-header nav li:last-child a {
+    padding-right: 0px;
+}
+
+.beautypress-main-header.color-white .xs_nav-landscape li .nav-submenu a:hover {
+    color: #560F86;
+}
+
+.beautypress-extra-css .beautypress-main-header .xs_nav-landscape .nav-submenu.megamenu-panel a {
+    padding: 0 0;
+}
+
+.beautypress-extra-css.beautypress-header-section.beautypress-version-1 .beautypress-version-2.beautypress-logo {
+    min-height: 117px;
+}
+
+.beautypress-extra-css.beautypress-header-section.beautypress-version-1 .beautypress-version-2.beautypress-logo:after {
+    border-left: 99.5px solid transparent;
+    border-right: 99.5px solid transparent;
+}
+
+.beautypress-main-header nav li a:hover, .beautypress-main-header nav li a:focus {
+    color: var(--color-purple);
+}
+
+.beautypress-main-header nav li a:before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    background-color: var(--color-purple);
+    height: 4px;
+    width: 0%;
+}
+
+.beautypress-main-header nav li a:hover:before {
+    width: calc(100%);
+}
+
+.beautypress-main-header .megamenu-panel .megamenu-list li {
+    display: block;
+}
+
+.beautypress-main-header .nav-submenu li a {
+    padding: 0;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 13px;
+}
+
+.beautypress-main-header .megamenu-panel .megamenu-list li.megamenu-list-title a {
+    font-weight: 700;
+    font-size: 1.1em;
+    color: var(--color-semi-black);
+}
+
+.beautypress-header-section.beautypress-header-version-4 .beautypress-main-header .xs-navigation-middle-menu.xs_nav-landscape .nav-menu li.megamenu-list-title a:hover {
+    color: white;
+}
+
+.beautypress-main-header .megamenu-panel .megamenu-list li.megamenu-list-title a:before, .beautypress-main-header .megamenu-panel .megamenu-list li a:before {
+    display: none;
+}
+
+.beautypress-main-header .megamenu-panel .megamenu-list li.megamenu-list-title a:hover {
+    color: #70798b;
+}
+
+.beautypress-main-header .megamenu-panel .megamenu-list li {
+    margin: 0;
+    padding: 0 0 20px;
+}
+
+.beautypress-main-header .megamenu-panel .megamenu-list li:last-child {
+    padding: 0;
+}
+
+.beautypress-main-header .megamenu-panel {
+    padding: 0;
+}
+
+.beautypress-main-header .xs_nav-landscape .megamenu-list {
+    padding: 40px 20px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    border: 0px;
+}
+
+.beautypress-main-header .xs_nav-landscape .megamenu-list:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-right: solid 1px #f0f0f0;
+    z-index: -2;
+}
+
+.beautypress-main-header .megamenu-panel .megamenu-list li a:hover, .beautypress-main-header .megamenu-panel .megamenu-list li a:focus {
+    background-color: transparent;
+}
+
+.beautypress-main-header .nav-dropdown.nav-submenu li {
+    display: block;
+    /*position: relative;*/
+}
+
+.beautypress-main-header .nav-dropdown.nav-submenu li a {
+    padding: 15px 25px;
+    background-color: transparent;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.beautypress-main-header .nav-dropdown.nav-submenu li:last-child a {
+    border-bottom: 0;
+}
+
+.beautypress-main-header .nav-dropdown.nav-submenu li a:hover:before {
+    width: calc(100% - 20px);
+}
+
+.beautypress-main-header .nav-dropdown {
+    min-width: 200px;
+}
+
+.beautypress-main-header .xs_nav-portrait .submenu-indicator {
+    width: 40px;
+    height: 100%;
+    margin: 0;
+}
+
+.beautypress-main-header .nav-dropdown.nav-submenu li a:before {
+    display: none;
+}
+
+.beautypress-mega-menu .nav-submenu, .xs-navigation-middle-menu .nav-submenu, .xs_nav_2 .nav-submenu {
+    border-radius: 0 0 5px 5px;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.16);
+    border: 0;
+}
+
+.nav-menu>li>.nav-dropdown {
+    border: 0;
+}
+
+.xs_nav_2 .nav-submenu li a {
+    background-color: transparent;
+}
+
+.xs_nav_2 .nav-submenu {
+    background-color: #FFFFFF;
+}
+
+.xs_nav-portrait .nav-submenu {
+    box-shadow: none;
+}
+
+.beautypress-main-header .beautypress-nav.xs_nav-portrait, .beautypress-main-header .xs-navigation-middle-menu.xs_nav-portrait, .beautypress-main-header .beautypress-mega-menu.xs_nav-portrait {
+    height: 60px;
+}
+
+.nav-toggle {
+    margin: 0;
+}
+
+.beautypress-mega-menu .nav-dropdown, .xs-navigation-middle-menu .nav-dropdown {
+    background-color: var(--color-white);
+}
+
+.mega-menu-overlay-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/mega_menu_bg.png);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    -webkit-background-size: cover;
+    background-size: contain;
+    border-radius: 0 0 5px 0;
+    pointer-events: none;
+}
+
+.xs_nav-portrait .mega-menu-overlay-img {
+    z-index: -1;
+}
+
+.beautypress-mega-menu.xs_nav-landscape .mega-menu-overlay-img {
+    z-index: -1;
+}
+
+.xs_nav-portrait .submenu-indicator-chevron {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.beautypress-mega-menu.xs_nav-landscape .submenu-indicator {
+    margin-top: 3px;
+}
+
+.submenu-indicator {
+    margin-top: 3px;
+}
+
+/*======================================================================================
+								2. INDEX-V1 welcome section
+===============================================================================*/
+
+.beautypress-welcome-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 50%;
+    position: relative;
+}
+
+.content-right .beautypress-welcome-container {
+    margin: 0 0 0 auto !important;
+    text-align: left !important;
+}
+
+.content-center .beautypress-welcome-container {
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
+.content-left .beautypress-welcome-container {
+    margin: 0 auto 0 0 !important;
+    text-align: left !important;
+}
+
+.beautypress-welcome-container h2 {
+    font-family: var(--font-cursive);
+    font-size: 3.571em;
+    margin: 0 0 4px;
+}
+
+.beautypress-welcome-container h3 {
+    margin: 0 0 30px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 5.000em;
+}
+
+.beautypress-welcome-container p {
+    margin: 0 0 40px;
+    font-size: 1.429em;
+}
+
+/*.beautypress-welcome-section.beautypress-welcome-section-v1 .beautypress-welcome-wraper {
+		margin: 26% 0 0 0;
+}*/
+
+.beautypress-welcome-slider-wraper {
+    position: relative;
+}
+
+.beautypress-welcome-slider-wraper .customNavigation .welcome-prev, .beautypress-welcome-slider .owl-nav .owl-prev {
+    left: 20px;
+}
+
+.beautypress-welcome-slider-wraper .customNavigation .welcome-next, .beautypress-welcome-slider .owl-nav .owl-next {
+    right: 20px;
+}
+
+.beautypress-welcome-slider .owl-nav i {
+    font-size: 3em;
+    color: var(--color-purple);
+    transition: all .4s ease;
+}
+
+.beautypress-welcome-slider .owl-nav i:hover {
+    color: var(--color-pink);
+}
+
+.beautypress-welcome-slider-wraper .owl-dots .owl-dot span {
+    border: 2px solid var(--color-purple);
+    background-color: transparent;
+    display: block;
+    height: 16px;
+    width: 16px;
+    border-radius: 5px;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    margin: 0 10px 0 0;
+}
+
+.beautypress-welcome-slider-wraper .owl-dots .owl-dot:last-child span {
+    margin: 0;
+}
+
+.beautypress-welcome-slider-wraper .owl-dots .owl-dot.active span {
+    background-color: var(--color-purple);
+}
+
+.beautypress-welcome-slider-wraper .owl-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 51px;
+}
+
+.beautypress-welcome-content-group {
+    position: relative;
+}
+
+.beautypress-welcome-slider .active .beautypress-welcome-wraper h2 {
+    -webkit-animation: fadeInLeftPix 1s ease 100ms both;
+    animation: fadeInLeftPix 1s ease 100ms both;
+}
+
+.beautypress-welcome-slider .active .beautypress-welcome-wraper h3 {
+    -webkit-animation: fadeInLeftPix 1s ease 200ms both;
+    animation: fadeInLeftPix 1s ease 200ms both;
+}
+
+.beautypress-welcome-slider .active .beautypress-welcome-wraper p {
+    -webkit-animation: fadeInLeftPix 1s ease 300ms both;
+    animation: fadeInLeftPix 1s ease 300ms both;
+}
+
+.beautypress-welcome-slider .active .beautypress-welcome-wraper .beautypress-btn-wraper a:first-child {
+    -webkit-animation: fadeInLeftPix 1s ease 400ms both;
+    animation: fadeInLeftPix 1s ease 400ms both;
+}
+
+.beautypress-welcome-slider .active .beautypress-welcome-wraper .beautypress-btn-wraper a:last-child {
+    -webkit-animation: fadeInRightPix 1s ease 500ms both;
+    animation: fadeInRightPix 1s ease 500ms both;
+}
+
+@-webkit-keyframes fadeInRightPix {
+    from {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        -webkit-transform: translate3d(50px, 0, 0);
+        transform: translate3d(50px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInRightPix {
+    from {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        -webkit-transform: translate3d(50px, 0, 0);
+        transform: translate3d(50px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@-webkit-keyframes fadeInLeftPix {
+    from {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        -webkit-transform: translate3d(-50px, 0, 0);
+        transform: translate3d(-50px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInLeftPix {
+    from {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        -webkit-transform: translate3d(-50px, 0, 0);
+        transform: translate3d(-50px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+/*======================================================================================
+								3. INDEX-V1 about section
+===============================================================================*/
+
+.beautypress-border-with-text-wrap {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 90px 0 90px 70px;
+    position: relative;
+}
+
+.beautypress-border-with-text-wrap .beautypress-border.beautypress-version-1 {
+    box-shadow: var(--hover-shadow);
+}
+
+.beautypress-border-with-text {
+    position: relative;
+    z-index: 2;
+}
+
+.beautypress-border-with-text h2 {
+    margin: 0;
+    color: var(--color-semi-black);
+    font-size: 3.571em;
+    font-weight: 200;
+    line-height: 1.2;
+    letter-spacing: -2px;
+}
+
+.beautypress-border-with-text h2 span {
+    color: var(--color-purple);
+    font-weight: 300;
+}
+
+.beautypress-border-with-text h2 strong {
+    font-weight: 500;
+}
+
+.beautypress-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    border: 10px solid var(--color-semi-black);
+    z-index: 1;
+}
+
+.beautypress-border.beautypress-version-1 {
+    border-color: #EBEBEB;
+    width: calc(100% - 136px);
+}
+
+.beautypress-simple-img-wraper {
+    position: relative;
+}
+
+/* new about section */
+
+.beautypress-new-about-text-gruop {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0 55px;
+}
+
+.beautypress-new-about-text-gruop .beautypress-sub-heading.beautypress-watermark-title h2 {
+    font-weight: 700;
+    font-size: 4.429em;
+    letter-spacing: -2px;
+    z-index: 1;
+    margin: 0 0 30px;
+}
+
+.beautypress-new-about-text-gruop .beautypress-sub-heading.beautypress-watermark-title h2:before {
+    color: #F0F0F0;
+    font-size: 2.419em;
+    z-index: -1;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    left: -55px;
+    top: 30px;
+}
+
+.beautypress-gradient-separetor {
+    display: block;
+    height: 2px;
+    width: 130px;
+    background-image: -webkit-linear-gradient( 175deg, rgba(236, 85, 152, 0) 0%, rgba(236, 85, 152, 0.26) 24%, rgba(236, 85, 152, 0.5) 46%, rgb(236, 85, 152) 100%);
+    background-image: -ms-linear-gradient( 175deg, rgba(236, 85, 152, 0) 0%, rgba(236, 85, 152, 0.26) 24%, rgba(236, 85, 152, 0.5) 46%, rgb(236, 85, 152) 100%);
+}
+
+.beautypress-new-about-text-gruop p {
+    margin: 30px 0 40px;
+    font-size: 1.143em;
+}
+
+.beautypress-new-about-img-wraper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.beautypress-new-single-about-img-group {
+    margin: 0 0 40px;
+}
+
+.beautypress-new-single-about-img-group:last-child {
+    margin: 0;
+}
+
+.beautypress-new-single-about-img img, .beautypress-new-single-about-img .beautypress-3d-project-card {
+    border-radius: 5px;
+}
+
+.beautypress-new-single-about-img img {
+    width: 100%;
+}
+
+.beautypress-new-single-about-img .beautypress-3d-project-card {
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.1);
+}
+
+.beautypress-new-about-img-wraper {
+    position: relative;
+    z-index: 2;
+}
+
+.beautypress-new-about-img-wraper:before, .beautypress-new-about-img-wraper:after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    opacity: .1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+    z-index: -1;
+}
+
+.beautypress-new-about-img-wraper:before {
+    top: -17px;
+    left: -123px;
+    background-image: url(../img/new-about-style.png);
+    background-position: top left;
+}
+
+.beautypress-new-about-img-wraper:after {
+    background-image: url(../img/new-about-style-2.png);
+    right: -135px;
+    bottom: 0;
+    background-position: bottom right;
+}
+
+/*======================================================================================
+								4. INDEX-V1 our secrets section
+===============================================================================*/
+
+.beautypress-simple-text-with-img-section {
+    padding: 110px 0;
+}
+
+.beautypress-simple-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 100px 0 0;
+}
+
+.beautypress-separetor-sub-heading {
+    padding: 0 0 30px;
+    margin: 0 0 30px;
+    position: relative;
+}
+
+.beautypress-separetor-sub-heading:before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    height: 2px;
+    background-color: #D6D6D6;
+}
+
+.beautypress-separetor-sub-heading.beautypress-no-separetor {
+    /* Index version 2 */
+    padding: 0;
+    margin: 0 0 40px;
+}
+
+.beautypress-separetor-sub-heading.beautypress-no-separetor:before {
+    /* Index version 2 */
+    display: none;
+}
+
+.beautypress-separetor-sub-heading h2 {
+    margin: 0;
+    color: var(--color-semi-black);
+    font-size: 2.857em;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.beautypress-simple-text p {
+    margin: 0 0 30px;
+    line-height: 1.8;
+}
+
+.twentytwenty-horizontal .beautypress-before-after .twentytwenty-handle:before, .twentytwenty-horizontal .beautypress-before-after .twentytwenty-handle:after {
+    background: #681C98;
+    box-shadow: none;
+}
+
+.beautypress-before-after .twentytwenty-handle {
+    border-color: #681C98;
+    box-shadow: none;
+    background-color: #E75098;
+}
+
+.beautypress-before-after .twentytwenty-handle {
+    top: 80%;
+}
+
+.beautypress-before-after.twentytwenty-container img {
+    width: 100%;
+}
+
+.beautypress-simple-text.beautypress-version-2 {
+    padding: 0 30px;
+}
+
+.beautypress-simple-text.beautypress-version-2 .beautypress-big-sub-heading h2 {
+    font-size: 2.286em;
+}
+
+.beautypress-simple-text.beautypress-version-2 .beautypress-big-sub-heading h3 {
+    font-size: 2.857em;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.beautypress-simple-text.beautypress-version-2 .beautypress-big-sub-heading {
+    margin: 0 0 15px;
+}
+
+.beautypress-simple-text-content p {
+    color: #333333;
+    font-size: 1.143em;
+    margin: 0;
+}
+
+.beautypress-simple-text-content {
+    margin: 0 0 30px;
+}
+
+.beautypress-simple-text.beautypress-version-2 .beautypress-spilit-container {
+    display: flex;
+}
+
+.beautypress-simple-text.beautypress-version-2 .beautypress-spilit-container .beautypress-icon-with-text {
+    flex: 1;
+}
+
+.beautypress-svg-ico {
+    height: 70px;
+    margin: 0 0 30px;
+}
+
+.beautypress-simple-text.beautypress-version-2 .beautypress-svg-ico {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.beautypress-svg-ico img {
+    max-height: 100%;
+}
+
+.beautypress-icon-with-text h3 {
+    margin: 0 0 15px;
+    color: #000000;
+    font-weight: 500;
+    font-size: 1.571em;
+    letter-spacing: -2px;
+    text-transform: capitalize;
+}
+
+.beautypress-icon-with-text p {
+    margin: 0;
+    line-height: inherit;
+}
+
+/*======================================================================================
+								5. INDEX-V1 vidoe popup section
+===============================================================================*/
+
+.beautypress-video-popup-content {
+    position: relative;
+}
+
+.beautypress-border.beautypress-version-2 {
+    border: 0;
+}
+
+.beautypress-border.beautypress-version-2:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 10px solid var(--color-purple);
+    background-color: #F7F7F7;
+    z-index: -1;
+}
+
+.beautypress-video-popup-content .beautypress-border.beautypress-version-2:before {
+    top: -70px;
+    left: -70px;
+}
+
+.beautypress-video-popup-content-inner {
+    position: relative;
+    z-index: 2;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 70px 0 0 70px;
+}
+
+.beautypress-video-popup-content-inner:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: -webkit-linear-gradient( 90deg, rgb(0, 188, 212) 0%, rgb(106, 27, 154) 0%, rgba(151, 95, 184, 0.5) 30%, rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(0, 188, 212) 0%, rgb(106, 27, 154) 0%, rgba(151, 95, 184, 0.5) 30%, rgba(255, 255, 255, 0) 100%);
+}
+
+.beautypress-video-popup-content a, .beautypress-about-video-pop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.beautypress-video-popup-btn:hover {
+    color: var(--color-white);
+}
+
+.beautypress-video-popup-btn {
+    width: 70px;
+    height: 70px;
+    box-shadow: var(--primary-shadow);
+    border-radius: 5px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #F7F7F7;
+    font-size: 1.429em;
+}
+
+.simple-icon-btn {
+    color: var(--color-white);
+    font-size: 4em;
+}
+
+.simple-icon-btn:hover {
+    color: var(--color-purple);
+}
+
+.beautypress-video-side-text {
+    width: calc(100% - 20px);
+    margin: 0 auto 0 0;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.beautypress-big-sub-heading {
+    margin: 0 0 40px;
+}
+
+.beautypress-big-sub-heading h2 {
+    margin: 0 0 10px;
+    font-family: var(--font-cursive);
+    color: var(--color-pink);
+    font-size: 3.071em;
+}
+
+.beautypress-big-sub-heading h3 {
+    margin: 0;
+    color: var(--color-semi-black);
+    font-size: 2.057em;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.beautypress-video-side-text p {
+    margin: 0 0 30px;
+    line-height: 2.1;
+}
+
+.beautypress-video-side-text .beautypress-simple-iocn-list.beautypress-version-2 {
+    margin: 0 0 40px;
+}
+
+.beautypress-simple-iocn-list.beautypress-version-2 ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 11px 0 0;
+}
+
+.beautypress-simple-iocn-list.beautypress-version-2 ul li {
+    margin: 0;
+    color: var(--color-pink);
+    padding: 0 11px 0 0;
+}
+
+.beautypress-simple-iocn-list.beautypress-version-2 ul li i {
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #DEDEDE;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 5px;
+    margin: 0 12px 0 0;
+}
+
+.beautypress-video-popup-content-inner.xs-video-border-none {
+    margin: 0px;
+}
+
+.beautypress-video-popup-content-inner.xs-video-border-none:before {
+    display: none;
+}
+
+.beautypress-video-popup-content-inner.video-popup-nomargin {
+    margin: 0px;
+}
+
+/*======================================================================================
+								6. Get Appoinment
+===============================================================================*/
+
+.beautypress-booking-text-wraper {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.beautypress-booking-text-wraper .beautypress-border.beautypress-version-3 {
+    width: calc(100% - 200px);
+    margin: 0 auto;
+    height: auto;
+}
+
+.beautypress-border.beautypress-version-3 {
+    position: relative;
+    border-right: 0;
+}
+
+.beautypress-border.beautypress-version-3:before, .beautypress-border.beautypress-version-3:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    height: 43px;
+    width: 43px;
+    border-right: 10px solid;
+}
+
+.beautypress-border.beautypress-version-3:after {
+    top: initial;
+    bottom: 0;
+}
+
+.beautypress-border.beautypress-version-3, .beautypress-border.beautypress-version-3:before, .beautypress-border.beautypress-version-3:after {
+    border-color: var(--color-purple);
+}
+
+.beautypress-booking-text {
+    height: 100%;
+    padding: 55px 0 55px 50px;
+    width: calc(100% + 30px);
+}
+
+.beautypress-booking-text h2 {
+    margin: 0 0 28px;
+    color: var(--color-purple);
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 1.429em;
+}
+
+.beautypress-booking-text h3 {
+    margin: 0 0 40px;
+    font-size: 2.143em;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--color-semi-black);
+}
+
+.beautypress-icon-bg-text {
+    position: relative;
+    padding: 0 0 40px;
+}
+
+.beautypress-icon-bg-text:before {
+    position: absolute;
+    content: "\e908";
+    top: -21px;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    font-family: var(--font-icons-2);
+    opacity: .3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    color: var(--color-purple);
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /*font-size: 13em;*/
+    font-size: 10em;
+    z-index: -1;
+}
+
+.beautypress-icon-bg-text p {
+    line-height: 1.875;
+}
+
+.beautypress-booking-text ul li {
+    font-size: 1.143em;
+    color: #646464;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0 0 18px;
+    line-height: 1;
+}
+
+.beautypress-booking-text ul li:last-child {
+    margin: 0;
+    color: var(--color-pink);
+}
+
+.beautypress-booking-form-wraper h2 {
+    margin: 0 0 30px;
+    color: var(--color-semi-black);
+    font-weight: 600;
+    font-size: 1.857em;
+}
+
+.beautypress-booking-form-wraper select {
+    background-color: var(--color-white) !important;
+    color: var(--color-semi-ash) !important;
+    width: 100% !important;
+    height: 60px !important;
+    border: 2px solid #E2E2E2 !important;
+    font-size: 1em !important;
+    padding: 0 21px;
+    border-radius: 0;
+}
+
+.beautypress-booking-form-wraper select:first-child {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.beautypress-booking-form-wraper .beautypress-select .input-group {
+    position: relative;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-booking-form-wraper .beautypress-select .input-group:before {
+    position: absolute;
+    content: "\f107";
+    top: 50%;
+    right: 0;
+    width: 60px;
+    height: calc(100% - 4px);
+    border-left: 2px solid #DEDEDE;
+    color: #E2B9A3;
+    font-size: 1.429em;
+    font-family: var(--font-icons-1);
+    z-index: 9;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    pointer-events: none;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.beautypress-booking-form-wraper .beautypress-select .input-group.actives:before {
+    background-color: var(--color-navy-blue);
+    border-color: var(--color-navy-blue);
+    color: var(--color-white);
+}
+
+.beautypress-booking-form-wraper .beautypress-select .input-group.actives, .beautypress-booking-form-wraper .form-control:focus {
+    box-shadow: var(--hover-shadow);
+}
+
+.beautypress-booking-form-wraper input:not([type="submit"]), .beautypress-booking-form-wraper textarea {
+    display: block;
+    width: 100%;
+    height: 60px;
+    border: 2px solid #E3E3E3;
+    border-radius: 0;
+    background-color: var(--color-white);
+    padding: 0 21px;
+    font-size: 1em !important;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-booking-form-wraper textarea {
+    height: 130px;
+    resize: none;
+    padding: 20px;
+    border-radius: 0;
+}
+
+.beautypress-booking-form-wraper textarea:focus, .beautypress-booking-form-wraper input:focus, .beautypress-booking-form-wraper select:focus {
+    border-color: var(--color-purple) !important;
+}
+
+.beautypress-booking-form-wraper .form-group, .beautypress-booking-form-wraper .beautypress-select {
+    margin: 0 0 20px;
+    width: 100%;
+}
+
+.beautypress-booking-form-wraper .form-group.massage-gropu {
+    margin: 0 0 30px;
+}
+
+.beautypress-booking-form-wraper .form-group.button-group {
+    margin: 0;
+}
+
+.beautypress-booking-form-wraper .beautypress-spilit-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.beautypress-service-and-date {
+    margin: 0 0 24px;
+}
+
+.beautypress-booking-form-wraper input[type="submit"] {
+    box-shadow: 0px 8px 16px 0px rgba(140, 140, 140, 0.157);
+    background-color: var(--color-pink);
+    text-transform: uppercase;
+    height: 50px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: 700;
+    color: var(--color-white);
+    border: 0;
+    border-radius: 5px;
+    padding: 15px 46px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.beautypress-booking-form-wraper input[type="submit"]:hover {
+    background-color: var(--color-purple);
+}
+
+.datepicker td, .datepicker th {
+    width: 30px;
+    height: 30px;
+    font-weight: 400;
+}
+
+.datepicker {
+    padding: 15px;
+}
+
+.datepicker table tr td.active, .datepicker table tr td.active:hover:active {
+    background-image: none;
+    background-color: var(--color-purple) !important;
+}
+
+.datepicker table tr td.active:hover {
+    background-color: var(--color-pink) !important;
+    background-image: none !important;
+}
+
+.beautypress-booking-form-wraper input[type="number"]::-webkit-inner-spin-button, .beautypress-booking-form-wraper input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*======================================================================================
+								6. INDEX-V1 Photo Gallery
+===============================================================================*/
+
+.beautypress-portfolio-nav {
+    text-align: center;
+}
+
+.beautypress-portfolio-nav ul#filters {
+    margin: 0;
+    padding: 0 0 47px;
+}
+
+.beautypress-portfolio-nav ul#filters li {
+    margin: 0 29px 0 0;
+}
+
+.beautypress-portfolio-nav ul#filters li:last-child {
+    margin: 0;
+}
+
+.beautypress-portfolio-nav ul li a {
+    text-transform: uppercase;
+    color: #444444;
+    font-weight: 700;
+    font-size: 0.857em;
+    position: relative;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-portfolio-nav ul li a:hover, .beautypress-portfolio-nav ul li a.selected {
+    color: var(--color-pink);
+}
+
+.beautypress-portfolio-nav ul li a:before {
+    position: absolute;
+    content: "";
+    bottom: -20px;
+    left: 50%;
+    height: 2px;
+    width: 0%;
+    background-color: var(--color-pink);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.beautypress-portfolio-nav ul li a:hover:before, .beautypress-portfolio-nav ul li a.selected:before {
+    width: calc(100% + 30px);
+}
+
+.beautypress-portfolio-nav.beautypress-version-2 ul#filters li {
+    margin: 0;
+}
+
+.beautypress-portfolio-nav.beautypress-version-2 ul#filters li a {
+    color: #BDBDBD;
+    padding: 13px 22px;
+}
+
+.beautypress-portfolio-nav.beautypress-version-2 ul li a:before {
+    display: none;
+}
+
+.beautypress-portfolio-nav.beautypress-version-2 ul#filters li a:hover, .beautypress-portfolio-nav.beautypress-version-2 ul#filters li a.selected {
+    background-color: #58B7AC;
+    color: var(--color-white);
+    border-radius: 5px;
+}
+
+.beautypress-photo-gallery-grid-item {
+    padding: 15px;
+}
+
+.beautypress-single-photo-gallery {
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-single-photo-gallery.beautypress-3d {
+    overflow: visible;
+}
+
+.beautypress-single-photo-gallery img {
+    width: 100%;
+}
+
+.beautypress-photo-gallery-content {
+    position: absolute;
+    top: calc(50% + 20px);
+    left: 50%;
+    -webkit-transform: translateZ(50px) translateY(-50%) translateX(-50%);
+    transform: translateZ(50px) translateY(-50%) translateX(-50%);
+    z-index: 2;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition: all .7s ease;
+    transition: all .7s ease;
+    width: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+}
+
+.beautypress-single-photo-gallery.beautypress-3d .beautypress-3d-project-card {
+    box-shadow: 0 3px 47px rgba(0, 0, 0, 0.2);
+}
+
+.beautypress-single-photo-gallery.beautypress-3d .beautypress-iocn-btn.full-round-btn {
+    box-shadow: 0 0 50px 0 rgba(51, 51, 51, 0.3);
+}
+
+.beautypress-photo-gallery-content a {
+    margin: 0 20px 0 0;
+}
+
+.beautypress-photo-gallery-content a:last-child {
+    margin: 0;
+}
+
+.beautypress-iocn-btn.full-round-btn {
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    box-shadow: var(--primary-shadow);
+    color: var(--color-white);
+    font-size: 1.143em;
+    background-color: var(--color-semi-black);
+    position: relative;
+    transition: all .9s ease;
+}
+
+.beautypress-iocn-btn.full-round-btn.bg-color-pink {
+    background-color: var(--color-pink);
+}
+
+.beautypress-iocn-btn.full-round-btn.bg-color-purple {
+    background-color: var(--color-purple);
+}
+
+.beautypress-gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #000;
+    -webkit-transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+.beautypress-single-photo-gallery:hover .beautypress-gallery-overlay {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: .5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+.beautypress-single-photo-gallery:hover .beautypress-photo-gallery-content {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    top: 50%;
+}
+
+.beautypress-3d-project-card {
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+.beautypress-photo-gallery-grid-item-v3 {
+    padding: 15px;
+}
+
+/*======================================================================================
+								7. INDEX-V1 Pricing Plan
+===============================================================================*/
+
+.beautypress-single-pricing-table {
+    box-shadow: var(--primary-shadow);
+    background-color: var(--color-white);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-pricing-table-section {
+    position: relative;
+    background-attachment: fixed;
+}
+
+.beautypress-pricing-table-section .beautypress-black-overlay {
+    background-color: #FFFFFF;
+    opacity: .5;
+}
+
+.beautypress-pricing-table-section .beautypress-section-headinig.beautypress-section-headinig-white h3 {
+    color: var(--color-semi-black);
+}
+
+.beautypress-pricing-header {
+    position: relative;
+}
+
+.beautypress-pricing-header img {
+    width: 100%;
+}
+
+.beautypress-pricing-header-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--color-white);
+    width: 100%;
+    display: flex;
+    padding: 30px;
+    -ms-grid-row-align: center;
+    align-items: center;
+}
+
+.beautypress-pricing-title, .beautypress-pricing-price {
+    flex: 1;
+}
+
+.beautypress-pricing-title h2 {
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 2.143em;
+    letter-spacing: -2px;
+}
+
+.beautypress-pricing-price {
+    text-align: right;
+}
+
+.beautypress-pricing-price h4 {
+    margin: 0 0 10px;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.beautypress-pricing-price h5 {
+    margin: 0;
+    font-size: 2.857em;
+    font-weight: 200;
+}
+
+.beautypress-pricing-price h5 span {
+    font-size: 0.600em;
+    vertical-align: super;
+}
+
+.beautypress-pricing-footer {
+    padding: 40px 30px;
+}
+
+.beautypress-both-side-list li {
+    display: flex;
+    font-size: 1.143em;
+    margin: 0 0 16px;
+    flex: 1;
+}
+
+.beautypress-both-side-list li:last-child {
+    margin: 0;
+}
+
+.beautypress-both-side-list li span {
+    text-align: right;
+    color: #444444;
+    flex: 1;
+}
+
+.beautypress-pricing-footer .beautypress-both-side-list {
+    margin: 0 0 42px;
+}
+
+.beautypress-pricing-footer .beautypress-btn-wraper {
+    text-align: center;
+}
+
+.beautypress-single-pricing-table:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+/*======================================================================================
+								8. Pricing Plan
+===============================================================================*/
+
+.beautypress-tab .beautypress-top-nav {
+    border: 0;
+    padding: 0 0 50px;
+    display: flex;
+}
+
+.beautypress-tab .nav.nav-tabs.beautypress-top-nav li {
+    flex: 1;
+    margin: 0 30px 0 0;
+}
+
+.beautypress-tab .nav.nav-tabs.beautypress-top-nav li:last-child {
+    margin: 0;
+}
+
+.beautypress-tab .beautypress-top-nav li, .beautypress-tab .beautypress-top-nav li a {
+    min-height: 150px;
+}
+
+.beautypress-tab .beautypress-top-nav li a {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: 100%;
+    background-color: #F5f5f5;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-tab .beautypress-top-nav li.active a, .beautypress-tab .beautypress-top-nav li a:hover {
+    box-shadow: var(--hover-shadow);
+    background-color: var(--color-white);
+}
+
+.beautypress-tab .beautypress-top-nav li a i {
+    margin: 0 0 20px;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    color: var(--color-purple);
+    font-size: 2.857em;
+}
+
+.beautypress-tab .beautypress-top-nav li a:hover i, .beautypress-tab .beautypress-top-nav li.active a i {
+    color: var(--color-pink);
+}
+
+.beautypress-tab .beautypress-top-nav li a:before, .beautypress-tab .beautypress-top-nav li a:after {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--color-pink);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-tab .beautypress-top-nav li a:before {
+    top: 0;
+    left: 0;
+    border-bottom: 0;
+    border-right: 0;
+}
+
+.beautypress-tab .beautypress-top-nav li a:after {
+    bottom: 0;
+    right: 0;
+    border-left: 0;
+    border-top: 0;
+}
+
+.beautypress-tab .beautypress-top-nav li.active a:before, .beautypress-tab .beautypress-top-nav li.active a:after, .beautypress-tab .beautypress-top-nav li a:hover:before, .beautypress-tab .beautypress-top-nav li a:hover:after {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.beautypress-tab .beautypress-top-nav li a span {
+    color: #999999;
+    font-weight: 500;
+    text-transform: uppercase;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-tab .beautypress-top-nav li.active a span, .beautypress-tab .beautypress-top-nav li a:hover span {
+    color: #666666;
+}
+
+.beautypress-tab .tab-content .tab-pane .tabbable {
+    display: flex;
+    width: 100%;
+}
+
+.beautypress-tab .tab-pane .tabbable .tab-content {
+    width: calc(75% - 15px);
+}
+
+.beautypress-tab .beautypress-side-nav {
+    padding: 30px 20px 30px 0;
+    box-shadow: var(--hover-shadow);
+    background-color: var(--color-white);
+    border: 0;
+    display: block;
+    width: calc(25% - 15px);
+    margin: 0 30px 0 0;
+}
+
+.beautypress-tab .beautypress-side-nav li {
+    display: block;
+    width: 100%;
+    margin: 16px 0 0 30px;
+}
+
+.beautypress-tab .beautypress-side-nav li:last-child {
+    border-bottom: 0;
+    margin: 16px 0 0 30px;
+    padding: 0;
+}
+
+.beautypress-tab .beautypress-side-nav li:last-child a {
+    padding: 0;
+}
+
+.beautypress-tab .beautypress-side-nav li:last-child a:after {
+    display: none;
+}
+
+.beautypress-tab .beautypress-side-nav li a {
+    display: block;
+    width: 100%;
+    color: var(--color-semi-ash);
+    text-transform: capitalize;
+    font-size: 1.143em;
+    position: relative;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    padding: 0 0 16px;
+}
+
+.beautypress-tab .beautypress-side-nav li a:hover, .beautypress-tab .beautypress-side-nav li.active a {
+    color: var(--color-pink);
+}
+
+.beautypress-tab .beautypress-side-nav li a:before {
+    position: absolute;
+    content: "";
+    left: -30px;
+    top: 50%;
+    height: 0;
+    width: 4px;
+    background-color: var(--color-pink);
+    -webkit-transform: translateY(-60%);
+    transform: translateY(-60%);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-tab .beautypress-side-nav li a:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    border-bottom: 1px dashed #C3C3C3;
+    width: calc(100% - 40px);
+}
+
+.beautypress-tab .beautypress-side-nav li a:hover:before, .beautypress-tab .beautypress-side-nav li.active a:before {
+    height: calc(100% + 10px);
+}
+
+.beautypress-tab .beautypress-spilit-container {
+    display: flex;
+    height: 100%;
+}
+
+.beautypress-tab-text-content {
+    -ms-flex-item-align: center;
+    align-self: center;
+    padding: 0 47px 0 0;
+    width: calc(55.56666% - 15px);
+}
+
+.beautypress-tab .beautypress-tab-content {
+    background-color: var(--color-white);
+    box-shadow: var(--hover-shadow);
+    height: 100%;
+}
+
+.beautypress-tab .beautypress-tab-image {
+    position: relative;
+    width: calc(44.444444% - 15px);
+    margin: 0 30px 0 0;
+}
+
+.beautypress-tab .beautypress-tab-image-content {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.beautypress-tab .beautypress-tab-image img {
+    width: 100%;
+}
+
+.beautypress-tab .beautypress-tab-text-content h3 {
+    margin: 0 0 40px;
+    color: #444444;
+    font-weight: 500;
+    font-size: 2.143em;
+    text-transform: capitalize;
+    line-height: inherit;
+}
+
+.beautypress-tab .beautypress-tab-text-content p {
+    margin: 0 0 30px;
+    color: #999999;
+}
+
+/*======================================================================================
+								8. INDEX-V1 Call To Action
+===============================================================================*/
+
+.beautypress-call-to-action-content {
+    text-align: center;
+    padding: 200px 0;
+}
+
+.beautypress-content-headinig h2 {
+    margin: 0 0 20px;
+    font-family: var(--font-cursive);
+    color: var(--color-purple);
+    font-size: 3.571em;
+}
+
+.beautypress-content-headinig h3 {
+    margin: 0;
+    color: var(--color-semi-black);
+    /*font-weight: 500;*/
+    font-weight: 600;
+    font-size: 3.571em;
+    letter-spacing: -2px;
+}
+
+.beautypress-content-headinig {
+    margin: 0 0 30px;
+}
+
+/*======================================================================================
+								9. INDEX-V1 Expert Beauticians
+===============================================================================*/
+
+.beautypress-team-section {
+    position: relative;
+}
+
+.beautypress-single-team {
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--primary-shadow);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-team-content {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    color: var(--color-white);
+    text-align: center;
+    padding: 10px;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-team-person-details {
+    position: relative;
+    margin: 0 0 20px;
+}
+
+.beautypress-team-person-details h3 {
+    margin: 0 0 10px;
+    font-weight: 500;
+    font-size: 1.429em;
+}
+
+.beautypress-team-person-details h4 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1em;
+    text-transform: capitalize;
+}
+
+.beautypress-social-list li {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+}
+
+.beautypress-social-list li:last-child {
+    margin: 0 0 10px 0;
+}
+
+.beautypress-social-list li a {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    box-shadow: var(--primary-shadow);
+    height: 40px;
+    width: 40px;
+    position: relative;
+    z-index: 1;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    background-color: var(--color-semi-black);
+    color: var(--color-white);
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.beautypress-social-list li a i {
+    line-height: inherit;
+}
+
+.beautypress-facebook {
+    background-color: #3B5999 !important;
+}
+
+.beautypress-twitter {
+    background-color: #55ACEE !important;
+}
+
+.beautypress-pinterest {
+    background-color: #BD081C !important;
+}
+
+.beautypress-dribbble {
+    background-color: #EA4C89 !important;
+}
+
+.beautypress-instagram {
+    background-color: #E4405F !important;
+}
+
+.beautypress-google-plus {
+    background-color: #DD4B39 !important;
+}
+
+.beautypress-envelope {
+    background-color: #373737 !important;
+}
+
+.beautypress-version-2.beautypress-social-list li a {
+    background-color: #47454F !important;
+    box-shadow: none;
+}
+
+.beautypress-single-team .beautypress-social-list li a:hover {
+    background-color: var(--color-semi-black) !important;
+}
+
+.beautypress-team-person-socail-details {
+    opacity: 0;
+    transition: all .4s ease;
+}
+
+.beautypress-single-team:hover .beautypress-team-content {
+    bottom: 20px;
+}
+
+.beautypress-single-team:hover .beautypress-team-person-socail-details {
+    opacity: 1;
+}
+
+.beautypress-single-team:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+.beautypress-single-team:after {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-single-team:hover:after {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.beautypress-single-team:hover:before {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+.beautypress-single-team img {
+    width: 100%;
+}
+
+.beautypress-single-team .beautypress-social-list li a {
+    height: 35px;
+    width: 35px;
+    font-size: 0.875em;
+}
+
+.beautypress-icon-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+.beautypress-icon-bg:before, .beautypress-icon-bg:after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 327px;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: .1;
+    top: 0;
+}
+
+.beautypress-icon-bg:before {
+    left: 0;
+    background-image: url(../img/left-bg-icon.png);
+    background-position: center top;
+}
+
+.beautypress-icon-bg:after {
+    right: 0;
+    background-image: url(../img/right-bg-icon.png);
+    background-position: center bottom;
+}
+
+/*======================================================================================
+								10. INDEX-V1 News Feeds
+===============================================================================*/
+
+.beautypress-single-newsletter {
+    box-shadow: var(--primary-shadow);
+    background-color: var(--color-white);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    margin: 0 0 30px;
+}
+
+.beautypress-newsfeed-header {
+    position: relative;
+}
+
+.beautypress-newsfeed-header img {
+    width: 100%;
+}
+
+.beautypress-newsfeed-header-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 13px 30px;
+    display: flex;
+    color: var(--color-white);
+}
+
+.beautypress-newsfeed-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    align-self: flex-end;
+    flex: 1;
+    flex-basis: 70%;
+}
+
+.beautypress-newsfeed-img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 0 10px 0 0;
+}
+
+.beautypress-newsfeed-img a {
+    margin: 0;
+    text-transform: capitalize;
+    display: block;
+    color: var(--color-white);
+}
+
+.beautypress-dates {
+    text-align: right;
+    flex: 1;
+    flex-basis: 30%;
+}
+
+.beautypress-dates p {
+    display: inline-block;
+    min-width: 60px;
+    font-size: 2.143em;
+    font-weight: 200;
+    text-align: center;
+}
+
+.beautypress-dates p strong {
+    display: block;
+    font-size: 0.400em;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 5px;
+    position: relative;
+}
+
+.beautypress-dates strong:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+}
+
+.beautypress-newsfeed-footer {
+    padding: 40px 30px;
+}
+
+.beautypress-dates .bg-color-purple strong {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.beautypress-newsfeed-footer a {
+    display: block;
+    color: var(--color-semi-black);
+    font-size: 1.429em;
+    margin: 0 0 20px;
+    transition: all .4s ease;
+}
+
+.beautypress-newsfeed-footer a:hover {
+    color: var(--color-purple);
+}
+
+.beautypress-newsfeed-footer p {
+    margin: 0;
+    line-height: 1.8;
+}
+
+.beautypress-single-newsletter:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+/* beautypress-single-newsletter beautypress-version-2 */
+
+.beautypress-dates .bg-color-pink-2 strong {
+    background-color: #DC296F;
+}
+
+.beautypress-single-newsletter.beautypress-version-2 .beautypress-newsfeed-header-content {
+    bottom: inherit;
+    top: 0;
+    padding: 20px;
+    display: block;
+}
+
+.beautypress-single-newsletter.beautypress-version-2 .beautypress-dates strong:before {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: var(--color-white);
+    height: 1px;
+    width: 30px;
+}
+
+.beautypress-single-newsletter.beautypress-version-2 .beautypress-dates .bg-color-pink-2 strong {
+    background-color: transparent;
+}
+
+/* beautypress-single-newsletter beautypress-version-3 */
+
+.beautypress-single-newsletter.beautypress-version-3 .beautypress-dates p {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.714em;
+    padding: 11px 28px;
+    margin: 0 auto;
+}
+
+.beautypress-single-newsletter.beautypress-version-3 .beautypress-newsfeed-header-content {
+    display: block;
+    padding: 0;
+    bottom: -18px;
+}
+
+.beautypress-single-newsletter.beautypress-version-3 .beautypress-dates {
+    text-align: center;
+}
+
+/*======================================================================================
+								11. INDEX-V1 Our Partners
+===============================================================================*/
+
+.beautypress-partner-section {
+    position: relative;
+}
+
+.beautypress-partner-text-content {
+    padding: 0 55px 0 35px;
+    height: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+}
+
+.beautypress-partner-text-content .beautypress-sub-heading {
+    margin: 0 0 40px;
+}
+
+.beautypress-sub-heading h2 {
+    margin: 0;
+    color: var(--color-semi-black);
+    font-weight: 500;
+    font-size: 2.857em;
+    position: relative;
+    z-index: 1;
+}
+
+.beautypress-sub-heading.beautypress-watermark-title h2:before {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+    opacity: .1;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #B2B2B2;
+    font-weight: 700;
+    font-size: 1.750em;
+    letter-spacing: -2px;
+}
+
+.beautypress-partner-text-content p {
+    color: #999999;
+    line-height: 1.8;
+}
+
+.beautypress-partner-list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.beautypress-partner-list li {
+    min-height: 170px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.beautypress-partner-list li:before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+}
+
+.beautypress-partner-list li:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 1px;
+}
+
+.beautypress-partner-list li:nth-child(1):before {
+    background-image: -webkit-linear-gradient( 0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(2, 188, 212) 25%, rgb(2, 188, 212) 100%, rgb(255, 255, 255) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(2, 188, 212) 25%, rgb(2, 188, 212) 100%, rgb(255, 255, 255) 100%);
+}
+
+.beautypress-partner-list li:nth-child(2):before {
+    border-bottom: 1px solid var(--color-sky-blue);
+}
+
+.beautypress-partner-list li:nth-child(3):before {
+    background-image: -webkit-linear-gradient( 0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(2, 188, 212) 0%, rgb(2, 188, 212) 25%, rgb(255, 255, 255) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(2, 188, 212) 0%, rgb(2, 188, 212) 25%, rgb(255, 255, 255) 100%);
+}
+
+.beautypress-partner-list li:nth-child(1):after, .beautypress-partner-list li:nth-child(2):after {
+    background-image: -webkit-linear-gradient( 90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(2, 188, 212) 0%, rgb(2, 188, 212) 75%, rgb(255, 255, 255) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(2, 188, 212) 0%, rgb(2, 188, 212) 75%, rgb(255, 255, 255) 100%);
+}
+
+.beautypress-partner-list li:nth-child(4):after, .beautypress-partner-list li:nth-child(5):after {
+    background-image: -webkit-linear-gradient( 90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(2, 188, 212) 25%, rgb(2, 188, 212) 100%, rgb(255, 255, 255) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(2, 188, 212) 25%, rgb(2, 188, 212) 100%, rgb(255, 255, 255) 100%);
+}
+
+/* version 4 */
+
+.beautypress-partner-list.beautypress-version-4 li:nth-child(1):before {
+    background-image: -moz-linear-gradient( 0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(232, 232, 232) 25%, rgb(232, 232, 232) 100%, rgb(255, 255, 255) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(232, 232, 232) 25%, rgb(232, 232, 232) 100%, rgb(255, 255, 255) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(232, 232, 232) 25%, rgb(232, 232, 232) 100%, rgb(255, 255, 255) 100%);
+}
+
+.beautypress-partner-list.beautypress-version-4 li:nth-child(1):after, .beautypress-partner-list.beautypress-version-4 li:nth-child(2):after {
+    background-image: -moz-linear-gradient( 90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(232, 232, 232) 0%, rgb(232, 232, 232) 75%, rgb(255, 255, 255) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(232, 232, 232) 0%, rgb(232, 232, 232) 75%, rgb(255, 255, 255) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(232, 232, 232) 0%, rgb(232, 232, 232) 75%, rgb(255, 255, 255) 100%);
+}
+
+.beautypress-partner-list.beautypress-version-4 li:nth-child(2):before {
+    border-color: #E8E8E8;
+}
+
+.beautypress-partner-list.beautypress-version-4 li:nth-child(3):before {
+    background-image: -moz-linear-gradient( 0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(232, 232, 232) 0%, rgb(232, 232, 232) 75%, rgb(255, 255, 255) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(232, 232, 232) 0%, rgb(232, 232, 232) 75%, rgb(255, 255, 255) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(232, 232, 232) 0%, rgb(232, 232, 232) 75%, rgb(255, 255, 255) 100%);
+}
+
+.beautypress-partner-list.beautypress-version-4 li:nth-child(4):after, .beautypress-partner-list.beautypress-version-4 li:nth-child(5):after {
+    background-image: -moz-linear-gradient( 90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(232, 232, 232) 100%, rgb(232, 232, 232) 75%, rgb(255, 255, 255) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(232, 232, 232) 100%, rgb(232, 232, 232) 75%, rgb(255, 255, 255) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(232, 232, 232) 100%, rgb(232, 232, 232) 75%, rgb(255, 255, 255) 100%);
+}
+
+/* icon bgs */
+
+.beautypress-round-icons-bg {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /*background-image: url(../img/icons-bg.png);*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    /*background-attachment: fixed;*/
+    z-index: -1;
+}
+
+/*======================================================================================
+								12. INDEX-V1 Footer Section
+===============================================================================*/
+
+.beautypress-footer-section {
+    position: relative;
+    /*padding: 133px 0 0 0;*/
+    background-size: cover;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 829.4" preserveAspectRatio="none"><path fill= "rgb(103, 28, 152)" fill-opacity= "0.7" fill-rule= "evenodd" d="M0,10266s198.4,114,387,5,497.966-214.4,774-170,689.47,140,759,169v650H0v-654Z" transform="translate(0 -10090.6)"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    padding: 0;
+    padding-top: calc(100% * 1 / 10);
+}
+
+.beautypress-footer-section:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 829.4" preserveAspectRatio="none"><path fill= "rgb(103, 28, 152)" fill-opacity= "0.7" fill-rule= "evenodd" d="M0,10095s570.853,396,1495,58c0,0,271.65-105.1,425-92v863H0v-829Z" transform="translate(0 -10059.8)"/></svg>');
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.beautypress-footer-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 0 100px;
+    /*border-bottom: 1px solid var(--color-white);*/
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    margin: 0 0 40px;
+}
+
+.beautypress-footer-logo {
+    text-align: center;
+    margin: 0 0 63px;
+}
+
+.beautypress-footer-logo a {
+    display: inline-block;
+}
+
+.beautypress-subscribe-wraper {
+    width: 50%;
+    margin: 0 auto 100px auto;
+    text-align: center;
+}
+
+.beautypress-subscribe {
+    height: 70px;
+    position: relative;
+}
+
+.beautypress-subscribe-wraper input:not([type="submit"]) {
+    height: 100%;
+    width: 100%;
+    border: 2px solid #F0F0F0;
+    background-color: var(--color-white);
+    padding: 0 31px;
+    border-radius: 5px;
+}
+
+.beautypress-subscribe-wraper input[type="submit"] {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 50px;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--color-purple);
+    padding: 0 30px;
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.beautypress-subscribe-wraper input[type="submit"]:hover {
+    background-color: var(--color-pink-2);
+}
+
+.beautypress-footer-section.beautypress-version-3 .beautypress-subscribe-wraper input[type="submit"]:hover {
+    background-color: var(--light-red) !important;
+}
+
+.beautypress-subscribe-wraper h3 {
+    margin: 0 0 30px;
+    font-weight: 500;
+    color: var(--color-white);
+    text-transform: capitalize;
+    font-size: 1.857em;
+}
+
+.beautypress-single-footer p {
+    color: var(--color-white);
+    text-align: center;
+    line-height: 1.875;
+}
+
+.beautypress-single-footer-group p {
+    line-height: 1;
+    word-spacing: 2px;
+}
+
+.beautypress-copyright-text {
+    text-align: center;
+    padding: 0 0 48px;
+    position: relative;
+    z-index: 2;
+}
+
+.beautypress-copyright-text p {
+    color: var(--color-white);
+    font-size: 1em;
+}
+
+.beautypress-subscribe label {
+    margin: 10px 0 0;
+    color: var(--color-white);
+}
+
+/*==============================-------------------------------------
+												index-v2.html
+=========================----------------------------------*/
+
+/*=============== section heading ==========================*/
+
+.beautypress-watermark-title.beautypress-section-headinig i {
+    color: var(--color-purple);
+    font-size: 4em;
+    margin: 0 0 27px;
+    display: block;
+}
+
+.beautypress-watermark-title.beautypress-section-headinig h2 {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 2.857em;
+    text-transform: capitalize;
+    z-index: 1;
+    margin: 0;
+    padding: 0 0 30px;
+}
+
+.beautypress-section-headinig.beautypress-watermark-title h2:before {
+    font-size: 1.750em;
+    font-weight: 700;
+    left: 50%;
+    top: -25px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+    color: #F6F6F6;
+    text-transform: uppercase;
+    pointer-events: none;
+    z-index: -1;
+    letter-spacing: -2px;
+}
+
+.bg-color-gray .beautypress-section-headinig.beautypress-watermark-title h2:before {
+    color: #eaeaea;
+}
+
+/*======================================================================================
+								1. INDEX-V2 Header section
+===============================================================================*/
+
+.beautypress-header-social-list ul li {
+    display: inline-block;
+    margin-right: 14px;
+}
+
+.beautypress-header-social-list ul li:last-child {
+    margin-right: 0;
+}
+
+.beautypress-header-social-list ul li a {
+    color: #666666;
+}
+
+.beautypress-header-section.beautypress-header-version-3.beautypress-header-version-4 {
+    box-shadow: var(--primary-shadow);
+}
+
+.beautypress-header-section.beautypress-header-version-2 .beautypress-header-top .beautypress-spilit-container, .beautypress-header-section.beautypress-header-version-3 .beautypress-header-top .beautypress-spilit-container {
+    /* index-v4.html and index-v3.html */
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.beautypress-header-section.beautypress-header-version-2 .beautypress-header-top .beautypress-simple-iocn-list {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.beautypress-header-section.beautypress-header-version-2 .beautypress-language-select-list, .beautypress-header-section.beautypress-header-version-3 .beautypress-language-select-list {
+    /* index-v4.html and index-v3.html */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.beautypress-language-select-list select {
+    background-color: transparent;
+    border: 0;
+    color: var(--color-white);
+    text-transform: capitalize;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(../img/select-icons.png) no-repeat center right;
+    padding: 0 22px;
+}
+
+.beautypress-language-select-list select option {
+    background-color: var(--color-pink);
+    border: 0;
+}
+
+.bg-color-green .beautypress-language-select-list select option {
+    background-color: #53A14E;
+}
+
+.bg-color-purple .beautypress-language-select-list select option {
+    background-color: var(--color-purple);
+}
+
+.bg-color-cyan .beautypress-language-select-list select option {
+    background-color: var(--color-cyan);
+}
+
+.bg-green-2 .beautypress-language-select-list select option {
+    background-color: #92C357;
+}
+
+.beautypress-header-section.beautypress-header-version-2 .beautypress-logo-wraper .beautypress-logo {
+    position: static;
+    box-shadow: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.navbar-toggler-icon {
+    background-color: var(--color-white);
+    height: 2px;
+    width: 40px;
+    transition: all .4s ease;
+    margin: 0 0 6px auto;
+    display: block;
+}
+
+.navbar-toggler-icon:last-child {
+    margin: 0 0 0 auto;
+}
+
+.icon-left .navbar-toggler-icon {
+    margin: 0 auto 6px 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+    transform-origin: center;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:nth-child(2) {
+    transform: translateX(-50px);
+    width: 0%;
+    opacity: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:nth-child(3) {
+    transform: translateY(-6px) rotate(45deg);
+    transform-origin: center;
+}
+
+.nav-side-logo {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.beautypress-nav-logo {
+    display: block;
+}
+
+.beautypress-version-2.beautypress-logo:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 191px;
+    z-index: -1;
+    top: 0;
+    background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 200 191"> <path fill-rule="evenodd"  fill="%23FFFFFF" d="M200.002,-0.005 L200.002,127.338 L100.003,191.011 L0.004,127.338 L0.004,-0.005 "/></svg>');
+    filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.1));
+}
+
+.beautypress-version-2.beautypress-logo:after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 64px solid var(--color-white);
+    filter: drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.1));
+    z-index: -2;
+    display: none;
+}
+
+.beautypress-logo.beautypress-version-2.beautypress-version-4:after {
+    border-left: 92.5px solid transparent;
+    border-right: 92.5px solid transparent;
+}
+
+.beautypress-version-2.beautypress-logo img {
+    /*padding: 17px 23px;*/
+    margin-top: 10px;
+}
+
+.beautypress-header-section.beautypress-version-1 .beautypress-version-2.beautypress-logo {
+    top: 0;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    box-shadow: var(--hover-shadow);
+    max-width: 199px;
+    height: 100%;
+    min-height: 110px;
+    width: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: auto;
+    max-height: none;
+    width: 100%;
+}
+
+/*======================================================================================
+								2. INDEX-V2 welcome section
+===============================================================================*/
+
+.beautypress-welcome-section.beautypress-welcome-version-2 .beautypress-welcome-container {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin: 0 0 0 auto;
+    width: 58.666667%;
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-2 .beautypress-welcome-wraper {
+    width: 100%;
+    min-height: 379px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 74px 74px 0;
+    position: relative;
+    margin: 25% 0 0 0;
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-2 .beautypress-welcome-wraper:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: calc(100% - 35px);
+    width: 100%;
+    border: 2px solid var(--color-white);
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-2 .beautypress-welcome-slider h2 {
+    font-size: 4.286em;
+    margin: 0 0 20px;
+    text-transform: capitalize;
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-2 .beautypress-welcome-slider h3 {
+    font-size: 7.143em;
+    margin: 0 0 50px;
+    letter-spacing: -4px;
+}
+
+/*======================================================================================
+								3. INDEX-V2 Simple text with image version 2
+===============================================================================*/
+
+.beautypress-watermark-icon {
+    position: relative;
+    z-index: 1;
+}
+
+.beautypress-watermark-icon:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    font-family: var(--font-icons-2);
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #f2f2f2;
+    font-size: 15em;
+}
+
+.beautypress-simple-text.beautypress-watermark-icon:before {
+    content: "\e946";
+    height: 200px;
+    width: 200px;
+    z-index: -1;
+}
+
+/*======================================================================================
+								4. INDEX-V2 Exclusive Products
+===============================================================================*/
+
+.beautypress-product-group {
+    min-height: 356px;
+    box-shadow: var(--primary-shadow);
+    position: relative;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    overflow: hidden;
+    text-align: center;
+    padding: 47px 10px 40px;
+    background-color: var(--color-white);
+}
+
+.beautypress-product-content .beautypress-rating {
+    margin: 0 0 20px;
+}
+
+.beautypress-rating li {
+    display: inline-block;
+}
+
+.beautypress-rating li a {
+    color: var(--color-orange);
+}
+
+.beautypress-product-details {
+    margin: 0 0 15px;
+}
+
+.beautypress-product-details h3 {
+    color: #111111;
+    margin: 0 0 20px;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 1.286em;
+    line-height: inherit;
+}
+
+.beautypress-product-details h4 {
+    margin: 0;
+    color: #A0A0A0;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.beautypress-product-img {
+    min-height: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.beautypress-product-hover-elements {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    width: 100%;
+    text-align: center;
+}
+
+.beautypress-product-group:hover .beautypress-product-hover-elements {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    top: 50%;
+}
+
+.beautypress-product-group:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+.beautypress-product-hover-elements a {
+    margin: 0 20px 0 0;
+}
+
+.beautypress-product-hover-elements a:last-child {
+    margin: 0;
+}
+
+.pulse-btn i:before {
+    z-index: 2;
+}
+
+.pulse-btn i:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    font-family: 'FontAwesome';
+    z-index: 1;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    pointer-events: none;
+}
+
+.beautypress-product-hover-elements .pulse-btn i:after {
+    content: "\f004";
+    color: var(--color-purple);
+}
+
+.pulse-btn.active i:after {
+    -webkit-animation: scale .6s linear;
+    animation: scale .6s linear;
+}
+
+@-webkit-keyframes scale {
+    50% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        -webkit-transform: scale(2);
+        transform: scale(2);
+    }
+}
+
+@keyframes scale {
+    50% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        -webkit-transform: scale(2);
+        transform: scale(2);
+    }
+}
+
+/*======================================================================================
+								5. INDEX-V2 Welcome to our barbar shop
+===============================================================================*/
+
+.beautypress-shop-call-to-action-content {
+    position: relative;
+    width: 77%;
+    z-index: 2;
+    padding: 200px 0;
+}
+
+.beautypress-shop-call-to-action-content h2 {
+    font-weight: 100;
+    font-size: 4.286em;
+    margin: 0 0 58px;
+}
+
+.beautypress-shop-call-to-action-content h2 strong {
+    font-weight: 500;
+}
+
+.beautypress-shop-call-to-action-content .beautypress-spilit-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 130px;
+}
+
+.beautypress-shop-text p {
+    color: #666666;
+    font-size: 1.143em;
+    margin: 0 0 30px;
+}
+
+.beautypress-shop-shedule h3 {
+    font-size: 1.857em;
+    font-weight: 500;
+    margin: 0 0 30px;
+    text-transform: capitalize;
+}
+
+.beautypress-shop-shedule span, .beautypress-shop-shedule i {
+    display: block;
+    color: #666666;
+    font-size: 0.700em;
+}
+
+.beautypress-shop-shedule p {
+    color: var(--color-purple);
+    margin: 0 0 15px;
+    font-size: 1.429em;
+}
+
+.beautypress-shop-shedule p:last-child {
+    margin: 0;
+}
+
+.beautypress-shop-shedule i {
+    color: var(--light-red);
+}
+
+.beautypress-watermark-big-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../img/scissors.png);
+    z-index: -1;
+    pointer-events: none;
+    background-size: 60% 70%;
+}
+
+/*======================================================================================
+								6. INDEX-V2 How It Works
+===============================================================================*/
+
+.counter-increment {
+    counter-increment: my-awesome-counter;
+}
+
+.beautypress-single-how-it-work {
+    padding: 0 30px;
+}
+
+.beautypress-neumaric-heading {
+    margin: 0 0 30px;
+}
+
+.beautypress-watermark-title .beautypress-neumaric-heading h2 {
+    z-index: 2;
+}
+
+.beautypress-watermark-title .beautypress-neumaric-heading h2:before {
+    color: var(--color-purple);
+    content: '0' counter(my-awesome-counter);
+    font-size: 3.846em;
+    font-weight: 700;
+    line-height: 1;
+    top: calc(50% - 11px);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: -34px;
+    z-index: -1;
+    opacity: .1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+}
+
+.beautypress-neumaric-heading h2 {
+    margin: 0;
+    font-size: 1.857em;
+    font-weight: 300;
+}
+
+.beautypress-neumaric-heading strong {
+    font-weight: 500;
+}
+
+.beautypress-single-how-it-work p {
+    margin: 0 0 25px;
+    line-height: 1.8;
+}
+
+/*======================================================================================
+								7. INDEX-V2 Video background section
+===============================================================================*/
+
+.beautypress-video-section {
+    padding: 260px 0;
+}
+
+.beautypress-video-section-content {
+    text-align: center;
+    color: var(--color-white);
+}
+
+.beautypress-video-section-content a {
+    margin: 0 0 50px;
+}
+
+.beautypress-video-section-content p {
+    font-family: var(--font-cursive);
+    font-size: 2.143em;
+    margin: 0 0 20px;
+}
+
+.beautypress-video-section-content h3 {
+    margin: 0;
+    font-size: 3.571em;
+    font-weight: 500;
+}
+
+/*======================================================================================
+								8. INDEX-V2 Our Services
+===============================================================================*/
+
+.beautypress-single-our-sevice {
+    box-shadow: var(--primary-shadow);
+}
+
+.beautypress-service-footer {
+    padding: 40px 30px 40px;
+}
+
+.beautypress-service-header img {
+    width: 100%;
+}
+
+.beautypress-service-footer h3 {
+    margin: 0 0 30px;
+    color: var(--color-semi-black);
+    font-weight: 500;
+    font-size: 1.857em;
+    text-transform: capitalize;
+}
+
+.beautypress-both-side-list.beautypress-version-2 li span {
+    color: var(--color-purple);
+}
+
+.beautypress-both-side-list.beautypress-version-2 li:hover, .beautypress-both-side-list.beautypress-version-2 li:hover span {
+    color: var(--light-red);
+}
+
+/*======================================================================================
+								9. INDEX-V2 Testimonial section
+===============================================================================*/
+
+.beautypress-testimonial-section {
+    padding: 173px 0;
+}
+
+.beautypress-testimonial-slider {
+    position: relative;
+    padding: 58px 0 0 0;
+}
+
+.beautypress-testimonial-slider:before {
+    position: absolute;
+    content: "";
+    top: 58px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 165px;
+    width: 225px;
+    background-image: url(../img/quote-icon.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    opacity: .1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+}
+
+.beautypress-black-overlay.light-overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.beautypress-single-testimonial {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.beautypress-single-testimonial h2 {
+    margin: 0 0 32px;
+    color: var(--color-white);
+    font-weight: 100;
+    font-size: 2.857em;
+    text-transform: capitalize;
+}
+
+.beautypress-single-testimonial p {
+    color: #BBBBBB;
+    margin: 0 0 30px;
+    font-size: 1.143em;
+}
+
+.beautypress-single-testimonial .beautypress-rating {
+    margin: 0 0 19px;
+}
+
+.beautypress-testimonial-slider.owl-carousel .owl-item .beautypress-signature img {
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+}
+
+.beautypress-testimonial-slider.owl-carousel .owl-dot {
+    height: 2px;
+    width: 30px;
+    background-color: var(--color-white);
+    opacity: .3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    margin: 0 20px 0 0;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-testimonial-slider.owl-carousel .owl-dot:last-child {
+    margin: 0;
+}
+
+.beautypress-testimonial-slider.owl-carousel .owl-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.beautypress-testimonial-slider.owl-carousel .owl-dot.active {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+/*======================================================================================
+								10. INDEX-V2 Our Pricing
+===============================================================================*/
+
+.beautypress-single-pricing-table.beautypress-version-2 {
+    padding: 80px 30px 50px;
+}
+
+.beautypress-single-pricing-table.beautypress-version-2 .beautypress-pricing-header {
+    text-align: center;
+}
+
+.beautypress-single-pricing-table.beautypress-version-2 .beautypress-pricing-header-content {
+    position: static;
+    flex-direction: column;
+    padding: 0;
+}
+
+.beautypress-single-pricing-table.beautypress-version-2 .beautypress-pricing-price {
+    text-align: center;
+    margin: 0 0 30px;
+}
+
+.beautypress-single-pricing-table.beautypress-version-2 .beautypress-pricing-header i {
+    color: var(--color-white);
+    font-size: 6em;
+    margin: 0 0 50px;
+    display: block;
+}
+
+.beautypress-single-pricing-table.beautypress-version-2 .beautypress-pricing-footer {
+    padding: 0;
+}
+
+.beautypress-single-pricing-table.beautypress-version-2 .beautypress-pricing-title h2 {
+    font-size: 1.857em;
+    margin: 0 0 30px;
+}
+
+.beautypress-single-pricing-table.beautypress-version-2 .beautypress-pricing-price h5 {
+    font-weight: 100;
+}
+
+.beautypress-single-pricing-table.beautypress-version-2 .beautypress-pricing-price h5 span {
+    font-size: inherit;
+    vertical-align: unset;
+}
+
+.beautypress-single-pricing-table.beautypress-version-2 .beautypress-both-side-list li, .beautypress-single-pricing-table.beautypress-version-2 .beautypress-both-side-list li span {
+    color: var(--color-white);
+}
+
+/*======================================================================================
+								11. INDEX-V2 Our Partners
+===============================================================================*/
+
+.beautypress-partner-list.beautypress-version-2 li:nth-child(1):before {
+    background-image: -webkit-linear-gradient( 0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(107, 30, 153) 25%, rgb(107, 30, 153) 100%, rgb(255, 255, 255) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(107, 30, 153) 25%, rgb(107, 30, 153) 100%, rgb(255, 255, 255) 100%);
+}
+
+.beautypress-partner-list.beautypress-version-2 li:nth-child(2):before {
+    border-color: var(--color-purple);
+}
+
+.beautypress-partner-list.beautypress-version-2 li:nth-child(1):after, .beautypress-partner-list.beautypress-version-2 li:nth-child(2):after {
+    background-image: -webkit-linear-gradient( 90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(107, 30, 153) 0%, rgb(107, 30, 153) 75%, rgb(255, 255, 255) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(107, 30, 153) 0%, rgb(107, 30, 153) 75%, rgb(255, 255, 255) 100%);
+}
+
+.beautypress-partner-list.beautypress-version-2 li:nth-child(3):before {
+    background-image: -webkit-linear-gradient( 0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(107, 30, 153) 0%, rgb(107, 30, 153) 25%, rgb(255, 255, 255) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(107, 30, 153) 0%, rgb(107, 30, 153) 25%, rgb(255, 255, 255) 100%);
+}
+
+.beautypress-partner-list.beautypress-version-2 li:nth-child(4):after, .beautypress-partner-list.beautypress-version-2 li:nth-child(5):after {
+    background-image: -webkit-linear-gradient( 90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(107, 30, 153) 25%, rgb(107, 30, 153) 100%, rgb(255, 255, 255) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(107, 30, 153) 25%, rgb(107, 30, 153) 100%, rgb(255, 255, 255) 100%);
+}
+
+/*======================================================================================
+								12. INDEX-V2 Subscribe Section
+===============================================================================*/
+
+.beautypress-subscribe-content {
+    padding: 0 0 70px;
+    margin: 0 0 80px;
+    border-bottom: 1px solid #E2E2E2;
+    position: relative;
+    z-index: 1;
+}
+
+.beautypress-subscribe-content:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/massage-watermark.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    opacity: .1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+}
+
+.beautypress-subscribe-wraper.beautypress-version-2 {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.beautypress-subscribe-wraper.beautypress-version-2 h3 {
+    color: var(--color-semi-black);
+    font-size: 2.857em;
+    margin: 0 0 48px;
+}
+
+.beautypress-version-2.beautypress-subscribe-wraper input:not([type="submit"]) {
+    background-color: transparent;
+}
+
+.beautypress-subscribe-wraper.beautypress-version-2 .beautypress-subscribe label {
+    color: var(--color-purple);
+}
+
+/*======================================================================================
+								13. INDEX-V2 Footer Section
+===============================================================================*/
+
+.beautypress-footer-section.beautypress-version-2 .beautypress-single-footer p {
+    color: inherit;
+    font-size: 1em;
+}
+
+.beautypress-version-2.beautypress-footer-section:before, .beautypress-version-2.beautypress-footer-section:after {
+    display: none;
+}
+
+.beautypress-version-2.beautypress-footer-section {
+    padding: 0;
+    background-image: none;
+}
+
+.beautypress-footer-section.beautypress-version-2 .beautypress-footer-content {
+    padding: 0 0 100px;
+    border-bottom: 0px solid var(--color-white);
+    margin: 0;
+}
+
+.beautypress-footer-section.beautypress-version-2 .beautypress-copyright-content {
+    background-color: var(--color-purple);
+    padding: 25px 0;
+}
+
+.beautypress-footer-section.beautypress-version-2 .beautypress-copyright-text {
+    text-align: left;
+    padding: 0;
+}
+
+.beautypress-footer-section.beautypress-version-2 .beautypress-footer-social {
+    text-align: right;
+}
+
+/*==============================-------------------------------------
+												index-v3.html
+=========================----------------------------------*/
+
+/*====================== section heading ========================*/
+
+.beautypress-version-2.beautypress-section-headinig h2 {
+    color: var(--color-cyan);
+    font-size: 1.857em;
+}
+
+.beautypress-version-2.beautypress-section-headinig h3 {
+    margin: 0 0 18px;
+}
+
+/*======================================================================================
+								1. INDEX-V3 header section
+===============================================================================*/
+
+.beautypress-header-section.beautypress-header-version-3 .beautypress-header-top .beautypress-simple-iocn-list {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.beautypress-header-section.beautypress-header-version-3 .beautypress-language-select-list {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.beautypress-header-section.beautypress-header-version-3 .beautypress-logo {
+    position: static;
+    box-shadow: none;
+    background-color: transparent;
+    padding: 9px 0;
+}
+
+.beautypress-address-content {
+    padding: 26px 0;
+    background-color: #F7F7F7;
+}
+
+.beautypress-address-element {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.beautypress-single-address-element {
+    padding: 0 45px 0 0;
+    display: flex;
+}
+
+.beautypress-single-address-element:last-child {
+    padding: 0;
+}
+
+.beautypress-single-address-element i {
+    font-size: 2.143em;
+    padding: 0;
+    vertical-align: text-top;
+    margin: 0 20px 0 0;
+    width: auto;
+    box-shadow: none;
+}
+
+.beautypress-single-address-element p {
+    margin: 0;
+    color: #444;
+    font-weight: 500;
+    font-size: 1.429em;
+    position: relative;
+}
+
+.beautypress-single-address-element span {
+    font-size: 1.143em;
+    display: block;
+}
+
+.beautypress-header-section.beautypress-header-version-3 .beautypress-main-header .beautypress-spilit-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.beautypress-header-section.beautypress-header-version-3 .beautypress-main-header .beautypress-spilit-container .beautypress-btn-wraper {
+    width: 25%;
+    text-align: right;
+}
+
+.beautypress-header-section.beautypress-header-version-3 .beautypress-main-header {
+    background-color: transparent;
+}
+
+.beautypress-header-section.beautypress-header-version-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: none;
+}
+
+.beautypress-header-section.beautypress-header-version-3 .beautypress-main-header .beautypress-mega-menu .nav-menu li {
+    margin: 0 30px 0 0;
+}
+
+.beautypress-mega-menu.xs_nav-landscape .xs-row {
+    width: 100%;
+}
+
+.nav-menu>li>a>i {
+    text-align: right;
+}
+
+.beautypress-header-section.beautypress-header-version-3 .beautypress-main-header .beautypress-mega-menu .nav-menu li a {
+    font-weight: 700;
+}
+
+.beautypress-header-section.beautypress-header-version-3 .beautypress-main-header .beautypress-mega-menu .beautypress-btn-wraper {
+    align-self: center;
+    text-align: right;
+}
+
+/*======================================================================================
+								2. INDEX-V3 welcome section
+===============================================================================*/
+
+.beautypress-welcome-section.beautypress-welcome-version-3 {
+    position: relative;
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-3 .beautypress-welcome-container {
+    /*height: 950px;*/
+    height: 700px;
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-3 .beautypress-black-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-3 .beautypress-black-gradient-overlay:before {
+    background-image: -moz-linear-gradient( 90deg, rgba(0, 0, 0, 0.70196) 0%, rgba(138, 138, 138, 0) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgba(0, 0, 0, 0.70196) 0%, rgba(138, 138, 138, 0) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgba(0, 0, 0, 0.70196) 0%, rgba(138, 138, 138, 0) 100%);
+    opacity: .9;
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-3 .beautypress-welcome-wraper {
+    width: 100%;
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-3 .beautypress-welcome-container {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-3 .beautypress-welcome-container h2 {
+    /*font-family: inherit;*/
+    font-weight: 200;
+    /*font-size: 5.000em;*/
+    font-size: 2.714em;
+    /*letter-spacing: -2px;*/
+    margin: 0 0 8px;
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-3 .beautypress-welcome-container h3 {
+    margin: 0 0 20px;
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-3 .beautypress-welcome-container p {
+    font-size: 1em;
+}
+
+/*======================================================================================
+								3. INDEX-V3 Our Services
+===============================================================================*/
+
+.beautypress-service-section.beautypress-version-2 .beautypress-tab .beautypress-side-nav li a:hover, .beautypress-service-section.beautypress-version-2 .beautypress-tab .beautypress-side-nav li.active a, .beautypress-service-section.beautypress-version-2 .beautypress-tab .beautypress-top-nav li a:hover i, .beautypress-service-section.beautypress-version-2 .beautypress-tab .beautypress-top-nav li.active a i {
+    color: var(--color-cyan);
+}
+
+.beautypress-service-section.beautypress-version-2 .beautypress-tab .beautypress-side-nav li a:before {
+    background-color: var(--color-cyan);
+}
+
+.beautypress-service-section.beautypress-version-2 .beautypress-tab .beautypress-top-nav li a:before, .beautypress-service-section.beautypress-version-2 .beautypress-tab .beautypress-top-nav li a:after {
+    border-color: var(--color-cyan);
+}
+
+.beautypress-service-section.beautypress-version-2 .beautypress-tab .beautypress-top-nav li a i {
+    color: var(--color-chocolate);
+}
+
+/*======================================================================================
+								4. INDEX-V3 Get Appoinment
+===============================================================================*/
+
+.beautypress-booking-section.beautypress-version-2 .beautypress-border.beautypress-version-3, .beautypress-booking-section.beautypress-version-2 .beautypress-border.beautypress-version-3:before, .beautypress-booking-section.beautypress-version-2 .beautypress-border.beautypress-version-3:after {
+    border-color: var(--color-chocolate);
+}
+
+.beautypress-booking-section.beautypress-version-2 .beautypress-booking-text h2 {
+    color: var(--color-cyan);
+}
+
+.beautypress-booking-section.beautypress-version-2 .beautypress-booking-text ul li:last-child {
+    color: #FF6B6B;
+}
+
+.beautypress-booking-section.beautypress-version-2 .beautypress-icon-bg-text:before {
+    color: var(--color-chocolate);
+}
+
+.beautypress-booking-section.beautypress-version-2 .beautypress-booking-form-wraper textarea:focus, .beautypress-booking-section.beautypress-version-2 .beautypress-booking-form-wraper input:focus, .beautypress-booking-section.beautypress-version-2 .beautypress-booking-form-wraper select:focus {
+    border-color: var(--color-chocolate) !important;
+}
+
+.beautypress-booking-section.beautypress-version-2 .beautypress-booking-form-wraper .beautypress-select .input-group.actives:before {
+    background-color: var(--color-chocolate);
+    border-color: var(--color-chocolate);
+}
+
+.beautypress-booking-section.beautypress-version-2 .beautypress-booking-form-wraper input[type="submit"] {
+    background-color: var(--color-cyan);
+}
+
+.beautypress-booking-section.beautypress-version-2 .beautypress-booking-form-wraper input[type="submit"]:hover {
+    background-color: var(--light-red);
+}
+
+/*======================================================================================
+								4. INDEX-V3 Photo Gallery
+===============================================================================*/
+
+.beautypress-photo-gallery-section.beautypress-version-2 .beautypress-portfolio-nav ul li a:hover, .beautypress-photo-gallery-section.beautypress-version-2 .beautypress-portfolio-nav ul li a.selected {
+    color: var(--color-cyan);
+}
+
+.beautypress-photo-gallery-section.beautypress-version-2 .beautypress-portfolio-nav ul li a:before, .beautypress-photo-gallery-section.beautypress-version-2 .beautypress-gallery-overlay {
+    background-color: var(--color-cyan);
+}
+
+.beautypress-photo-gallery-section.beautypress-version-2 .beautypress-single-photo-gallery:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+.beautypress-photo-gallery-section.beautypress-version-2 .beautypress-single-photo-gallery.beautypress-3d:hover {
+    box-shadow: none;
+}
+
+.beautypress-photo-gallery-section.beautypress-version-2 .beautypress-single-photo-gallery.beautypress-3d:hover .beautypress-3d-project-card {
+    box-shadow: var(--hover-shadow);
+}
+
+/*======================================================================================
+								5. INDEX-V3 Our Pricing
+===============================================================================*/
+
+.beautypress-single-pricing-table.beautypress-version-3 {
+    padding: 100px 30px 50px;
+}
+
+.beautypress-single-pricing-table.beautypress-version-3 .beautypress-pricing-header-content {
+    position: static;
+    padding: 0;
+    flex-direction: column;
+}
+
+.beautypress-single-pricing-table.beautypress-version-3 .beautypress-pricing-header, .beautypress-single-pricing-table.beautypress-version-3 .beautypress-pricing-price {
+    text-align: center;
+}
+
+.beautypress-single-pricing-table.beautypress-version-3 .beautypress-pricing-title h2 {
+    color: var(--color-semi-black);
+    font-size: 1.857em;
+    letter-spacing: -2px;
+}
+
+.beautypress-single-pricing-table.beautypress-version-3 .beautypress-pricing-price h4 {
+    color: #C8C8C8;
+}
+
+.beautypress-single-pricing-table.beautypress-version-3 .beautypress-pricing-price h5 span {
+    vertical-align: unset;
+    font-size: inherit;
+}
+
+.beautypress-single-pricing-table.beautypress-version-3 .beautypress-pricing-footer {
+    padding: 0;
+}
+
+.beautypress-single-pricing-table.beautypress-version-3 .beautypress-pricing-header img {
+    margin: 0 0 30px;
+    width: auto;
+}
+
+.beautypress-single-pricing-table.beautypress-version-3 .beautypress-pricing-title {
+    margin: 0 0 20px;
+}
+
+.beautypress-single-pricing-table.beautypress-version-3 .beautypress-pricing-header {
+    padding: 0 0 37px;
+    z-index: 1;
+}
+
+.beautypress-single-pricing-table.beautypress-version-3 .beautypress-pricing-header:before {
+    position: absolute;
+    content: "";
+    top: -53px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: -1;
+    opacity: .1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+}
+
+.beautypress-single-pricing-table.beautypress-version-3.beautypress-image-overlay-1 .beautypress-pricing-header:before {
+    background-image: url(../img/pricing-overlay-1.png);
+}
+
+.beautypress-single-pricing-table.beautypress-version-3.beautypress-image-overlay-2 .beautypress-pricing-header:before {
+    background-image: url(../img/pricing-overlay-2.png);
+}
+
+.beautypress-single-pricing-table.beautypress-version-3.beautypress-image-overlay-3 .beautypress-pricing-header:before {
+    background-image: url(../img/pricing-overlay-3.png);
+}
+
+.beautypress-both-side-list.beautypress-version-3 li span {
+    color: var(--color-chocolate);
+}
+
+.beautypress-single-pricing-table.beautypress-version-3 .beautypress-both-side-list li {
+    color: #999;
+}
+
+/*======================================================================================
+								6. INDEX-V3 Call To Action
+===============================================================================*/
+
+.beautypress-call-to-action-content.beautypress-version-2 .beautypress-content-headinig h2 {
+    font-size: 2.857em;
+}
+
+.beautypress-call-to-action-content.beautypress-version-2 .beautypress-content-headinig h3 {
+    color: #444444;
+    font-size: 3.571em;
+    letter-spacing: -2px;
+}
+
+/*======================================================================================
+								7. INDEX-V3 Fun Factory
+===============================================================================*/
+
+.beautypress-fun-factory-section {
+    padding: 173px 0;
+}
+
+.beautypress-counter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0 0 13px;
+}
+
+.beautypress-single-fun-factory {
+    text-align: center;
+    color: var(--color-white);
+}
+
+.beautypress-counter h2, .beautypress-counter span {
+    margin: 0;
+    font-size: 4.286em;
+    font-weight: 100;
+    line-height: 1;
+}
+
+.beautypress-single-fun-factory h5 {
+    margin: 0;
+    font-size: 1.857em;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.beautypress-single-fun-factory {
+    position: relative;
+}
+
+.beautypress-watermark-icons.watermark-icon-style-1 {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    opacity: .1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    font-size: 12em;
+    line-height: 1;
+}
+
+/*======================================================================================
+								8. INDEX-V3 Footer
+===============================================================================*/
+
+.beautypress-version-3.beautypress-footer-section {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 829.4" preserveAspectRatio="none"><path fill="rgb(77, 182, 172)" fill-opacity="0.7" fill-rule= "evenodd" d="M0,10266s198.4,114,387,5,497.966-214.4,774-170,689.47,140,759,169v650H0v-654Z" transform="translate(0 -10090.6)"/></svg>');
+}
+
+.beautypress-version-3.beautypress-footer-section:after {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 829.4" preserveAspectRatio="none"><path fill="rgb(77, 182, 172)" fill-opacity="0.7" fill-rule= "evenodd" d="M0,10095s570.853,396,1495,58c0,0,271.65-105.1,425-92v863H0v-829Z" transform="translate(0 -10059.8)"/></svg>');
+}
+
+/*==============================-------------------------------------
+												index-v4.html
+=========================----------------------------------*/
+
+/*======================================================================================
+								1. INDEX-V4 welcome section
+===============================================================================*/
+
+.beautypress-welcome-section.beautypress-welcome-version-4 .beautypress-welcome-container {
+    height: 750px;
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-4 .beautypress-welcome-container p {
+    font-size: 1.857em;
+    margin: 0 0 20px;
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-4 .beautypress-welcome-container h3 {
+    margin: 0 0 50px;
+    letter-spacing: -2px;
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-4 .beautypress-welcome-slider-item.beautypress-version-1 .beautypress-welcome-content-group:before {
+    background-image: url(../img/women_1.html);
+    width: 450px;
+    bottom: -50px;
+}
+
+/*======================================================================================
+								2. INDEX-V4 Our Features
+===============================================================================*/
+
+.beautypress-single-our-feature {
+    position: relative;
+    box-shadow: var(--hover-shadow);
+    overflow: hidden;
+}
+
+.beautypress-single-our-feature img {
+    width: 100%;
+}
+
+.beautypress-our-features-content {
+    position: absolute;
+    bottom: -65px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    padding: 0 10px;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-our-features-content h3 {
+    color: var(--color-white);
+    letter-spacing: -2px;
+    font-size: 1.857em;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0 0 25px;
+}
+
+.beautypress-single-our-feature i {
+    position: absolute;
+    right: -90px;
+    bottom: -50px;
+    font-size: 18em;
+    color: var(--color-white);
+    opacity: .2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    z-index: 1;
+    line-height: 1;
+}
+
+.beautypress-single-our-feature .beautypress-btn-wraper {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-single-our-feature:hover .beautypress-our-features-content {
+    bottom: 40px;
+}
+
+.beautypress-single-our-feature:hover .beautypress-btn-wraper {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+/*======================================================================================
+								3. INDEX-V4 Our Pricing
+===============================================================================*/
+
+.beautypress-single-pricing-table.beautypress-version-4 .beautypress-pricing-header-content {
+    position: static;
+    padding: 40px 40px 0;
+    text-align: center;
+    flex-direction: column;
+}
+
+.beautypress-single-pricing-table.beautypress-version-4 .beautypress-pricing-title h2 {
+    color: var(--color-semi-black);
+    font-size: 1.857em;
+}
+
+.beautypress-single-pricing-table.beautypress-version-4 .beautypress-pricing-title {
+    margin: 0 0 20px;
+}
+
+.beautypress-single-pricing-table.beautypress-version-4 .beautypress-pricing-price h4 {
+    color: #C8C8C8;
+}
+
+.beautypress-single-pricing-table.beautypress-version-4 .beautypress-pricing-price {
+    text-align: center;
+}
+
+.beautypress-single-pricing-table.beautypress-version-4 .beautypress-pricing-price h5 span {
+    vertical-align: inherit;
+    font-size: inherit;
+}
+
+/*==============================-------------------------------------
+												index-v5.html
+=========================----------------------------------*/
+
+/*======================================================================================
+								1. INDEX-V5 Header Section
+===============================================================================*/
+
+.beautypress-header-section.beautypress-header-version-4 .beautypress-main-header .xs-navigation-middle-menu.xs_nav-landscape .nav-menu li a {
+    color: var(--color-white);
+    /*border-color: transparent;*/
+}
+
+.beautypress-header-section.beautypress-header-version-4 .beautypress-main-header .xs-navigation-middle-menu.xs_nav-landscape .nav-menu li .nav-submenu li a {
+    color: var(--color-semi-black);
+}
+
+.beautypress-header-section.beautypress-header-version-4 .beautypress-main-header .xs-navigation-middle-menu.xs_nav-landscape .nav-menu li .nav-submenu li a:hover {
+    color: var(--color-navy-blue);
+}
+
+.beautypress-main-header.bg-color-cyan .nav-menu .submenu-indicator-chevron {
+    border-color: transparent #FFFFFF #FFFFFF transparent;
+}
+
+.beautypress-main-header.bg-color-cyan .xs-navigation-middle-menu.xs_nav-landscape .nav-menu .nav-submenu {
+    background-color: var(--color-white);
+}
+
+/*.beautypress-header-section.beautypress-header-version-4 .beautypress-main-header .xs-navigation-middle-menu.xs_nav-landscape .nav-menu li a:hover {
+	color: var(--color-purple);
+}*/
+
+.beautypress-header-section.beautypress-header-version-4 .beautypress-version-2.beautypress-logo {
+    top: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.xs-navigation-middle-menu .xs-row {
+    width: 100%;
+}
+
+.xs-navigation-middle-menu .xs-row .xs-col-2 {
+    position: relative;
+    display: block;
+    height: 100%;
+}
+
+.beautypress-header-section.beautypress-header-version-4 .nav-header .xs-nav-logo {
+    display: none;
+}
+
+/*======================================================================================
+								2. INDEX-V5 welcome Section
+===============================================================================*/
+
+.beautypress-welcome-section.beautypress-welcome-version-5 .beautypress-welcome-container {
+    width: 60%;
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-5 .beautypress-welcome-container h3 {
+    margin: 0 0 20px;
+    letter-spacing: -2px;
+    font-size: 4.286em;
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-5 .beautypress-welcome-container p {
+    font-size: 1.286em;
+    margin: 0 0 30px;
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-5 .beautypress-welcome-wraper {
+    position: relative;
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-5 .beautypress-welcome-wraper span.xsicon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    line-height: 1;
+    color: #b6b6b6;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 30em;
+    opacity: .1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-5 .content-right .beautypress-welcome-wraper span {
+    justify-content: flex-start;
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-5 .content-left .beautypress-welcome-wraper span {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.beautypress-welcome-section.beautypress-welcome-version-5 .content-center .beautypress-welcome-wraper span {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+/*======================================================================================
+								3. INDEX-V5 Face & Beauty Care
+===============================================================================*/
+
+.beautypress-single-beauty-product {
+    background-color: var(--color-white);
+    border: 10px solid #F7F7F7;
+    position: relative;
+    padding: 15px 15px 60px;
+    text-align: center;
+}
+
+.beautypress-beauty-product-header {
+    margin: 0 0 33px;
+}
+
+.beautypress-beauty-product-footer {
+    position: relative;
+    z-index: 1;
+}
+
+.beautypress-beauty-product-footer h3 {
+    margin: 0 0 15px;
+    color: var(--color-chocolate);
+    text-transform: capitalize;
+    font-size: 1.857em;
+    font-weight: 500;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-beauty-product-footer p {
+    color: #888888;
+}
+
+.beautypress-beauty-product-footer span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #f6f6f6;
+    font-size: 10em;
+    line-height: 1;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.beautypress-single-beauty-product .beautypress-beauty-product-hover-content {
+    bottom: -30px;
+}
+
+.beautypress-beauty-product-hover-content {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.icon-btn-with-text {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.icon-btn-with-text:before {
+    position: absolute;
+    content: "\f105";
+    font-family: var(--font-icons-1);
+    color: var(--color-white);
+    box-shadow: var(--primary-shadow);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: var(--color-chocolate);
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease;
+    font-size: 1.143em;
+}
+
+.icon-btn-with-text:after {
+    position: absolute;
+    content: attr(data-title);
+    height: 100%;
+    width: 100%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    left: 50px;
+    top: 0;
+    color: var(--color-white);
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    visibility: hidden;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.icon-btn-with-text:hover {
+    /*width: 186px;*/
+    padding: 0 100px;
+}
+
+.icon-btn-with-text:hover:before {
+    border-radius: 5px;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
+    justify-content: left;
+    padding: 0 37px;
+    background-color: var(--color-cyan);
+    box-shadow: var(--hover-shadow);
+}
+
+.icon-btn-with-text:hover:after {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    visibility: visible;
+    left: 0;
+}
+
+/*======================================================================================
+								4. INDEX-V5 About Us
+===============================================================================*/
+
+.beautypress-border-chocolate.beautypress-border.beautypress-version-2:before {
+    border-color: var(--color-chocolate);
+}
+
+.beautypress-vedio-section-with-text-v2 .beautypress-video-popup-content-inner:after {
+    background-image: none;
+}
+
+.beautypress-vedio-section-with-text-v2 .beautypress-big-sub-heading h2 {
+    font-size: 1.857em;
+}
+
+.beautypress-vedio-section-with-text-v2 .beautypress-big-sub-heading h3 {
+    font-size: 2.143em;
+}
+
+.beautypress-vedio-section-with-text-v2 .beautypress-big-sub-heading {
+    margin: 0 0 25px;
+}
+
+.beautypress-vedio-section-with-text-v2 .beautypress-simple-iocn-list.beautypress-version-2 ul li {
+    color: var(--color-chocolate);
+}
+
+/*======================================================================================
+								5. INDEX-V5 Popular Services
+===============================================================================*/
+
+.beautypress-popular-service-grid-item {
+    padding: 15px;
+}
+
+.beautypress-single-popular-service {
+    box-shadow: var(--primary-shadow);
+    background-color: var(--color-white);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-popular-service-header {
+    position: relative;
+}
+
+.beautypress-popular-service-content {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: var(--color-cyan);
+    height: 50px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: var(--color-white);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    padding: 0 32px;
+    border-radius: 5px;
+}
+
+.beautypress-popular-service-footer {
+    padding: 55px 10px 30px;
+    text-align: center;
+}
+
+.beautypress-popular-service-footer a {
+    display: block;
+    color: var(--color-semi-black);
+    font-size: 1.429em;
+    font-weight: 500;
+    text-transform: capitalize;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-popular-service-content h3 {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.beautypress-single-popular-service:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+.beautypress-single-popular-service:hover .beautypress-popular-service-footer a {
+    color: var(--color-chocolate);
+}
+
+.beautypress-single-popular-service:hover .beautypress-popular-service-content {
+    background-color: var(--color-chocolate);
+}
+
+/*======================================================================================
+								6. INDEX-V5 Video Section
+===============================================================================*/
+
+.beautypress-video-section.beautypress-version-2 {
+    /*background-color: var(--color-white);*/
+    padding: 0 0 100px;
+    position: relative;
+}
+
+.beautypress-video-section.beautypress-version-2:before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 0;
+    background-image: url(../img/stone_1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 410px;
+    width: 479px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.beautypress-video-wraper {
+    padding: 130px 0;
+}
+
+.beautypress-video-section.beautypress-version-2 .beautypress-video-section-content h2 {
+    color: var(--color-semi-black);
+    font-size: 2.857em;
+    font-weight: 500;
+    margin: 0 0 30px;
+    letter-spacing: -2px;
+}
+
+.beautypress-video-section.beautypress-version-2 .beautypress-video-section-content a {
+    margin: 0 20px 0 0;
+}
+
+.beautypress-video-section.beautypress-version-2 .beautypress-video-content {
+    text-align: left;
+}
+
+.beautypress-video-section.beautypress-version-2 .beautypress-video-content p {
+    color: var(--color-semi-black);
+    font-size: 1.429em;
+    font-weight: 500;
+    font-family: inherit;
+    margin: 0 0 10px;
+    line-height: 1;
+}
+
+.beautypress-video-section.beautypress-version-2 .beautypress-video-content h3 {
+    color: #666666;
+    margin: 0;
+    font-size: 1.429em;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.beautypress-video-section.beautypress-version-2 .beautypress-spilit-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/*======================================================================================
+								7. INDEX-V5 Expert Beautician
+===============================================================================*/
+
+.beautypress-team-section.beautypress-team-section-v2 .beautypress-single-team.beautypress-white-overlay:after {
+    background-image: -webkit-linear-gradient( 90deg, rgb(77, 182, 172) 0%, rgb(226, 185, 163) 0%, rgba(232, 199, 181, 0.5) 20%, rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(77, 182, 172) 0%, rgb(226, 185, 163) 0%, rgba(232, 199, 181, 0.5) 20%, rgba(255, 255, 255, 0) 100%);
+}
+
+.beautypress-team-section.beautypress-team-section-v2 .beautypress-team-content {
+    color: var(--color-semi-black);
+}
+
+.beautypress-team-section.beautypress-team-section-v2 .beautypress-team-person-details h3 {
+    text-transform: capitalize;
+}
+
+.beautypress-team-section.beautypress-team-section-v2 .beautypress-team-person-details h4 {
+    color: var(--color-semi-ash);
+}
+
+.beautypress-team-section.beautypress-team-section-v2 .beautypress-single-team:hover .beautypress-team-person-details h4 {
+    color: #555555;
+}
+
+.beautypress-team-section.beautypress-team-section-v2 .beautypress-single-team:hover {
+    box-shadow: none;
+}
+
+.beautypress-team-wraper {
+    position: relative;
+}
+
+.beautypress-team-wraper:before {
+    position: absolute;
+    content: "";
+    bottom: -90px;
+    left: 0;
+    background-image: url(../img/stone_2.png);
+    height: 428px;
+    width: 428px;
+    background-repeat: no-repeat;
+}
+
+/*======================================================================================
+								8. INDEX-V5 Best Features
+===============================================================================*/
+
+.beautypress-best-features-wraper {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.beautypress-single-best-feature {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 0 50px;
+}
+
+.beautypress-single-best-feature:last-child {
+    margin: 0;
+}
+
+.beautypress-feature-icon {
+    padding: 0 30px 0 0;
+}
+
+.beautypress-feature-icon i {
+    color: var(--color-chocolate);
+    font-size: 6.2em;
+}
+
+.beautypress-feature-content h3 {
+    margin: 0 0 10px;
+    color: var(--color-semi-black);
+    font-weight: 500;
+    font-size: 1.429em;
+}
+
+.beautypress-feature-content p {
+    color: #888888;
+}
+
+.beautypress-image-slider {
+    position: relative;
+}
+
+.beautypress-single-slider-img {
+    position: relative;
+    z-index: 1;
+    box-shadow: var(--primary-shadow);
+    margin: 60px 80px 0 0;
+}
+
+.beautypress-image-slider .owl-stage-outer {
+    position: relative;
+    padding: 0 20px 20px;
+}
+
+.beautypress-image-slider .owl-stage-outer:before {
+    position: absolute;
+    content: "";
+    top: -60px;
+    left: 60px;
+    height: 100%;
+    width: 100%;
+    background-color: #FEF5EF;
+    z-index: -1;
+}
+
+.beautypress-image-slider .owl-dot span {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background-color: var(--color-white);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-image-slider .owl-dot.active span {
+    background-color: var(--color-cyan);
+}
+
+.beautypress-image-slider .owl-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+
+.beautypress-image-slider .owl-dot {
+    margin: 0 10px 0 0;
+}
+
+.beautypress-image-slider .owl-dot:last-child {
+    margin: 0;
+}
+
+/*======================================================================================
+								9. INDEX-V5 Fun Fact Version 2
+===============================================================================*/
+
+.beautypress-fun-factory-text-content-v2 {
+    position: relative;
+    text-align: center;
+    color: var(--color-white);
+    padding: 107px 0 207px;
+}
+
+.beautypress-fun-factory-text-content-v2 h2 {
+    margin: 0;
+    font-size: 2.857em;
+    font-weight: 500;
+    letter-spacing: -2px;
+}
+
+.beautypress-fun-factory-content-v2 {
+    margin: -135px 0 0 0;
+}
+
+.beautypress-fun-factory-content-v2 .beautypress-single-fun-factory {
+    box-shadow: var(--primary-shadow);
+    min-height: 270px;
+    background-color: var(--color-white);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.beautypress-fun-factory-content-v2 .beautypress-single-fun-factory i {
+    color: #f7f7f7;
+    top: 0;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    z-index: -1;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.beautypress-fun-factory-content-v2 .beautypress-single-fun-factory h5 {
+    color: #777777;
+    font-weight: 500;
+    font-size: 1.429em;
+    text-transform: capitalize;
+}
+
+.beautypress-fun-factory-content-v2 .beautypress-counter span {
+    color: #E0B8A4;
+}
+
+.beautypress-fun-factory-content-v2 .beautypress-counter h2 {
+    font-size: 5.714em;
+}
+
+.beautypress-counter b {
+    color: #E0B8A4;
+    font-size: 5.714em;
+    line-height: 1;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+/*======================================================================================
+								10. INDEX-V5 Client Review
+===============================================================================*/
+
+.beautypress-best-reviewr-avator-wraper {
+    width: calc(100% - 180px);
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.beautypress-best-reviewr-avator {
+    position: relative;
+    height: auto;
+}
+
+.beautypress-best-reviewr-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+}
+
+.beautypress-best-reviewr-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.429em;
+}
+
+/*======================================================================================
+								11. INDEX-V5 Call to action
+===============================================================================*/
+
+.beautypress-call-to-action-v2 {
+    padding: 61px 0 52px;
+}
+
+.beautypress-call-to-action-content-v2 {
+    padding: 0 0 0 70px;
+}
+
+.beautypress-call-to-action-content-v2 {
+    position: relative;
+}
+
+.beautypress-call-to-action-content-v2:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    color: var(--color-semi-black);
+    font-size: 1em;
+    line-height: 1;
+}
+
+.beautypress-call-to-action-content-v2 h2 {
+    color: var(--color-white);
+    font-size: 3.571em;
+    margin: 0;
+    letter-spacing: -2px;
+    line-height: 1.2;
+}
+
+.beautypress-call-to-action-content-v2 h2 span {
+    display: block;
+    font-weight: 200;
+}
+
+.beautypress-call-to-action-v2 .beautypress-btn-wraper {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 100px 0 0;
+}
+
+/*======================================================================================
+								12. INDEX-V5 Footer section
+===============================================================================*/
+
+.beautypress-version-4.beautypress-footer-section:before, .beautypress-version-4.beautypress-footer-section:after {
+    display: none;
+}
+
+.beautypress-version-4.beautypress-footer-section {
+    padding: 100px 0 0;
+    background-image: none;
+}
+
+.beautypress-version-4.beautypress-footer-section .beautypress-footer-logo {
+    margin: 0 0 30px;
+}
+
+.beautypress-version-4.beautypress-footer-section .beautypress-footer-content p {
+    text-align: center;
+    color: #999999;
+    font-size: 1.143em;
+    margin: 0 0 30px;
+}
+
+.beautypress-version-4.beautypress-footer-section .beautypress-footer-content {
+    padding: 0 0 80px;
+    border-color: #D2D2D2;
+    margin: 0;
+}
+
+.beautypress-footer-menu {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.beautypress-footer-menu ul {
+    line-height: 1;
+}
+
+.beautypress-footer-menu ul li {
+    display: inline-block;
+    margin: 0 30px 10px 0;
+}
+
+.beautypress-footer-menu ul li:last-child {
+    margin: 0;
+}
+
+.beautypress-footer-menu ul li a {
+    color: #999999;
+    font-weight: 700;
+    display: block;
+    text-transform: uppercase;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-footer-menu ul li a:hover {
+    color: var(--color-cyan);
+}
+
+.beautypress-version-4.beautypress-footer-section .beautypress-copyright-content {
+    background-color: var(--color-cyan);
+    padding: 30px 0;
+}
+
+.beautypress-version-4.beautypress-footer-section .beautypress-copyright-text {
+    padding: 0;
+}
+
+/* back to top init */
+
+.beautypress-back-to-top-group {
+    position: relative;
+}
+
+.beautypress-back-to-top-wraper {
+    position: absolute;
+    bottom: 12px;
+    right: 0;
+    z-index: 999999;
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    visibility: visible;
+    height: 60px;
+    width: 60px;
+}
+
+.beautypress-back-to-top-wraper.show-last-pos {
+    -webkit-transform: scale3d(1.5, 1.5, 1.5);
+    transform: scale3d(1.5, 1.5, 1.5);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    visibility: hidden;
+}
+
+.beautypress-back-to-top-wraper.show-last-pos.active {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    visibility: visible;
+}
+
+.back-to-top-center {
+    right: inherit;
+    transform: translateX(-50%) !important;
+    left: 50%;
+}
+
+.back-to-top-center.beautypress-back-to-top-wraper {
+    height: 40px;
+    width: 40px;
+    bottom: 22px;
+}
+
+.back-to-top-center.beautypress-back-to-top-wraper a {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.beautypress-btn-2.back-to-top:hover {
+    background-color: var(--color-semi-black) !important;
+}
+
+.beautypress-btn-2.back-to-top {
+    height: 100%;
+    width: 100%;
+    font-size: 1.429em;
+}
+
+.beautypress-btn-2.back-to-top.bg-dark-green:hover {
+    background-color: var(--light-red) !important;
+}
+
+/*===================================================================
+										Inner page start
+=============================================================================*/
+
+/*=========================================================================
+								1. INNER PAGE header section
+=============================================================================*/
+
+.beautypress-header-section.beautypress-inner-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: all .4s ease;
+}
+
+.beautypress-header-section.beautypress-inner-menu .beautypress-main-header {
+    background-color: rgba(255, 255, 255, 0.102);
+}
+
+/* fixed menu css */
+
+.beautypress-header-section.navbar-fixed.off-canvas {
+    top: -100px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.beautypress-header-section.navbar-fixed {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    transition: all 0.6s ease;
+}
+
+.beautypress-header-section.navbar-fixed.fixed {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* menu skew animation */
+
+.beautypress-header-section.navbar-fixed.off-canvas.menu-skew {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+    /*transform-style: preserve-3d;
+	perspective: 1000px;*/
+}
+
+.menu-skew {
+    animation-duration: .6s;
+    animation-fill-mode: both;
+    will-change: transform;
+}
+
+@media (max-width: 480px) {
+    .menu-skew {
+        animation-fill-mode: none;
+        will-change: unset;
+    }
+}
+
+@-webkit-keyframes swingInX {
+    0% {
+        -webkit-transform: perspective(400px) rotateX(-90deg);
+    }
+    100% {
+        -webkit-transform: perspective(400px) rotateX(0deg);
+    }
+}
+
+@-moz-keyframes swingInX {
+    0% {
+        -moz-transform: perspective(400px) rotateX(-90deg);
+    }
+    100% {
+        -moz-transform: perspective(400px) rotateX(0deg);
+    }
+}
+
+@-o-keyframes swingInX {
+    0% {
+        -o-transform: perspective(400px) rotateX(-90deg);
+    }
+    100% {
+        -o-transform: perspective(400px) rotateX(0deg);
+    }
+}
+
+@keyframes swingInX {
+    0% {
+        transform: perspective(400px) rotateX(-90deg);
+    }
+    100% {
+        transform: perspective(400px) rotateX(0deg);
+    }
+}
+
+.menu-skew.swingInX {
+    -webkit-transform-origin: top;
+    -moz-transform-origin: top;
+    -ie-transform-origin: top;
+    -o-transform-origin: top;
+    transform-origin: top;
+    -webkit-backface-visibility: hidden !important;
+    -webkit-animation-name: swingInX;
+    -moz-backface-visibility: hidden !important;
+    -moz-animation-name: swingInX;
+    -o-backface-visibility: hidden !important;
+    -o-animation-name: swingInX;
+    backface-visibility: hidden !important;
+    animation-name: swingInX;
+}
+
+@media (max-width: 480px) {
+    .menu-skew.swingInX {
+        animation-name: none;
+        transform-origin: unset;
+    }
+}
+
+@-webkit-keyframes swingOutX {
+    0% {
+        -webkit-transform: perspective(400px) rotateX(0deg);
+    }
+    100% {
+        -webkit-transform: perspective(400px) rotateX(-90deg);
+    }
+}
+
+@-moz-keyframes swingOutX {
+    0% {
+        -moz-transform: perspective(400px) rotateX(0deg);
+    }
+    100% {
+        -moz-transform: perspective(400px) rotateX(-90deg);
+    }
+}
+
+@-o-keyframes swingOutX {
+    0% {
+        -o-transform: perspective(400px) rotateX(0deg);
+    }
+    100% {
+        -o-transform: perspective(400px) rotateX(-90deg);
+    }
+}
+
+@keyframes swingOutX {
+    0% {
+        transform: perspective(400px) rotateX(0deg);
+    }
+    100% {
+        transform: perspective(400px) rotateX(-90deg);
+    }
+}
+
+.menu-skew.swingOutX {
+    -webkit-transform-origin: top;
+    -webkit-animation-name: swingOutX;
+    -webkit-backface-visibility: hidden !important;
+    -moz-animation-name: swingOutX;
+    -moz-backface-visibility: hidden !important;
+    -o-animation-name: swingOutX;
+    -o-backface-visibility: hidden !important;
+    animation-name: swingOutX;
+    backface-visibility: hidden !important;
+}
+
+@media (max-width: 480px) {
+    .menu-skew.swingOutX {
+        animation-name: none;
+        transform-origin: unset;
+    }
+}
+
+/*=========================================================================
+								2. INNER PAGE welcome section
+=============================================================================*/
+
+.beautypress-inner-welocme-section {
+    position: relative;
+    padding: 300px 0 180px;
+    text-align: center;
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+
+.beautypress-inner-welocme-section .beautypress-black-overlay {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.beautypress-inner-welcome-content {
+    width: 66.6666667%;
+    margin: 0 auto;
+}
+
+.beautypress-inner-welcome-content img {
+    margin: 0 0 40px;
+}
+
+.beautypress-inner-welcome-content h1 {
+    margin: 0 0 20px;
+    font-size: 4.286em;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: -2px;
+}
+
+.beautypress-inner-welcome-content p {
+    font-size: 1.143em;
+}
+
+.beautypress-inner-welcome-footer-content {
+    position: absolute;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="369.781" height="48" viewBox="0 0 369.781 48"><path fill="%23FFFFFF"  d="M1145,740s-4-33-30-33H985s-23.5-2.5-25-15v48h185Zm-369.782,0s4-33,29.973-33h129.84S958.5,704.5,960,692v48H775.218Z" transform="translate(-775.219 -692)"/></svg>');
+    bottom: -2px;
+    backface-visibility: hidden;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 48px;
+    width: 369.781px;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.beautypress-breadcrumb li {
+    display: inline-block;
+    padding: 0 12px 0 0;
+    position: relative;
+}
+
+.beautypress-breadcrumb li:before {
+    position: absolute;
+    content: "/";
+    right: 0;
+    top: 0;
+    color: #B9B9B9;
+}
+
+.beautypress-breadcrumb li:last-child:before {
+    display: none;
+}
+
+.beautypress-breadcrumb li:last-child {
+    padding: 0;
+}
+
+.beautypress-breadcrumb li a {
+    color: #B9B9B9;
+    display: block;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    text-transform: capitalize;
+}
+
+.beautypress-breadcrumb li:last-child a {
+    color: var(--color-purple);
+    pointer-events: none;
+}
+
+/*=========================================================================
+								3. INNER PAGE square service section
+=============================================================================*/
+
+.beautypress-single-square-service-content {
+    padding: 0 40px;
+    min-height: 330px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    z-index: 5;
+    position: relative;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    width: calc(100% - 20px);
+}
+
+.beautypress-single-square-service-content i {
+    color: var(--color-purple);
+    font-size: 5em;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    margin: 0 0 30px;
+    display: inline-block;
+}
+
+.beautypress-single-square-service-content h2 {
+    margin: 0 0 20px;
+    color: #444444;
+    font-size: 2.143em;
+    text-transform: capitalize;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-single-square-service-content p {
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.beautypress-single-square-service-content:hover h2, .beautypress-single-square-service-content:hover p, .beautypress-single-square-service-content:hover i {
+    color: var(--color-white);
+}
+
+.beautypress-single-square-service-content:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-white);
+    box-shadow: var(--primary-shadow);
+    z-index: -1;
+}
+
+.beautypress-overlay-with-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 20px;
+    left: 20px;
+    background-color: var(--color-purple);
+    z-index: -2;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    pointer-events: none;
+}
+
+.beautypress-overlay-with-img:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.beautypress-overlay-with-img.img-1:before {
+    background-image: url(../img/square-service-bg.jpg);
+}
+
+.beautypress-overlay-with-img.img-2:before {
+    background-image: url(../img/skin_care.jpg);
+}
+
+.beautypress-overlay-with-img.img-3:before {
+    background-image: url(../img/spa_care.jpg);
+}
+
+.beautypress-single-square-service-content:hover .beautypress-overlay-with-img {
+    top: 0;
+    left: 0;
+    background-color: transparent;
+}
+
+.beautypress-single-square-service-content:hover:before {
+    background-color: var(--color-purple);
+    opacity: .9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    box-shadow: var(--hover-shadow);
+}
+
+.beautypress-single-square-service-content:hover .beautypress-overlay-with-img:before {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+
+
+/*=========================================================================
+								9. INNER faq.html content
+=============================================================================*/
+
+.beautypress-accordion .collapse.in {
+    display: block;
+}
+
+/* beautypress-accordion common style */
+
+.beautypress-accordion .panel-heading a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: var(--color-semi-black);
+    font-size: 1.143em;
+    position: relative;
+    height: 60px;
+    padding: 0 30px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.beautypress-accordion .panel {
+    margin: 0 0 10px;
+}
+
+.beautypress-accordion .panel:last-child {
+    margin: 0;
+}
+
+.beautypress-accordion .panel-body {
+    padding: 8px 30px 41px;
+}
+
+.beautypress-accordion .panel.active {
+    position: relative;
+}
+
+.beautypress-accordion .panel.active:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 2px solid #F1F1F1;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    pointer-events: none;
+    border-radius: 4px;
+}
+
+/* beautypress-accordion beautypress-version-1 */
+
+.beautypress-accordion.beautypress-version-1 .panel-heading a {
+    background-color: #F8F8F8;
+    border-radius: 4px;
+}
+
+.beautypress-accordion.beautypress-version-1 .panel-heading a:before {
+    position: absolute;
+    content: "\f107";
+    top: 50%;
+    right: 21px;
+    font-family: var(--font-icons-1);
+    color: var(--color-semi-black);
+    font-size: 1.286em;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    -webkit-transform: translateY(-50%) rotateX(0deg);
+    transform: translateY(-50%) rotateX(0deg);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.beautypress-accordion.beautypress-version-1 .panel-heading a[aria-expanded="true"]:before {
+    -webkit-transform: translateY(-50%) rotateX(180deg);
+    transform: translateY(-50%) rotateX(180deg);
+    color: #4CA14B;
+}
+
+.beautypress-accordion.beautypress-version-1 .panel-heading a[aria-expanded="true"] {
+    background-color: transparent;
+    color: #4CA14B;
+}
+
+/* beautypress-accordion beautypress-version-2 */
+
+.beautypress-accordion.beautypress-version-2 .panel-heading a {
+    background-color: #F9F9F9;
+    border-radius: 5px;
+}
+
+.beautypress-accordion.beautypress-version-2 .panel-heading a:before {
+    position: absolute;
+    content: "\f107";
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 60px;
+    border-radius: 5px;
+    background-color: #4CA14B;
+    font-family: var(--font-icons-1);
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: var(--color-white);
+    font-size: 1.286em;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.beautypress-accordion.beautypress-version-2 .panel-heading a[aria-expanded="true"]:before {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    background-color: transparent;
+    color: #4CA14B;
+}
+
+.beautypress-accordion.beautypress-version-2 .panel-heading a[aria-expanded="true"] {
+    background-color: transparent;
+    color: #4CA14B;
+}
+
+.beautypress-accordion.beautypress-version-2 .panel.active:before {
+    border-radius: 5px;
+}
+
+/*=========================================================================
+								10. INNER shop.html content
+=============================================================================*/
+
+.beautypress-pagination.beautypress-version-2 li a {
+    height: 38px;
+    width: 38px;
+    border-radius: 5px;
+    border: 1px solid #F0F0F0;
+}
+
+.beautypress-pagination.beautypress-version-2 li a:hover {
+    background-color: #5BC271;
+}
+
+
+
+/*=========================================================================
+								14. INNER contact-v3.html content
+=============================================================================*/
+
+.beautypress-contact-wraper.beautypress-version-2 {
+    padding: 0 0 0 40px;
+    margin: 0 0 50px;
+}
+
+.beautypress-contact-form h2 {
+    margin: 0 0 60px;
+    color: var(--color-semi-black);
+    font-size: 2.857em;
+    text-align: center;
+}
+
+.beautypress-contact-wraper.beautypress-version-2 .beautypress-contact-form {
+    padding: 55px 0;
+    height: auto;
+    position: relative;
+}
+
+.beautypress-contact-wraper.beautypress-version-2 .beautypress-contact-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.beautypress-contact-wraper.beautypress-version-2 .beautypress-contact-form input[type="submit"] {
+    background-color: #5BC271;
+    margin: 0 auto;
+}
+
+.beautypress-contact-wraper.beautypress-version-2 .beautypress-contact-form:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 30px;
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/massage-icon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    opacity: .1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+    pointer-events: none;
+}
+
+
+
+/*============================== menu version ==============================*/
+
+/* menus list */
+
+.beautypress-main-header.color-white .xs_nav-landscape li a {
+    color: var(--color-white);
+}
+
+.beautypress-main-header.color-white .xs_nav-landscape li .nav-submenu a, .beautypress-main-header.color-white .xs_nav-landscape li .nav-submenu p {
+    color: var(--color-semi-black);
+}
+
+.beautypress-main-header li .nav-submenu p, .beautypress-new-header li .nav-submenu p {
+    color: var(--color-semi-black);
+}
+
+.beautypress-main-header.color-white .xs_nav-landscape .submenu-indicator-chevron {
+    border-color: transparent #fff #fff transparent;
+}
+
+.beautypress-main-header.color-white .nav-toggle:before {
+    background-color: var(--color-white);
+    box-shadow: 0 0.5em 0 0 #fff, 0 1em 0 0 #fff;
+}
+
+.beautypress-new-header .xs_nav_2 .nav-logo>img {
+    height: auto;
+    margin: 0 auto;
+    /*padding: 23px 0;*/
+    padding: 18.3px 0;
+}
+
+.beautypress-new-header .xs_nav_2 .nav-logo {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.beautypress-new-header .xs_nav_2 .nav-menu>li>a {
+    height: auto;
+    color: #222;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.beautypress-new-header .xs_nav_2.xs_nav-landscape .nav-menu>li>a {
+    padding: 35px 35px 35px 0;
+}
+
+.beautypress-new-header .xs_nav_2.xs_nav-landscape .nav-menu>li:last-child>a {
+    padding-right: 0;
+}
+
+.beautypress-new-header {
+    background-color: var(--color-white);
+    position: relative;
+}
+
+.beautypress-new-header .xs_nav_2.xs_nav-landscape {
+    display: block;
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+/*.beautypress-new-header .xs_nav_2 .nav-menu.nav-menu-centered>li {
+		margin: 0 40px 0 0;
+}*/
+
+.beautypress-new-header .xs_nav_2 .nav-menu.nav-menu-centered>li:last-child {
+    margin: 0;
+}
+
+.beautypress-new-header .xs_nav_2 .nav-search {
+    height: 100%;
+    display: flex;
+    padding: 19px 0;
+}
+
+.beautypress-new-header .xs_nav_2 .nav-search a {
+    color: #8C8C8C;
+    height: 50px;
+    width: auto;
+    /*border: 2px solid #D7D7D7;*/
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.143em;
+}
+
+.beautypress-new-header .xs_nav_2 .nav-search-button {
+    width: auto;
+    height: auto;
+    line-height: inherit;
+}
+
+.beautypress-new-header .xs_nav_2 .nav-search>div {
+    margin: 0 20px 0 0;
+}
+
+.beautypress-new-header .xs_nav_2 .nav-search .nav-search-button {
+    margin: 0;
+    background-color: transparent;
+}
+
+.beautypress-new-header.xs-extra-css .xs_nav_2 .nav-menu.nav-menu-centered>li a {
+    padding-right: 30px;
+}
+
+.beautypress-new-header.xs-extra-css .xs_nav_2 .nav-menu.nav-menu-centered>li:last-child a {
+    padding-right: 0px;
+}
+
+.beautypress-new-header.xs-extra-css .xs_nav_2 .nav-menu.nav-menu-centered .nav-dropdown>li>a, .beautypress-new-header.xs-extra-css .xs_nav_2 .nav-menu.nav-menu-centered .megamenu-list>li>a {
+    height: auto;
+    color: #222;
+    display: block;
+    text-transform: capitalize;
+    font-size: 12px;
+}
+
+.beautypress-new-header.xs-extra-css .xs_nav_2 .nav-menu.nav-menu-centered .nav-dropdown>li>a {
+    border-bottom: 1px solid #f5f5f5
+}
+
+.beautypress-new-header.xs-extra-css .xs_nav_2 .nav-menu.nav-menu-centered .megamenu-list>li>a {
+    border-color: transparent;
+}
+
+.beautypress-new-header.xs-extra-css .xs_nav_2 .nav-menu.nav-menu-centered .megamenu-list>li>a:hover {
+    background-color: transparent;
+}
+
+.beautypress-new-header.xs-extra-css .xs_nav_2 .nav-menu.nav-menu-centered .megamenu-panel .text-content {
+    padding: 20px;
+}
+
+/* menu */
+
+.megamenu-list-title {
+    pointer-events: none;
+}
+
+.beautypress-header-section.beautypress-header-version-3.beautypress-header-version-4 .beautypress-main-header .xs-navigation-middle-menu.xs_nav-landscape .nav-menu li a {
+    color: var(--color-semi-black);
+}
+
+.beautypress-header-section.beautypress-header-version-3.beautypress-header-version-4 .beautypress-main-header .xs-navigation-middle-menu.xs_nav-landscape .nav-menu li.megamenu-list-title a {
+    color: var(--color-semi-black);
+}
+
+.beautypress-header-section.beautypress-header-version-3.beautypress-header-version-4 .beautypress-main-header .xs-navigation-middle-menu.xs_nav-landscape .nav-menu li a:hover {
+    color: var(--color-purple);
+}
+
+.beautypress-header-section.beautypress-header-version-3.beautypress-header-version-4 .beautypress-main-header .nav-menu li:last-child {
+    margin: 0;
+}
+
+.beautypress-header-section.beautypress-header-version-3.beautypress-header-version-4 .beautypress-main-header.color-pink .nav-menu li a:before {
+    background-color: var(--color-pink);
+}
+
+.beautypress-header-section.beautypress-header-version-3.beautypress-header-version-4 .beautypress-main-header.color-pink .xs-navigation-middle-menu.xs_nav-landscape .nav-menu li a:hover {
+    color: var(--color-pink);
+}
+
+.beautypress-header-section.beautypress-header-version-3.beautypress-header-version-4 .beautypress-main-header.color-green .xs-navigation-middle-menu.xs_nav-landscape .nav-menu li a:hover {
+    color: #4CA14B;
+}
+
+.beautypress-header-section.beautypress-header-version-3.beautypress-header-version-4 .beautypress-main-header.color-green .xs-navigation-middle-menu.xs_nav-landscape .nav-menu li a:before {
+    background-color: #4CA14B;
+}
+
+.beautypress-logo.beautypress-version-3 {
+    position: absolute !important;
+    box-shadow: var(--hover-shadow) !important;
+    /*min-height: 180px;*/
+    min-height: 170px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white) !important;
+    padding: 0 !important;
+    /*border-radius: 0 0 20px 20px;*/
+    top: -42px;
+    width: 100%;
+}
+
+.beautypress-nav-search-button {
+    text-align: right;
+}
+
+.beautypress-nav-search-button a {
+    /*background-color: #5BC271;*/
+    height: 50px;
+    width: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    font-size: 1.143em;
+    color: #5BC271;
+}
+
+/* menus */
+
+.beautypress-header-section.beautypress-header-version-3.beautypress-header-version-5 .xs_nav.beautypress-nav {
+    justify-content: flex-start;
+}
+
+.icon-square {
+    display: inline-flex;
+    height: 50px;
+    width: 60px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.icon-square:before {
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.beautypress-new-header.xs-extra-css .xs_nav_2 .nav-menu.nav-menu-centered .nav-dropdown>li>a:hover {
+    color: #560F86;
+}
+
+.beautypress-copyright-content-wrapers {
+    position: relative;
+    width: 100%;
+}
+
+/*style swither*/
+
+.style_swither {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100px;
+    z-index: 999999999;
+}
+
+.layout-backgrounds {
+    display: none;
+}
+
+.theme-switcher-inner h4 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#theme-switcher {
+    width: 210px;
+    left: -210px;
+}
+
+.theme-switcher-inner ul {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.img-radio-button.active {
+    pointer-events: none;
+}
+
+.theme-switcher-inner ul li a {
+    opacity: 1;
+    border-radius: 0%;
+    height: 20px;
+    width: 20px;
+    font-size: 1.4em;
+}
+
+.theme-switcher-inner ul li {
+    margin-right: 9px;
+}
+
+.theme-switcher-inner ul li:last-child {
+    margin-right: 0;
+}
+
+.theme-switcher-inner ul li a[data-name="green"] {
+    background-image: linear-gradient(to right, #2cafca 0%, #2cafca 50%, #2d3e4f 50%, #2d3e4f 100%);
+}
+
+.theme-switcher-inner ul li a[data-name="purple"] {
+    background-image: linear-gradient(to right, #fa926e 0%, #fa926e 50%, #333333 50%, #333333 100%);
+}
+
+.theme-switcher-inner ul li a[data-name="blue"] {
+    background-image: linear-gradient(to right, #2fb6ed 0%, #2fb6ed 50%, #2d3e4f 50%, #2d3e4f 100%);
+}
+
+.theme-switcher-inner ul li a[data-name="cian"] {
+    background-image: linear-gradient(to right, #681c98 0%, #681c98 50%, #222222 50%, #222222 100%);
+}
+
+.theme-switcher-inner ul li a[data-name="orange"] {
+    background-image: linear-gradient(to right, #E1BCA9 0%, #E1BCA9 50%, #333333 50%, #333333 100%);
+}
+
+.loaded .preloader-cancel-btn-wraper {
+    bottom: 100%;
+}
+
+.preloader-cancel-btn-wraper {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 30px;
+    transition: all .6s ease;
+}
+
+#preloader-cancel-btn:hover {
+    color: #333333 !important;
+}
+
+#preloader-cancel-btn span {
+    background-color: #fff;
+}
+
+.custom-style {
+    padding: 10px 20px;
+    background: #ec5698;
+    color: white !important;
+    border-radius: 5px;
+    transition: 0.3s ease-in;
+}
+
+.custom-style:hover {
+    background: #464646;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+.main-form {
+    /* background: linear-gradient(to right, #b24592, #f15f79); */
+    padding: 5rem 0 1rem;
+    background-color: #f3f3f3;
+    /* height: 100vh; */
+}
+
+.login-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #EC5698;
+    border-radius: 5px;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 16px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+form label {
+    color: #4d4747;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+    font-weight: 600;
+}
+
+.form button:hover, .form button:active, .form button:focus {
+    background: #681C98;
+}
+
+.form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+.form .message a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.form .register-form {
+    display: none;
+}
+
+.container-login {
+    position: relative;
+    z-index: 1;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.container-login:before, .container-login:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.container-login .info {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.container-login .info h1 {
+    margin: 0 0 15px;
+    padding: 0;
+    font-size: 36px;
+    font-weight: 300;
+    color: #1a1a1a;
+}
+
+.container-login .info span {
+    color: #4d4d4d;
+    font-size: 12px;
+}
+
+.container-login .info span a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.container-login .info span .fa {
+    color: #EF3B3A;
+}
+
+.check-btn {
+    border: none !important;
+    padding: 4px 15px !important;
+    background: var(--color-pink) !important;
+    cursor: pointer !important;
+    -webkit-transition: .5s;
+    transition: .5s;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+    margin: 0 2px;
+}
+
+.check-btn:hover {
+    color: #fff;
+    background-color: #E4405F;
+}
+
+.del-btn {
+    border: none;
+    padding: 4px 15px;
+    background: var(--del-red);
+    cursor: pointer;
+    -webkit-transition: .5s;
+    transition: .5s;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+    margin: 0 2px;
+
+}
+
+.del-btn:hover {
+    background-color: #9c202c;
+    color: #fff;
+}
+
+.edit-btn {
+    border: none;
+    padding: 4px 15px;
+    background: var(--edit-blue);
+    cursor: pointer;
+    -webkit-transition: .5s;
+    transition: .5s;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+    margin: 0 2px;
+
+}
+
+.edit-btn:hover {
+    background-color: #013f86;
+    color: #fff;
+}
+
+.save-btn {
+    border: none;
+    padding: 4px 15px;
+    background: var(--agree-green);
+    cursor: pointer;
+    -webkit-transition: .5s;
+    transition: .5s;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.save-btn:hover {
+    background-color: #028706;
+    color: #fff;
+}
+.table{
+    background-color: #ffffff;
+    overflow-x: scroll;
+    width: 100%;
+}
+.nav-active{
+    background-color: #e0e0e0;
+}
+.nav-link{
+    color: #201e1e !important;
+    font-weight: 600;
+    padding: 0;
+}
+.tab:hover{
+    background-color: #eeeeee;
+}
+.tab{
+    display: block !important;
+    transition: 0.2s ease-in-out;
+}
+.green-btn{
+    border: none;
+    padding: 4px 15px;
+    background: var(--agree-green);
+    cursor: pointer;
+    -webkit-transition: .5s;
+    transition: .5s;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.sec-btn{
+    border: none;
+    padding: 4px 15px;
+    background: var(--sec-grey);
+    cursor: pointer;
+    -webkit-transition: .5s;
+    transition: .5s;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+}
+.green-btn:hover, .sec-btn:hover{
+    color: #fff;
+}
+ /* overwtite */
+
+ .container{
+     /* max-width: 90%; */
+ }
+ .bg-white{
+     margin: 0;
+     max-width: 100% !important;
+ }
+ .btn{
+    color: white !important;
+}
+.p-dropdown, .p-component{
+    width: 100% !important;
+}

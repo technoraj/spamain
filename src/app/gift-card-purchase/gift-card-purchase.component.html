@@ -1,0 +1,50 @@
+<section class="bg-color-pink" style="padding: 1rem 0 2rem">
+    <div class="row justify-content-between ml-4 p-2 container" style="margin: 0 auto !important;">
+        <div class="col-md-5 mt-3">
+            <div class="text-center w-100 text-white bg-color-purple" style=" height:45px;padding-top: 15px;">
+                <h6 class="">Commander une carte cadeau</h6>
+            </div>
+            <div class="card p-3">
+                <div class="card-body">
+                    <form #giftCardForm="ngForm">
+                        <div class="form-group">
+                            <h6> Nom du destinataire *</h6>
+                            <input type="text" name="recipientName" class="form-control" placeholder="Name"
+                                [(ngModel)]="giftCardModel.recipientName" required>
+                        </div>
+                        <div class="form-group">
+                            <h6> Choisissez votre carte cadeau</h6>
+                            <select class="form-control" id="exampleFormControlSelect1" name="giftFormula"
+                                [(ngModel)]="giftCardModel.giftCardId" required>
+                                <option value="">Choisissez une formule</option>
+                                <option *ngFor="let giftcard of giftCards" [value]="giftcard.giftCard_Id">
+                                    {{giftcard.label}}</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <h6> Commentaire</h6>
+                            <textarea class="form-control" name="comment" [(ngModel)]="giftCardModel.comment" rows="5"
+                                id="comment"></textarea>
+                        </div>
+                        <button [disabled]="!giftCardForm.form.valid" type="submit"
+                            class="btn btn-primary btn-lg btn-block" (click)="buyGiftCard()">Procéder au paiement</button>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mt-3">
+
+                <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h6 class="text-black"><img src="./src/assets/img/On.png" alt=""> &nbsp; 24/7 Soutien</h6>
+                            <h6 class="text-black"><img src="./src/assets/img/Card.png" alt=""> &nbsp; 100% Paiement sécurisé</h6>
+                            <h6 class="text-black"><img src="./src/assets/img/Gift.png" alt=""> &nbsp; Carte cadeau</h6>
+        
+                        </div>
+                    </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,21 @@
+
+<section class="main-form">   
+    <div class="login-page">
+        <div class="form">
+            <h4 class="label-name"><b>Choisissez le paiement :</b></h4>
+            <div class="payment-menu" (click)="makeMolliePayment()">
+                <p> Passerelle de paiement Mollie </p>
+            </div>
+            <br>
+            <div class="payment-menu" (click)="makeStripePayment()">
+                <p> Passerelle de paiement Stripe</p>
+            </div>
+            <br>
+            <div class="payment-menu">
+                <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+            </div>
+        </div>
+      </div>
+</section>
+
+

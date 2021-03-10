@@ -1,0 +1,63 @@
+<header
+    class="beautypress-header-section beautypress-header-version-3 beautypress-header-version-2 header-height-calc-minus">
+    <div class="beautypress-header-top bg-color-gray-2">
+        <div class="container">
+            <div class="beautypress-spilit-container beautypress-version-2">
+                <div class="beautypress-language-select-list">
+                    <div class="beautypress-header-social-list">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="beautypress-simple-iocn-list beautypress-version-1">
+                    <li><i class="xsicon icon-call"></i>+00 11 222 333 444</li>
+                    <li><i class="xsicon icon-envelope"></i>info@lileospa.com</li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- .beautypress-header-top END -->
+    <div class="beautypress-new-header color-grren xs-extra-css">
+        <div class="container">
+            <nav class="xs_nav_2 xs_nav-landscape">
+                <div class="nav-header" style="width: 13rem;">
+                    <a class="nav-logo" href="/">
+                        <img src="./src/assets/img/logo.png" alt="logo">
+                    </a>
+                    <div class="nav-toggle"></div>
+                </div>
+
+                <div *ngIf="userRole == 'ADMIN'" class="nav-search"  style="padding: 28px 0 19px 0;">
+                    <a routerLink="/app-home/app-admin">
+                        <i class="fa fa-user custom-style" title="admin"></i>
+                    </a>
+                </div>
+
+                <div class="nav-menus-wrapper">
+                    <ul class="nav-menu nav-menu-centered">
+                        <li><a href="/">Accueil</a></li>
+                        <li><a class="pointer" (click)="setReservationType(ReservationType.Care)">Nos soins</a></li>
+                        <li><a routerLink="/app-home/gift-card">Cartes cadeaux</a></li>
+                        <li><a routerLink="/app-home/contact">Contacter</a></li>
+                        <li *ngIf="!userLogged"><a routerLink="/app-home/app-login">S'identifier/S'enregistrer</a></li>
+                        <li *ngIf="userLogged" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" (click)="toggle()">{{ userName }}<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu" id="navbarDropdown">
+                                <li><a class="dropdown-item" routerLink="/app-home/user/order">Mes commandes</a></li>
+                                <li><a class="dropdown-item" (click)="logout()">Se déconnecter</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a (click)="setReservationType(ReservationType.Appointment)"><button class="btn btn-secondary">Prenez rendez-vous</button></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-overlay-panel"></div>
+            </nav>
+        </div>
+    </div>
+</header>

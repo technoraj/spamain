@@ -1,0 +1,32 @@
+{
+    "apiEndPoint": "https://begiumspa1.azurewebsites.net/",
+    "authenticationEndPoint": "https://authbelgiumspa.azurewebsites.net/",
+    "language": "en-GB",
+    "key":"BELGIUMSPA1",
+    "productCategories": [
+        {
+            "name": "Boissons",
+            "icon": "fas fa-cocktail"
+        },
+        {
+            "name": "L'hygiène",
+            "icon": "fas fa-hands-wash"
+        },
+        {
+            "name": "De l'alcool",
+            "icon": "fas fa-wine-bottle"
+        },
+        {
+            "name": "Restaurants",
+            "icon": "fas fa-utensils"
+        },
+        {
+            "name": "Lequel",
+            "icon": "fas fa-hand-holding-medical"
+        },
+        {
+            "name": "Personne",
+            "icon": "fab fa-speaker-deck"
+        }
+    ]
+}

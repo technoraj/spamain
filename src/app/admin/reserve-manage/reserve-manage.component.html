@@ -1,0 +1,129 @@
+<div class="row">
+    <div class="text-center w-100 text-white bg-color-purple" style=" height:45px;padding-top: 15px;">
+        <h6 class="">Liste des rendez-vous</h6>
+    </div>
+    <div class="container bg-white">
+      <br>
+      <span style="border-radius:4px">Cliquez sur les éléments de la liste pour voir les détails *  </span>
+      <br>
+      <div>
+          <input  type="text"  id="myInput" placeholder="Type to search by User.." title="search" class="form-control" (input)="search()">
+      </div>
+      <div id="table-wrapper">
+      <div id="table-scroll">
+      <table *ngIf="reservations" id="myTable" class="table table-hover table-striped table-bordered" style="height:330px;">
+        <thead>
+          <tr>
+            <th *ngFor="let header of headers">{{header}}</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let reservation of searchReservations">
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(reservation)"> {{ reservation.center_Id | showLable:"center_Id":"name":centers }}</td>
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(reservation)"> {{ reservation.formula_Id | showLable:"formula_Id":"name":formulas }}</td>
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(reservation)"> {{ reservation.date | date: 'dd/MM/yyyy'}} </td>
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(reservation)"> {{ reservation.gift_Cd }}</td>
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(reservation)"> {{ reservation.promoCode}}</td>
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(reservation)"> {{ reservation.session_Id | showLable:"session_Id":"startTime":session | date : 'HH.mm a' }}</td>
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(reservation)"> {{ reservation.session_Id | showLable:"session_Id":"endTime":session | date : 'HH.mm a' }}</td>
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(reservation)"> {{ reservation.totalPayment }}</td>
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(reservation)"> {{ reservation.payment_Status}}</td>
+                <td data-toggle="modal" data-target="#view" (click)="showFormula(reservation)"> {{ reservation.user_Id | showLable:"user_Id":"firstName":users }}</td>
+                <td>
+                    <div class="row" style="padding: 10px;">
+                            <button class="btn edit-btn" data-toggle="modal" data-target="#edit" (click)="editChanges(reservation)">Éditer</button>
+                            <button class="btn del-btn" data-toggle="modal" data-target="#delete" (click)="deleteRow(reservation)">Effacer</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+      </div>
+      </div>
+    
+
+      <!--Modal for viewing product -->
+      <div class="modal fade" id="view" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Rendez-vous</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table *ngIf="viewReservation">
+                <tr><td>{{ headers[0] }} :</td><td> {{ viewReservation.center_Id | showLable:"center_Id":"name":centers }}</td></tr>
+                <tr><td>{{ headers[1] }} :</td><td> {{ viewReservation.formula_Id | showLable:"formula_Id":"name":formulas }}</td></tr>
+                <tr><td>{{ headers[2] }} :</td><td> {{ viewReservation.date | date: 'dd/MM/yyyy'}}</td></tr>
+                <tr><td>{{ headers[3] }} :</td><td> {{ viewReservation.gift_Cd }}</td></tr>
+                <tr><td>{{ headers[4] }} :</td><td> {{ viewReservation.promoCode}}</td></tr>
+                <tr><td>{{ headers[5] }} :</td><td> {{ viewReservation.session_Id | showLable:"session_Id":"startTime":session | date : 'HH.mm a' }}</td></tr>
+                <tr><td>{{ headers[6] }} :</td><td> {{ viewReservation.session_Id | showLable:"session_Id":"endTime":session | date : 'HH.mm a' }}</td></tr>
+                <tr><td>{{ headers[7] }} :</td><td> {{ viewReservation.totalPayment }}</td></tr>
+                <tr><td>{{ headers[8] }} :</td><td> {{ viewReservation.payment_Status}}</td></tr>
+                <tr><td>{{ headers[9] }} :</td><td> {{ viewReservation.user_Id | showLable:"user_Id":"firstName":users }}</td></tr>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn sec-btn" data-dismiss="modal">Proche</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Modal for editing product -->
+      <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Modifier le rendez-vous</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                    <table *ngIf="editReservation">
+                        <tr><td>{{ editHeaders[0] }} :</td>
+                          <td> <p-dropdown [options]="centers" [(ngModel)]="editReservation.center_Id" optionLabel="name" optionValue="center_Id" [filter]="true" (onChange)="onChange($event)"></p-dropdown></td>
+                        </tr>
+                        <tr><td>{{ editHeaders[1] }} :</td><td> <input pInputText type="date" [ngModel]="reserveDate | date:'yyyy-MM-dd'" (ngModelChange)="onChange($event)"></td></tr>
+                        <tr><td>{{ editHeaders[2] }} :</td><td> <p-dropdown [options]="editSession" [(ngModel)]="editReservation.session_Id" optionLabel="name" optionValue="session_Id" [filter]="true" filterBy="name" [showClear]="true"></p-dropdown></td></tr>
+                        <tr><td>{{ editHeaders[3] }} :</td><td> {{ editReservation.session_Id | showLable:"session_Id":"startTime":session | date : 'HH.mm a' }}</td></tr>
+                        <tr><td>{{ editHeaders[4] }} :</td><td> {{ editReservation.session_Id | showLable:"session_Id":"endTime":session | date : 'HH.mm a' }}</td></tr>               
+                    </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn sec-btn" data-dismiss="modal" (click)="clearChanges()">Proche</button>
+              <button type="button" class="btn green-btn" data-dismiss="modal" (click)="saveEditedRow()">Sauvegarder les modifications</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Delete Modal -->
+      <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Supprimer le rendez-vous</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Voulez-vous supprimer le rendez-vous?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn edit-btn" data-dismiss="modal" (click)="saveChanges()" >Oui</button>
+              <button type="button" class="btn sec-btn" data-dismiss="modal" (click)="clearChanges()" >Non</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

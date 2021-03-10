@@ -1,0 +1,29 @@
+.check-btn {
+    border: none !important;
+    padding: 4px 15px !important;
+    background: var(--color-pink) !important;
+    cursor: pointer !important;
+    -webkit-transition: .5s;
+    transition: .5s;
+    border-radius: 30px;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+#view,
+#delete,
+#edit,
+#add {
+    z-index: 9999999 !important;
+}
+
+.modal-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1400;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+}

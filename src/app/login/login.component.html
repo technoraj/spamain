@@ -1,0 +1,18 @@
+<section class="bg-color-pink" style="padding: 5rem 0 1rem;">   
+    <div class="login-page">
+        <div class="form">
+          <form class="login-form">
+            <label>S'identifier</label>
+            <input type="Email" id="email" name="email" placeholder="Email" [(ngModel)]="email" value={{email}} required/>
+            <show-hide-password class="show-hide" size="sm" [btnOutline]="false">
+            <input type="password" class="password" id="password" name="password"  placeholder="Mot de passe" [(ngModel)]="password" value={{password}} required/>
+            </show-hide-password>
+            <p><a routerLink='/app-home/app-forgot-password'>Mot de passe oublié?</a></p>
+            <button (click)= "login()" class="bg-color-purple">s'identifier</button>
+            <p class="message">Non enregistré? <a routerLink='/app-home/app-register'>Créer un compte</a></p>
+          </form>
+        </div>
+      </div>
+</section>
+  
+  

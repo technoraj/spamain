@@ -1,0 +1,77 @@
+<section class="bg-color-pink" style="padding: 5rem 0 2rem;">
+        <div class="row ml-2 mr-2">
+            <div class="col-md-3">
+                <ul>
+                    <li class="list-group-item d-flex align-items-center bg-color-purple nav">
+                        <div class="" style="margin: 0 auto;"> 
+                            <span class="text-white" routerLink='/app-home/app-admin' style="font-weight: bold;">Administrateur</span>
+                        </div>
+                    </li>
+                    <li [ngClass]="menuItem == 'reservemanage' ? 'list-style list-group-item d-flex tab nav-active' : 'list-style list-group-item d-flex tab'" (click)="menuItem = 'reservemanage'">
+                        <a class="nav-link" routerLink='/app-home/app-admin/reservemanage'><img src="./src/assets/img/Planner.png" alt=""> Réservation</a>
+                    </li>
+                    <li [ngClass]="menuItem == 'careadmin' ? 'list-style list-group-item d-flex tab nav-active' : 'list-style list-group-item d-flex tab'" (click)="menuItem = 'careadmin'">
+                        <a class="nav-link" routerLink='/app-home/app-admin/careadmin' > <img src="./src/assets/img/Planner.png" alt=""> Lequel</a>
+                    </li>
+                    <li [ngClass]="menuItem == 'giftcard' ? 'list-style list-group-item d-flex tab nav-active' : 'list-style list-group-item d-flex tab'" (click)="menuItem = 'giftcard'">
+                        <a class="nav-link" routerLink='/app-home/app-admin/giftcard'> <img src="./src/assets/img/Star.png" alt="">  Carte cadeau</a>
+                    </li>
+                    <li [ngClass]="menuItem == 'promocode' ? 'list-style list-group-item d-flex tab nav-active' : 'list-style list-group-item d-flex tab'" (click)="menuItem = 'promocode'">
+                        <a class="nav-link" routerLink='/app-home/app-admin/promocode'> <img src="./src/assets/img/Star.png" alt=""> Code promo</a>
+                    </li>
+                    <li [ngClass]="menuItem == 'usermanagement' ? 'list-style list-group-item d-flex tab nav-active' : 'list-style list-group-item d-flex tab'" (click)="menuItem = 'reservemanage'">
+                        <a class="nav-link" routerLink='/app-home/app-admin/usermanagement'> <img src="./src/assets/img/acc.png" alt=""> Utilisateurs</a>
+                    </li>
+                    <li [ngClass]="menuItem == 'formulas' ? 'list-style list-group-item d-flex tab nav-active' : 'list-style list-group-item d-flex tab'" (click)="menuItem = 'reservemanage'">
+                        <a class="nav-link" routerLink='/app-home/app-admin/formulas'> <img src="./src/assets/img/add.png" alt=""> Formule</a>
+
+                    </li>
+                    <li [ngClass]="menuItem == 'products' ? 'list-style list-group-item d-flex tab nav-active' : 'list-style list-group-item d-flex tab'" (click)="menuItem = 'reservemanage'">
+                        <a class="nav-link" routerLink='/app-home/app-admin/products' ><img src="./src/assets/img/add.png" alt=""> Des produits</a>
+                    </li>
+                    <li class = "list-style list-group-item d-flex tab">
+                        <a class="nav-link" (click)="logout()"><img src="./src/assets/img/log.png" alt=""> Se déconnecter</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <div *ngIf="showAdminDetail" class="row tag-boxes">
+                    <div class="col-md-6 col-lg-3 text-center">
+                        <div class="bg-white" style="height:130px">
+                            <p class="pl-3 pt-3 pr-3"><b>nombre d'utilisateurs</b></p>
+                            <hr>
+                            <h3>{{ adminInfo.userCount }}</h3>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-center">
+                        <div class="bg-white" style="height:130px">
+                            <p class="pl-3 pt-3 pr-3"><b>Nombre de réservations [aujourd'hui]</b></p>
+                            <hr>
+                            <h3>{{ adminInfo.registrationCountTaday }}</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-center">
+                        <div class="bg-white" style="height:130px">
+                            <p class="pl-3 pt-3 pr-3 "><b>Réservation totale</b></p>
+                            <hr>
+                            <h3>{{ adminInfo.registrationCountTotal }}</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-center">
+                        <div class="bg-white" style="height:130px">
+                            <p class="pl-3 pt-3 pr-3 "><b>Valeur nette</b></p>
+                            <hr>
+                            <p>Ce mois-ci &euro; {{ adminInfo.worthMonth }}</p>
+                            <p>Cette année &euro; {{ adminInfo.worthYear }}</p>
+                        </div>
+                    </div>
+                </div>
+                <br *ngIf="showAdminDetail"/>
+                <div *ngIf="showAdminDetail">
+                    <app-reservation  ></app-reservation>
+                </div>
+                <router-outlet *ngIf="!showAdminDetail"></router-outlet>
+            </div>
+        </div>
+    </section>
